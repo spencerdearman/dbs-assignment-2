@@ -191,12 +191,19 @@ export default function QuizPage() {
 
         {feedback === "incorrect" && showAnswer && (
           <div className="mt-5 space-y-3">
-            <p className="text-sm text-red-400/80">
-              Not quite. The answer is{" "}
-              <kbd className="ml-1 inline-flex items-center rounded-lg bg-white/[0.06] px-2.5 py-1 font-mono text-xs text-white ring-1 ring-white/[0.08]">
-                {current?.keystroke}
-              </kbd>
-            </p>
+            <div className="flex items-center gap-2 text-sm text-red-400/80">
+              <span>Not quite. The answer is</span>
+              <span className="inline-flex items-center gap-1">
+                {current?.keystroke.split("+").map((k, i) => (
+                  <span key={i} className="flex items-center gap-1">
+                    {i > 0 && <span className="text-white/15 text-xs">+</span>}
+                    <kbd className="inline-flex items-center justify-center font-mono text-xs font-medium border border-white/[0.08] bg-white/[0.06] text-white/90 px-2 py-1 min-w-[28px]" style={{ borderRadius: 8 }}>
+                      {k}
+                    </kbd>
+                  </span>
+                ))}
+              </span>
+            </div>
             <button
               onClick={advance}
               className="rounded-2xl border border-white/[0.08] px-5 py-2 text-sm text-white/40 transition-all hover:border-white/15 hover:text-white/70"
