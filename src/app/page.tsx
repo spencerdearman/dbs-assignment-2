@@ -246,43 +246,90 @@ export default function TypingArena() {
 
       e.preventDefault();
 
+      /* ── Code mode: editor-like behavior ── */
+      if (isCodeMode) {
+        const pos = typedChars.length;
+
+        if (e.key === "Backspace") {
+          // Smart backspace: if cursor is in leading whitespace of a line,
+          // delete back to the newline (undo the whole auto-indent at once)
+          setTypedChars((prev) => {
+            if (prev.length === 0) return prev;
+            const lastIdx = prev.length - 1;
+            // Check if we're in leading whitespace after a \n
+            let wsStart = lastIdx;
+            while (wsStart > 0 && (prev[wsStart] === " " || prev[wsStart] === "\t")) wsStart--;
+            if (wsStart >= 0 && prev[wsStart] === "\n" && wsStart < lastIdx) {
+              // Delete the whole auto-indented whitespace + the newline
+              return prev.slice(0, wsStart);
+            }
+            return prev.slice(0, -1);
+          });
+          return;
+        }
+
+        if (e.key === "Enter") {
+          // Auto-indent: insert \n plus all leading whitespace of the next line
+          if (pos < targetText.length && targetText[pos] === "\n") {
+            if (!isRunning) { setIsRunning(true); setStartTime(Date.now()); }
+            setTypedChars((prev) => {
+              const chars = [...prev, "\n"];
+              // Consume all leading whitespace on the next line
+              let nextPos = pos + 1;
+              while (nextPos < targetText.length && (targetText[nextPos] === " " || targetText[nextPos] === "\t")) {
+                chars.push(targetText[nextPos]);
+                nextPos++;
+              }
+              if (chars.length >= targetText.length) {
+                setIsFinished(true); setIsRunning(false);
+              }
+              return chars;
+            });
+          }
+          return;
+        }
+
+        if (e.key === "Tab") {
+          // Insert any upcoming whitespace block at current position
+          const upcoming = targetText.slice(pos);
+          const wsMatch = upcoming.match(/^( +|\t+)/);
+          if (wsMatch) {
+            if (!isRunning) { setIsRunning(true); setStartTime(Date.now()); }
+            setTypedChars((prev) => {
+              const next = [...prev, ...wsMatch[0].split("")];
+              if (next.length >= targetText.length) {
+                setIsFinished(true); setIsRunning(false);
+              }
+              return next;
+            });
+          }
+          return;
+        }
+
+        // Regular character in code mode
+        if (e.key.length !== 1) return;
+        if (!isRunning) { setIsRunning(true); setStartTime(Date.now()); }
+        setTypedChars((prev) => {
+          const next = [...prev, e.key];
+          if (next.length >= targetText.length) {
+            setIsFinished(true); setIsRunning(false);
+          }
+          return next;
+        });
+        return;
+      }
+
+      /* ── Words / custom mode ── */
       if (e.key === "Backspace") {
         setTypedChars((prev) => prev.slice(0, -1));
         return;
       }
-
-      // Map Enter to \n and Tab to matching whitespace in code mode
-      let char: string | null = null;
-      if (e.key === "Enter") {
-        char = "\n";
-      } else if (e.key === "Tab" && isCodeMode) {
-        // Insert the exact whitespace the target expects at this position
-        const pos = typedChars.length;
-        const upcoming = targetText.slice(pos);
-        const wsMatch = upcoming.match(/^( +|\t)/);
-        if (wsMatch) {
-          const ws = wsMatch[0];
-          if (!isRunning) { setIsRunning(true); setStartTime(Date.now()); }
-          setTypedChars((prev) => {
-            const next = [...prev, ...ws.split("")];
-            if (next.length >= targetText.length) {
-              setIsFinished(true); setIsRunning(false);
-            }
-            return next;
-          });
-          return;
-        }
-        return;
-      } else if (e.key.length === 1) {
-        char = e.key;
-      }
-
-      if (!char) return;
+      if (e.key.length !== 1) return;
 
       if (!isRunning) { setIsRunning(true); setStartTime(Date.now()); }
 
       setTypedChars((prev) => {
-        const next = [...prev, char];
+        const next = [...prev, e.key];
         if (topMode !== "words" && next.length >= targetText.length) {
           setIsFinished(true); setIsRunning(false);
         }
