@@ -138,7 +138,7 @@ function getWordAt(text: string, pos: number): string {
 export default function TypingArena() {
   const { typingSnippets, codeSnippets, updatePersonalBest, updateCodeBest, recordWpm } = useAppState();
 
-  const [topMode, setTopMode] = useState<TopMode>("words");
+  const [topMode, setTopMode] = useState<TopMode>("code");
   const [timerDuration, setTimerDuration] = useState<TimerDuration>(30);
   const [punctuation, setPunctuation] = useState(false);
   const [numbers, setNumbers] = useState(false);
@@ -425,7 +425,7 @@ export default function TypingArena() {
       {/* ── Controls bar ── */}
       <div className="glass flex flex-wrap items-center gap-3 p-2" style={{ borderRadius: 28 }}>
         <div className="flex gap-0.5 bg-white/[0.04] p-1" style={{ borderRadius: 20 }}>
-          {(["words", "code", "custom"] as TopMode[]).map((m) => (
+          {(["code", "words", "custom"] as TopMode[]).map((m) => (
             <button
               key={m}
               onClick={() => { setTopMode(m); setCustomSubmitted(false); }}
