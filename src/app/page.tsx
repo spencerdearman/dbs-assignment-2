@@ -207,6 +207,11 @@ export default function TypingArena() {
     setScrollOffset(cursorLine * LINE_HEIGHT);
   }, [typedChars.length, targetText, isCodeMode]);
 
+  // Use a ref so loadText doesn't depend on the codeSnippets array
+  // (which changes when personalBestWPM is updated, causing a reset)
+  const codeSnippetsRef = useRef(codeSnippets);
+  codeSnippetsRef.current = codeSnippets;
+
   const loadText = useCallback(() => {
     setTypedChars([]);
     setIsRunning(false);
@@ -220,12 +225,12 @@ export default function TypingArena() {
       setTargetText(generateWords(200, { punctuation, numbers }));
       setTimeLeft(timerDuration);
     } else if (topMode === "code") {
-      const snippet = codeSnippets.find((s) => s.id === selectedCodeId);
+      const snippet = codeSnippetsRef.current.find((s) => s.id === selectedCodeId);
       setTargetText(snippet?.text ?? "");
     } else if (topMode === "custom") {
       if (customSubmitted && customText.trim()) setTargetText(customText.trim());
     }
-  }, [topMode, timerDuration, punctuation, numbers, selectedCodeId, codeSnippets, customText, customSubmitted]);
+  }, [topMode, timerDuration, punctuation, numbers, selectedCodeId, customText, customSubmitted]);
 
   useEffect(() => { loadText(); }, [loadText]);
 
