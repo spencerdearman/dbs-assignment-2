@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useAppState } from "@/context/AppContext";
+import KeystrokeInput from "@/components/KeystrokeInput";
 
 const CATEGORIES = ["Code", "Prose", "Terminal", "Other"];
 
@@ -207,13 +208,11 @@ export default function BuilderPage() {
 
           <div className="space-y-1">
             <label className="text-xs font-medium text-white/50">Keystroke</label>
-            <input
-              type="text"
+            <KeystrokeInput
               value={shortcutKeystroke}
-              onChange={(e) => setShortcutKeystroke(e.target.value)}
-              placeholder="e.g. Cmd+S"
-              className={inputClasses}
-              required
+              onChange={setShortcutKeystroke}
+              placeholder="Press a key combination..."
+              className="w-full"
             />
           </div>
 

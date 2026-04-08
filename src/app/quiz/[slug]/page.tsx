@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useAppState } from "@/context/AppContext";
+import KeystrokeInput from "@/components/KeystrokeInput";
 
 export default function QuizPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -33,7 +34,7 @@ export default function QuizPage() {
     }
   }, [currentIndex, shortcuts.length]);
 
-  // Clear feedback after delay and advance
+  // Auto-advance after correct answer
   useEffect(() => {
     if (feedback === "correct") {
       const timer = setTimeout(advance, 800);
@@ -41,25 +42,35 @@ export default function QuizPage() {
     }
   }, [feedback, advance]);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!current || feedback) return;
-
-    const normalized = userInput.trim().toLowerCase().replace(/\s+/g, "");
-    const expected = current.keystroke.toLowerCase().replace(/\s+/g, "");
-
-    const isCorrect = normalized === expected;
-    setFeedback(isCorrect ? "correct" : "incorrect");
-    setScore((prev) => ({
-      correct: prev.correct + (isCorrect ? 1 : 0),
-      total: prev.total + 1,
-    }));
-    recordQuizResult(isCorrect);
-
-    if (!isCorrect) {
-      setShowAnswer(true);
-    }
+  // Normalize keystroke for comparison: lowercase, no spaces, sort modifiers
+  const normalize = (s: string) => {
+    const parts = s.toLowerCase().replace(/\s+/g, "").split("+");
+    const modOrder = ["cmd", "ctrl", "alt", "shift"];
+    const mods = parts.filter((p) => modOrder.includes(p)).sort((a, b) => modOrder.indexOf(a) - modOrder.indexOf(b));
+    const keys = parts.filter((p) => !modOrder.includes(p));
+    return [...mods, ...keys].join("+");
   };
+
+  // Auto-check when keystroke is captured
+  const handleKeystroke = useCallback(
+    (keystroke: string) => {
+      if (!current || feedback) return;
+      setUserInput(keystroke);
+
+      const isCorrect = normalize(keystroke) === normalize(current.keystroke);
+      setFeedback(isCorrect ? "correct" : "incorrect");
+      setScore((prev) => ({
+        correct: prev.correct + (isCorrect ? 1 : 0),
+        total: prev.total + 1,
+      }));
+      recordQuizResult(isCorrect);
+
+      if (!isCorrect) {
+        setShowAnswer(true);
+      }
+    },
+    [current, feedback, recordQuizResult]
+  );
 
   const handleSkip = () => {
     setScore((prev) => ({ ...prev, total: prev.total + 1 }));
@@ -144,7 +155,7 @@ export default function QuizPage() {
       <div className="h-1 w-full overflow-hidden rounded-full bg-white/10">
         <div
           className="h-full rounded-full bg-blue-500 transition-all duration-300"
-          style={{ width: `${((currentIndex) / shortcuts.length) * 100}%` }}
+          style={{ width: `${(currentIndex / shortcuts.length) * 100}%` }}
         />
       </div>
 
@@ -161,24 +172,16 @@ export default function QuizPage() {
         <p className="text-sm font-medium text-white/40">What is the shortcut for:</p>
         <p className="mt-2 text-2xl font-semibold text-white">{current?.action}</p>
 
-        <form onSubmit={handleSubmit} className="mt-6 flex gap-3">
-          <input
-            type="text"
+        <div className="mt-6">
+          <KeystrokeInput
             value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Type the keystroke (e.g. Cmd+S)"
-            className="flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white outline-none placeholder:text-white/30 focus:border-blue-500 transition-colors"
-            autoFocus
+            onChange={handleKeystroke}
             disabled={!!feedback}
+            placeholder="Press the key combination..."
+            className="w-full py-3 text-base"
+            autoFocus
           />
-          <button
-            type="submit"
-            disabled={!userInput.trim() || !!feedback}
-            className="rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-600 disabled:opacity-40"
-          >
-            Check
-          </button>
-        </form>
+        </div>
 
         {/* Feedback */}
         {feedback === "correct" && (
@@ -189,7 +192,7 @@ export default function QuizPage() {
           <div className="mt-4 space-y-2">
             <p className="text-sm font-medium text-red-400">
               Incorrect. The answer is:{" "}
-              <span className="font-mono text-white">{current?.keystroke}</span>
+              <kbd className="rounded bg-white/10 px-2 py-0.5 font-mono text-white">{current?.keystroke}</kbd>
             </p>
             <button
               onClick={advance}
