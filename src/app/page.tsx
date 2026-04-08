@@ -249,6 +249,10 @@ export default function TypingArena() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't intercept typing in input/textarea/select elements
+      const tag = (e.target as HTMLElement)?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+
       if (isFinished || !targetText) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
 
