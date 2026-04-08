@@ -35,7 +35,7 @@ export default function ReferencePage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight">Master Cheatsheet</h1>
+        <h1 className="text-2xl font-bold tracking-tight">Reference</h1>
         <p className="mt-1 text-sm text-white/30">Quick reference for all keyboard shortcuts</p>
       </div>
 
@@ -50,13 +50,13 @@ export default function ReferencePage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search shortcuts..."
-            className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] py-2.5 pl-9 pr-3 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20"
+            className="w-full rounded-2xl border border-white/[0.06] bg-white/[0.04] py-2.5 pl-9 pr-3 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20"
           />
         </div>
         <select
           value={filterDeck}
           onChange={(e) => setFilterDeck(e.target.value)}
-          className="rounded-xl border border-white/[0.06] bg-white/[0.04] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-blue-500/50"
+          className="rounded-2xl border border-white/[0.06] bg-white/[0.04] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-blue-500/50"
         >
           <option value="all" className="bg-[#08080c]">All Decks</option>
           {shortcutDecks.map((d) => (

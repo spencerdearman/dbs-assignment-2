@@ -4,10 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const tabs = [
-  { label: "Typing Arena", href: "/" },
-  { label: "Shortcut Quiz", href: "/decks" },
-  { label: "The Builder", href: "/builder" },
-  { label: "Cheatsheet", href: "/reference" },
+  { label: "Arena", href: "/" },
+  { label: "Shortcuts", href: "/decks" },
+  { label: "Builder", href: "/builder" },
+  { label: "Reference", href: "/reference" },
 ];
 
 export default function Nav() {
@@ -31,7 +31,7 @@ export default function Nav() {
           <Link
             key={tab.href}
             href={tab.href}
-            className={`relative rounded-lg px-3.5 py-2 text-[13px] font-medium tracking-wide transition-all duration-200 ${
+            className={`relative rounded-2xl px-3.5 py-2 text-[13px] font-medium tracking-wide transition-all duration-200 ${
               isActive(tab.href)
                 ? "text-white"
                 : "text-white/40 hover:text-white/70 hover:bg-white/[0.04]"

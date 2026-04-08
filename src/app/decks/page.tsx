@@ -11,7 +11,7 @@ export default function DecksPage() {
     <div className="space-y-8">
       <div className="flex items-end justify-between">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Shortcut Quiz</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Shortcuts</h1>
           <p className="mt-1 text-sm text-white/30">Choose a deck to test your shortcut knowledge</p>
         </div>
         {total > 0 && (

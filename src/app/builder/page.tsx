@@ -65,12 +65,12 @@ export default function BuilderPage() {
   };
 
   const inputClasses =
-    "w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-3.5 py-2.5 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20";
+    "w-full rounded-2xl border border-white/[0.06] bg-white/[0.04] px-3.5 py-2.5 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20";
 
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight">The Builder</h1>
+        <h1 className="text-2xl font-bold tracking-tight">Builder</h1>
         <p className="mt-1 text-sm text-white/30">Add typing snippets and keyboard shortcuts</p>
       </div>
 
@@ -127,7 +127,7 @@ export default function BuilderPage() {
 
           <button
             type="submit"
-            className="w-full rounded-xl bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+            className="w-full rounded-2xl bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
           >
             Add Snippet
           </button>
@@ -146,7 +146,7 @@ export default function BuilderPage() {
 
           <div className="space-y-1.5">
             <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Deck</label>
-            <div className="flex gap-0.5 rounded-xl bg-white/[0.04] p-1">
+            <div className="flex gap-0.5 rounded-2xl bg-white/[0.04] p-1">
               <button
                 type="button"
                 onClick={() => setDeckMode("existing")}
@@ -225,7 +225,7 @@ export default function BuilderPage() {
 
           <button
             type="submit"
-            className="w-full rounded-xl bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+            className="w-full rounded-2xl bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
           >
             Add Shortcut
           </button>

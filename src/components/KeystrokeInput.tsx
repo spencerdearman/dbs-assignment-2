@@ -83,7 +83,7 @@ export default function KeystrokeInput({
       tabIndex={0}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
-      className={`flex items-center rounded-xl border bg-white/[0.04] px-4 py-2.5 text-sm outline-none transition-all duration-200 ${
+      className={`flex items-center rounded-2xl border bg-white/[0.04] px-4 py-2.5 text-sm outline-none transition-all duration-200 ${
         isFocused
           ? "border-blue-500/50 ring-1 ring-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.1)]"
           : "border-white/[0.06]"

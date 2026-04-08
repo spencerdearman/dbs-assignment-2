@@ -123,13 +123,13 @@ export default function QuizPage() {
           <div className="flex gap-3">
             <button
               onClick={restart}
-              className="rounded-xl bg-blue-500 px-6 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all hover:bg-blue-400"
+              className="rounded-2xl bg-blue-500 px-6 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all hover:bg-blue-400"
             >
               Try Again
             </button>
             <Link
               href="/decks"
-              className="rounded-xl border border-white/[0.08] px-6 py-2.5 text-sm font-medium text-white/40 transition-all hover:border-white/15 hover:text-white/70"
+              className="rounded-2xl border border-white/[0.08] px-6 py-2.5 text-sm font-medium text-white/40 transition-all hover:border-white/15 hover:text-white/70"
             >
               All Decks
             </Link>
@@ -199,7 +199,7 @@ export default function QuizPage() {
             </p>
             <button
               onClick={advance}
-              className="rounded-xl border border-white/[0.08] px-5 py-2 text-sm text-white/40 transition-all hover:border-white/15 hover:text-white/70"
+              className="rounded-2xl border border-white/[0.08] px-5 py-2 text-sm text-white/40 transition-all hover:border-white/15 hover:text-white/70"
             >
               Next
             </button>
