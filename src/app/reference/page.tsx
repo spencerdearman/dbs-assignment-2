@@ -39,10 +39,10 @@ export default function ReferencePage() {
         <p className="mt-1 text-sm text-white/30">Quick reference for all keyboard shortcuts</p>
       </div>
 
-      {/* Search & Filter Bar */}
-      <div className="glass flex flex-wrap items-center gap-3 p-4">
+      {/* Search & Filter Bar — pill radius math: inner 16px + 8px padding = 24px outer */}
+      <div className="glass flex flex-wrap items-center gap-3 p-2" style={{ borderRadius: 28 }}>
         <div className="relative flex-1 min-w-[200px]">
-          <svg className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <svg className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-white/20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <input
@@ -50,13 +50,15 @@ export default function ReferencePage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search shortcuts..."
-            className="w-full rounded-2xl border border-white/[0.06] bg-white/[0.04] py-2.5 pl-9 pr-3 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20"
+            className="w-full border border-white/[0.06] bg-white/[0.04] py-2 pl-10 pr-3 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50"
+            style={{ borderRadius: 20 }}
           />
         </div>
         <select
           value={filterDeck}
           onChange={(e) => setFilterDeck(e.target.value)}
-          className="rounded-2xl border border-white/[0.06] bg-white/[0.04] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-blue-500/50"
+          className="border border-white/[0.06] bg-white/[0.04] pl-3 py-2 text-sm text-white outline-none transition-colors focus:border-blue-500/50"
+          style={{ borderRadius: 20 }}
         >
           <option value="all" className="bg-[#08080c]">All Decks</option>
           {shortcutDecks.map((d) => (
@@ -65,7 +67,7 @@ export default function ReferencePage() {
             </option>
           ))}
         </select>
-        <span className="text-xs tabular-nums text-white/20">
+        <span className="text-xs tabular-nums text-white/20 pr-2">
           {filtered.length} result{filtered.length !== 1 && "s"}
         </span>
       </div>

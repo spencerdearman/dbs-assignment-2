@@ -67,7 +67,7 @@ function SmoothCaret({
 }: {
   charRefs: React.RefObject<(HTMLSpanElement | null)[]>;
   index: number;
-  containerRef: React.RefObject<HTMLDivElement | null>;
+  containerRef: React.RefObject<HTMLElement | null>;
   targetText: string;
   isTyping: boolean;
 }) {
@@ -157,6 +157,7 @@ export default function TypingArena() {
 
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const codePreRef = useRef<HTMLPreElement>(null);
   const charRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -392,8 +393,8 @@ export default function TypingArena() {
 
         {topMode === "code" && (
           <>
-            <select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)}
-              className="border border-white/[0.06] bg-white/[0.04] px-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
+            <select value={selectedLang} onChange={(e) => { setSelectedLang(e.target.value); }}
+              className="border border-white/[0.06] bg-white/[0.04] pl-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
               style={{ borderRadius: 16 }}
             >
               <option value="all" className="bg-[#08080c]">All Languages</option>
@@ -402,12 +403,12 @@ export default function TypingArena() {
               ))}
             </select>
             <select value={selectedCodeId} onChange={(e) => setSelectedCodeId(e.target.value)}
-              className="border border-white/[0.06] bg-white/[0.04] px-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
+              className="border border-white/[0.06] bg-white/[0.04] pl-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
               style={{ borderRadius: 16 }}
             >
               {filteredSnippets.map((s) => (
                 <option key={s.id} value={s.id} className="bg-[#08080c]">
-                  {s.title} — {s.language}
+                  {s.title}
                 </option>
               ))}
             </select>
@@ -440,12 +441,7 @@ export default function TypingArena() {
           <div className="glass overflow-hidden mt-8">
             {/* Title bar */}
             <div className="flex items-center gap-2 border-b border-white/[0.06] px-4 py-2.5">
-              <div className="flex gap-1.5">
-                <span className="h-3 w-3 rounded-full bg-red-500/60" />
-                <span className="h-3 w-3 rounded-full bg-yellow-500/60" />
-                <span className="h-3 w-3 rounded-full bg-green-500/60" />
-              </div>
-              <span className="ml-2 text-xs text-white/30 font-mono">{selectedCode?.title}.{
+              <span className="text-xs text-white/30 font-mono">{selectedCode?.title}.{
                 selectedCode?.language === "Python" ? "py" :
                 selectedCode?.language === "Swift" ? "swift" :
                 selectedCode?.language === "C" ? "c" :
@@ -459,7 +455,7 @@ export default function TypingArena() {
               <span className="ml-auto text-[11px] text-white/20 uppercase tracking-widest">{selectedCode?.language}</span>
             </div>
             {/* Code area with line numbers */}
-            <div className="flex overflow-auto max-h-[420px]" ref={textRef}>
+            <div className="flex overflow-auto max-h-[420px]">
               {/* Line numbers */}
               <div className="sticky left-0 flex flex-col border-r border-white/[0.04] bg-white/[0.02] px-3 py-4 text-right font-mono text-xs text-white/15 select-none"
                 style={{ lineHeight: `${CODE_LINE_HEIGHT}px` }}
@@ -471,13 +467,14 @@ export default function TypingArena() {
               {/* Code content */}
               <div className="relative flex-1 px-5 py-4">
                 <pre
+                  ref={codePreRef}
                   className="relative font-mono text-[15px] select-none whitespace-pre"
                   style={{ lineHeight: `${CODE_LINE_HEIGHT}px` }}
                 >
                   <SmoothCaret
                     charRefs={charRefs}
                     index={typedChars.length}
-                    containerRef={textRef}
+                    containerRef={codePreRef}
                     targetText={targetText}
                     isTyping={isRunning}
                   />
