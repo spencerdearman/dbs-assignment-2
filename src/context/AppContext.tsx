@@ -1,6 +1,9 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
+import { CodeSnippet, defaultCodeSnippets } from "@/data/codeSnippets";
+
+export type { CodeSnippet };
 
 export interface TypingSnippet {
   id: string;
@@ -28,11 +31,13 @@ export interface UserStats {
 
 interface AppState {
   typingSnippets: TypingSnippet[];
+  codeSnippets: CodeSnippet[];
   shortcutDecks: ShortcutDeck[];
   userStats: UserStats;
   addSnippet: (snippet: Omit<TypingSnippet, "id" | "personalBestWPM">) => void;
   addShortcut: (deckSlug: string, deckName: string, shortcut: Shortcut) => void;
   updatePersonalBest: (snippetId: string, wpm: number) => void;
+  updateCodeBest: (snippetId: string, wpm: number) => void;
   recordWpm: (wpm: number) => void;
   recordQuizResult: (correct: boolean) => void;
 }
@@ -132,6 +137,7 @@ const AppContext = createContext<AppState | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [typingSnippets, setTypingSnippets] = useState<TypingSnippet[]>(defaultSnippets);
+  const [codeSnippets, setCodeSnippets] = useState<CodeSnippet[]>(defaultCodeSnippets);
   const [shortcutDecks, setShortcutDecks] = useState<ShortcutDeck[]>(defaultDecks);
   const [userStats, setUserStats] = useState<UserStats>({
     wpmHistory: [],
@@ -169,6 +175,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
     );
   };
 
+  const updateCodeBest = (snippetId: string, wpm: number) => {
+    setCodeSnippets((prev) =>
+      prev.map((s) =>
+        s.id === snippetId && (s.personalBestWPM === null || wpm > s.personalBestWPM)
+          ? { ...s, personalBestWPM: wpm }
+          : s
+      )
+    );
+  };
+
   const recordWpm = (wpm: number) => {
     setUserStats((prev) => ({
       ...prev,
@@ -190,11 +206,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
     <AppContext.Provider
       value={{
         typingSnippets,
+        codeSnippets,
         shortcutDecks,
         userStats,
         addSnippet,
         addShortcut,
         updatePersonalBest,
+        updateCodeBest,
         recordWpm,
         recordQuizResult,
       }}

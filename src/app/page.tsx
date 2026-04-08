@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, useLayoutEffect } from "react";
+import { useState, useEffect, useCallback, useRef, useLayoutEffect, useMemo } from "react";
 import { useAppState } from "@/context/AppContext";
 
 /* ── Word bank ── */
@@ -31,10 +31,7 @@ function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function generateWords(
-  count: number,
-  opts: { punctuation: boolean; numbers: boolean }
-): string {
+function generateWords(count: number, opts: { punctuation: boolean; numbers: boolean }): string {
   const words: string[] = [];
   for (let i = 0; i < count; i++) {
     if (opts.numbers && Math.random() < 0.08) {
@@ -46,13 +43,9 @@ function generateWords(
       let word = pick(COMMON_WORDS);
       if (opts.punctuation && Math.random() < 0.12) {
         const mark = pick(PUNCTUATION_MARKS);
-        if (mark === '"' || mark === "'") {
-          word = mark + word + mark;
-        } else if (mark === "(") {
-          word = "(" + word + ")";
-        } else {
-          word = word + mark;
-        }
+        if (mark === '"' || mark === "'") word = mark + word + mark;
+        else if (mark === "(") word = "(" + word + ")";
+        else word = word + mark;
       }
       words.push(word);
     }
@@ -64,16 +57,13 @@ function generateWords(
 type TopMode = "words" | "code" | "custom";
 type TimerDuration = 15 | 30 | 60 | 120;
 
-const LINE_HEIGHT = 56; // px per line
+const LINE_HEIGHT = 56;
 const VISIBLE_LINES = 3;
+const CODE_LINE_HEIGHT = 28;
 
 /* ── Smooth Caret ── */
 function SmoothCaret({
-  charRefs,
-  index,
-  containerRef,
-  targetText,
-  isTyping,
+  charRefs, index, containerRef, targetText, isTyping,
 }: {
   charRefs: React.RefObject<(HTMLSpanElement | null)[]>;
   index: number;
@@ -89,29 +79,19 @@ function SmoothCaret({
       const chars = charRefs.current;
       const container = containerRef.current;
       if (!chars || !container) return;
-
       const el = chars[index];
       if (el) {
         const cRect = container.getBoundingClientRect();
         const eRect = el.getBoundingClientRect();
-        setPos({
-          left: eRect.left - cRect.left,
-          top: eRect.top - cRect.top,
-          height: eRect.height,
-        });
+        setPos({ left: eRect.left - cRect.left, top: eRect.top - cRect.top, height: eRect.height });
         setReady(true);
       } else if (index > 0 && chars[index - 1]) {
         const cRect = container.getBoundingClientRect();
         const eRect = chars[index - 1]!.getBoundingClientRect();
-        setPos({
-          left: eRect.right - cRect.left,
-          top: eRect.top - cRect.top,
-          height: eRect.height,
-        });
+        setPos({ left: eRect.right - cRect.left, top: eRect.top - cRect.top, height: eRect.height });
         setReady(true);
       }
     };
-
     measure();
     const raf = requestAnimationFrame(measure);
     return () => cancelAnimationFrame(raf);
@@ -119,30 +99,50 @@ function SmoothCaret({
 
   return (
     <span
-      className="pointer-events-none absolute w-[3px] rounded-full bg-amber-400"
+      className="pointer-events-none absolute w-[2.5px] rounded-full bg-amber-400"
       style={{
         left: pos.left,
         top: pos.top,
-        height: pos.height || 40,
+        height: pos.height || 24,
         opacity: ready ? 1 : 0,
-        transition: ready
-          ? "left 80ms ease-out, top 60ms ease-out, opacity 150ms"
-          : "opacity 150ms",
+        transition: ready ? "left 80ms ease-out, top 60ms ease-out, opacity 150ms" : "opacity 150ms",
         animation: isTyping ? "none" : "caret-blink 1s step-end infinite",
       }}
     />
   );
 }
 
+/* ── Language-aware syntax coloring for untyped chars ── */
+const KEYWORDS: Record<string, Set<string>> = {
+  JavaScript: new Set(["const","let","var","function","return","if","else","for","while","class","new","this","import","export","from","async","await","try","catch","throw","typeof","instanceof","of","in","true","false","null","undefined"]),
+  TypeScript: new Set(["const","let","var","function","return","if","else","for","while","class","new","this","import","export","from","async","await","try","catch","throw","typeof","instanceof","of","in","true","false","null","undefined","interface","type","enum","extends","implements","readonly","as","keyof","Promise","string","number","boolean","void","any","never"]),
+  Python: new Set(["def","class","return","if","else","elif","for","while","import","from","as","with","try","except","raise","in","not","and","or","is","None","True","False","self","lambda","yield","pass","break","continue","global"]),
+  Swift: new Set(["func","var","let","struct","class","enum","protocol","return","if","else","for","while","switch","case","import","guard","self","true","false","nil","in","throws","async","await","init","deinit","extension","where","default"]),
+  C: new Set(["int","char","float","double","void","return","if","else","for","while","do","switch","case","break","continue","struct","typedef","sizeof","malloc","free","NULL","const","static","extern","unsigned","long","short","include"]),
+  "C++": new Set(["int","char","float","double","void","return","if","else","for","while","do","switch","case","break","continue","class","struct","template","typename","public","private","protected","virtual","override","const","static","new","delete","this","auto","using","namespace","std","true","false","nullptr","include"]),
+  Rust: new Set(["fn","let","mut","const","struct","enum","impl","trait","pub","return","if","else","for","while","loop","match","use","mod","self","Self","true","false","Some","None","Ok","Err","where","move","ref","as","in","type"]),
+  Go: new Set(["func","var","const","type","struct","interface","return","if","else","for","range","switch","case","break","continue","package","import","go","defer","chan","map","nil","true","false","err"]),
+  Java: new Set(["public","private","protected","static","final","class","interface","enum","extends","implements","return","if","else","for","while","new","this","super","void","int","String","boolean","double","float","long","import","package","try","catch","throw","throws","null","true","false","record"]),
+  Ruby: new Set(["def","class","module","end","if","else","elsif","unless","while","until","for","do","return","nil","true","false","self","puts","require","attr_accessor","attr_reader","initialize","yield","block","lambda","proc"]),
+};
+
+function getWordAt(text: string, pos: number): string {
+  let start = pos;
+  while (start > 0 && /[a-zA-Z_]/.test(text[start - 1])) start--;
+  let end = pos;
+  while (end < text.length && /[a-zA-Z_]/.test(text[end])) end++;
+  return text.slice(start, end);
+}
+
 /* ── Main component ── */
 export default function TypingArena() {
-  const { typingSnippets, updatePersonalBest, recordWpm } = useAppState();
+  const { typingSnippets, codeSnippets, updatePersonalBest, updateCodeBest, recordWpm } = useAppState();
 
   const [topMode, setTopMode] = useState<TopMode>("words");
   const [timerDuration, setTimerDuration] = useState<TimerDuration>(30);
   const [punctuation, setPunctuation] = useState(false);
   const [numbers, setNumbers] = useState(false);
-  const [selectedSnippetId, setSelectedSnippetId] = useState(typingSnippets[0]?.id ?? "");
+  const [selectedCodeId, setSelectedCodeId] = useState(codeSnippets[0]?.id ?? "");
   const [customText, setCustomText] = useState("");
   const [customSubmitted, setCustomSubmitted] = useState(false);
 
@@ -160,25 +160,41 @@ export default function TypingArena() {
   const charRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  /* ── Detect which line the cursor is on and scroll ── */
+  const selectedCode = codeSnippets.find((s) => s.id === selectedCodeId);
+  const isCodeMode = topMode === "code";
+
+  // Get unique languages for filtering
+  const languages = useMemo(() => {
+    const langs = [...new Set(codeSnippets.map((s) => s.language))];
+    return langs.sort();
+  }, [codeSnippets]);
+
+  const [selectedLang, setSelectedLang] = useState<string>("all");
+  const filteredSnippets = useMemo(() => {
+    if (selectedLang === "all") return codeSnippets;
+    return codeSnippets.filter((s) => s.language === selectedLang);
+  }, [codeSnippets, selectedLang]);
+
+  // Build keyword set for current language
+  const currentKeywords = useMemo(() => {
+    if (!isCodeMode || !selectedCode) return new Set<string>();
+    return KEYWORDS[selectedCode.language] ?? new Set<string>();
+  }, [isCodeMode, selectedCode]);
+
+  /* ── Line scroll for words mode ── */
   useLayoutEffect(() => {
+    if (isCodeMode) return;
     const chars = charRefs.current;
     const container = textRef.current;
     if (!chars || !container || chars.length === 0) return;
-
     const cursorEl = chars[typedChars.length] ?? chars[chars.length - 1];
     if (!cursorEl) return;
-
     const containerTop = container.getBoundingClientRect().top;
     const charTop = cursorEl.getBoundingClientRect().top;
     const relativeTop = charTop - containerTop + scrollOffset;
     const currentLine = Math.floor(relativeTop / LINE_HEIGHT);
-
-    // Keep cursor on the top visible line (line 0 of visible area)
-    if (currentLine >= 1) {
-      setScrollOffset(currentLine * LINE_HEIGHT);
-    }
-  }, [typedChars.length, targetText, scrollOffset]);
+    if (currentLine >= 1) setScrollOffset(currentLine * LINE_HEIGHT);
+  }, [typedChars.length, targetText, scrollOffset, isCodeMode]);
 
   const loadText = useCallback(() => {
     setTypedChars([]);
@@ -193,18 +209,14 @@ export default function TypingArena() {
       setTargetText(generateWords(200, { punctuation, numbers }));
       setTimeLeft(timerDuration);
     } else if (topMode === "code") {
-      const snippet = typingSnippets.find((s) => s.id === selectedSnippetId);
+      const snippet = codeSnippets.find((s) => s.id === selectedCodeId);
       setTargetText(snippet?.text ?? "");
     } else if (topMode === "custom") {
-      if (customSubmitted && customText.trim()) {
-        setTargetText(customText.trim());
-      }
+      if (customSubmitted && customText.trim()) setTargetText(customText.trim());
     }
-  }, [topMode, timerDuration, punctuation, numbers, selectedSnippetId, typingSnippets, customText, customSubmitted]);
+  }, [topMode, timerDuration, punctuation, numbers, selectedCodeId, codeSnippets, customText, customSubmitted]);
 
-  useEffect(() => {
-    loadText();
-  }, [loadText]);
+  useEffect(() => { loadText(); }, [loadText]);
 
   useEffect(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -212,11 +224,7 @@ export default function TypingArena() {
       intervalRef.current = setInterval(() => {
         if (topMode === "words") {
           setTimeLeft((prev) => {
-            if (prev <= 1) {
-              setIsFinished(true);
-              setIsRunning(false);
-              return 0;
-            }
+            if (prev <= 1) { setIsFinished(true); setIsRunning(false); return 0; }
             return prev - 1;
           });
         }
@@ -228,10 +236,12 @@ export default function TypingArena() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (isFinished) return;
-      if (!targetText) return;
+      if (isFinished || !targetText) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key === "Tab" || e.key === "Escape") return;
+
+      // In code mode, allow Tab and Enter
+      if (!isCodeMode && (e.key === "Tab" || e.key === "Escape")) return;
+      if (isCodeMode && e.key === "Escape") return;
 
       e.preventDefault();
 
@@ -239,18 +249,41 @@ export default function TypingArena() {
         setTypedChars((prev) => prev.slice(0, -1));
         return;
       }
-      if (e.key.length !== 1) return;
 
-      if (!isRunning) {
-        setIsRunning(true);
-        setStartTime(Date.now());
+      // Map Enter to \n and Tab to matching whitespace in code mode
+      let char: string | null = null;
+      if (e.key === "Enter") {
+        char = "\n";
+      } else if (e.key === "Tab" && isCodeMode) {
+        // Insert the exact whitespace the target expects at this position
+        const pos = typedChars.length;
+        const upcoming = targetText.slice(pos);
+        const wsMatch = upcoming.match(/^( +|\t)/);
+        if (wsMatch) {
+          const ws = wsMatch[0];
+          if (!isRunning) { setIsRunning(true); setStartTime(Date.now()); }
+          setTypedChars((prev) => {
+            const next = [...prev, ...ws.split("")];
+            if (next.length >= targetText.length) {
+              setIsFinished(true); setIsRunning(false);
+            }
+            return next;
+          });
+          return;
+        }
+        return;
+      } else if (e.key.length === 1) {
+        char = e.key;
       }
 
+      if (!char) return;
+
+      if (!isRunning) { setIsRunning(true); setStartTime(Date.now()); }
+
       setTypedChars((prev) => {
-        const next = [...prev, e.key];
+        const next = [...prev, char];
         if (topMode !== "words" && next.length >= targetText.length) {
-          setIsFinished(true);
-          setIsRunning(false);
+          setIsFinished(true); setIsRunning(false);
         }
         return next;
       });
@@ -258,11 +291,9 @@ export default function TypingArena() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isRunning, isFinished, targetText, topMode]);
+  }, [isRunning, isFinished, targetText, topMode, isCodeMode, typedChars.length]);
 
-  useEffect(() => {
-    containerRef.current?.focus();
-  }, [targetText]);
+  useEffect(() => { containerRef.current?.focus(); }, [targetText]);
 
   const correctChars = typedChars.filter((ch, i) => ch === targetText[i]).length;
   const totalTyped = typedChars.length;
@@ -274,27 +305,39 @@ export default function TypingArena() {
   useEffect(() => {
     if (isFinished && wpm > 0) {
       recordWpm(wpm);
-      if (topMode === "code" && selectedSnippetId) {
-        updatePersonalBest(selectedSnippetId, wpm);
-      }
+      if (topMode === "code" && selectedCodeId) updateCodeBest(selectedCodeId, wpm);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFinished]);
-
-  const selectedSnippet = typingSnippets.find((s) => s.id === selectedSnippetId);
 
   const toggleBtn = (active: boolean, label: string, onClick: () => void) => (
     <button
       onClick={onClick}
       className={`rounded-2xl px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ${
-        active
-          ? "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/30"
-          : "text-white/35 hover:text-white/60"
+        active ? "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/30" : "text-white/35 hover:text-white/60"
       }`}
     >
       {label}
     </button>
   );
+
+  /* ── Split code into lines for IDE display ── */
+  const codeLines = useMemo(() => {
+    if (!isCodeMode || !targetText) return [];
+    return targetText.split("\n");
+  }, [isCodeMode, targetText]);
+
+  // Map flat char index → { line, col }
+  const charToLine = useMemo(() => {
+    if (!isCodeMode) return [];
+    const map: { line: number; col: number }[] = [];
+    let line = 0, col = 0;
+    for (const ch of targetText) {
+      map.push({ line, col });
+      if (ch === "\n") { line++; col = 0; } else { col++; }
+    }
+    return map;
+  }, [isCodeMode, targetText]);
 
   return (
     <div className="space-y-6 outline-none" ref={containerRef} tabIndex={-1}>
@@ -312,7 +355,7 @@ export default function TypingArena() {
         )}
       </div>
 
-      {/* ── Controls bar — outer radius = inner radius + padding ── */}
+      {/* ── Controls bar ── */}
       <div className="glass flex flex-wrap items-center gap-3 p-2" style={{ borderRadius: 28 }}>
         <div className="flex gap-0.5 bg-white/[0.04] p-1" style={{ borderRadius: 20 }}>
           {(["words", "code", "custom"] as TopMode[]).map((m) => (
@@ -325,9 +368,7 @@ export default function TypingArena() {
                   : "text-white/40 hover:text-white/70"
               }`}
               style={{ borderRadius: 16 }}
-            >
-              {m}
-            </button>
+            >{m}</button>
           ))}
         </div>
 
@@ -335,18 +376,12 @@ export default function TypingArena() {
           <>
             <div className="flex gap-0.5 bg-white/[0.04] p-1" style={{ borderRadius: 20 }}>
               {([15, 30, 60, 120] as TimerDuration[]).map((d) => (
-                <button
-                  key={d}
-                  onClick={() => setTimerDuration(d)}
+                <button key={d} onClick={() => setTimerDuration(d)}
                   className={`px-2.5 py-1 text-[13px] font-medium transition-all duration-200 ${
-                    timerDuration === d
-                      ? "bg-white/10 text-white"
-                      : "text-white/30 hover:text-white/60"
+                    timerDuration === d ? "bg-white/10 text-white" : "text-white/30 hover:text-white/60"
                   }`}
                   style={{ borderRadius: 16 }}
-                >
-                  {d}s
-                </button>
+                >{d}s</button>
               ))}
             </div>
             <span className="text-white/10">|</span>
@@ -356,97 +391,151 @@ export default function TypingArena() {
         )}
 
         {topMode === "code" && (
-          <select
-            value={selectedSnippetId}
-            onChange={(e) => setSelectedSnippetId(e.target.value)}
-            className="rounded-2xl border border-white/[0.06] bg-white/[0.04] px-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
-          >
-            {typingSnippets.map((s) => (
-              <option key={s.id} value={s.id} className="bg-[#08080c]">
-                {s.title}
-              </option>
-            ))}
-          </select>
+          <>
+            <select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)}
+              className="border border-white/[0.06] bg-white/[0.04] px-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
+              style={{ borderRadius: 16 }}
+            >
+              <option value="all" className="bg-[#08080c]">All Languages</option>
+              {languages.map((l) => (
+                <option key={l} value={l} className="bg-[#08080c]">{l}</option>
+              ))}
+            </select>
+            <select value={selectedCodeId} onChange={(e) => setSelectedCodeId(e.target.value)}
+              className="border border-white/[0.06] bg-white/[0.04] px-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
+              style={{ borderRadius: 16 }}
+            >
+              {filteredSnippets.map((s) => (
+                <option key={s.id} value={s.id} className="bg-[#08080c]">
+                  {s.title} — {s.language}
+                </option>
+              ))}
+            </select>
+          </>
         )}
 
         {topMode === "custom" && !customSubmitted && (
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (customText.trim()) setCustomSubmitted(true);
-            }}
-            className="flex flex-1 gap-2"
-          >
-            <input
-              type="text"
-              value={customText}
-              onChange={(e) => setCustomText(e.target.value)}
+          <form onSubmit={(e) => { e.preventDefault(); if (customText.trim()) setCustomSubmitted(true); }} className="flex flex-1 gap-2">
+            <input type="text" value={customText} onChange={(e) => setCustomText(e.target.value)}
               placeholder="Paste or type your custom text..."
               className="flex-1 rounded-2xl border border-white/[0.06] bg-white/[0.04] px-3 py-1.5 text-[13px] text-white outline-none placeholder:text-white/25 transition-colors focus:border-blue-500/50"
             />
-            <button
-              type="submit"
+            <button type="submit"
               className="rounded-2xl bg-blue-500 px-4 py-1.5 text-[13px] font-medium text-white shadow-[0_0_10px_rgba(59,130,246,0.3)] transition-all hover:bg-blue-400"
-            >
-              Go
-            </button>
+            >Go</button>
           </form>
         )}
 
         <button
-          onClick={() => {
-            if (topMode === "custom") setCustomSubmitted(false);
-            loadText();
-          }}
+          onClick={() => { if (topMode === "custom") setCustomSubmitted(false); loadText(); }}
           className="ml-auto border border-white/[0.06] px-4 py-1.5 text-[13px] text-white/30 transition-all duration-200 hover:border-white/15 hover:text-white/60"
           style={{ borderRadius: 20 }}
-        >
-          {topMode === "custom" && customSubmitted ? "Change text" : "Reset"}
-        </button>
+        >{topMode === "custom" && customSubmitted ? "Change text" : "Reset"}</button>
       </div>
 
-      {/* ── Typing display — 3 visible lines ── */}
+      {/* ── Typing display ── */}
       {!isFinished && targetText ? (
-        <div
-          className="relative cursor-text overflow-hidden mt-16"
-          style={{ height: LINE_HEIGHT * VISIBLE_LINES }}
-        >
-          <div
-            ref={textRef}
-            className="relative font-mono text-[1.75rem] select-none"
-            style={{
-              lineHeight: `${LINE_HEIGHT}px`,
-              transform: `translateY(-${scrollOffset}px)`,
-              transition: "transform 200ms ease-out",
-            }}
-          >
-            <SmoothCaret
-              charRefs={charRefs}
-              index={typedChars.length}
-              containerRef={textRef}
-              targetText={targetText}
-              isTyping={isRunning}
-            />
-            {targetText.split("").map((char, i) => {
-              let colorClass = "text-white/20";
-              if (i < typedChars.length) {
-                colorClass =
-                  typedChars[i] === char
-                    ? "text-white"
-                    : "text-red-400 bg-red-500/10 rounded-sm";
-              }
-              return (
-                <span
-                  key={i}
-                  ref={(el) => { charRefs.current[i] = el; }}
-                  className={colorClass}
+        isCodeMode ? (
+          /* ── IDE-style code display ── */
+          <div className="glass overflow-hidden mt-8">
+            {/* Title bar */}
+            <div className="flex items-center gap-2 border-b border-white/[0.06] px-4 py-2.5">
+              <div className="flex gap-1.5">
+                <span className="h-3 w-3 rounded-full bg-red-500/60" />
+                <span className="h-3 w-3 rounded-full bg-yellow-500/60" />
+                <span className="h-3 w-3 rounded-full bg-green-500/60" />
+              </div>
+              <span className="ml-2 text-xs text-white/30 font-mono">{selectedCode?.title}.{
+                selectedCode?.language === "Python" ? "py" :
+                selectedCode?.language === "Swift" ? "swift" :
+                selectedCode?.language === "C" ? "c" :
+                selectedCode?.language === "C++" ? "cpp" :
+                selectedCode?.language === "Rust" ? "rs" :
+                selectedCode?.language === "Go" ? "go" :
+                selectedCode?.language === "Java" ? "java" :
+                selectedCode?.language === "Ruby" ? "rb" :
+                selectedCode?.language === "TypeScript" ? "ts" : "js"
+              }</span>
+              <span className="ml-auto text-[11px] text-white/20 uppercase tracking-widest">{selectedCode?.language}</span>
+            </div>
+            {/* Code area with line numbers */}
+            <div className="flex overflow-auto max-h-[420px]" ref={textRef}>
+              {/* Line numbers */}
+              <div className="sticky left-0 flex flex-col border-r border-white/[0.04] bg-white/[0.02] px-3 py-4 text-right font-mono text-xs text-white/15 select-none"
+                style={{ lineHeight: `${CODE_LINE_HEIGHT}px` }}
+              >
+                {codeLines.map((_, i) => (
+                  <span key={i}>{i + 1}</span>
+                ))}
+              </div>
+              {/* Code content */}
+              <div className="relative flex-1 px-5 py-4">
+                <pre
+                  className="relative font-mono text-[15px] select-none whitespace-pre"
+                  style={{ lineHeight: `${CODE_LINE_HEIGHT}px` }}
                 >
-                  {char}
-                </span>
-              );
-            })}
+                  <SmoothCaret
+                    charRefs={charRefs}
+                    index={typedChars.length}
+                    containerRef={textRef}
+                    targetText={targetText}
+                    isTyping={isRunning}
+                  />
+                  {targetText.split("").map((char, i) => {
+                    // Determine syntax color for untyped chars
+                    let colorClass = "text-white/20";
+                    if (i < typedChars.length) {
+                      colorClass = typedChars[i] === char ? "text-white/90" : "text-red-400 bg-red-500/10";
+                    } else {
+                      // Syntax hints for untyped code
+                      const word = getWordAt(targetText, i);
+                      if (currentKeywords.has(word) && i === targetText.indexOf(word, i - (i - targetText.lastIndexOf(" ", i) - 1)) + (i - targetText.lastIndexOf(" ", i) - 1) - (i - targetText.lastIndexOf(" ", i) - 1)) {
+                        // Simplified: color keywords
+                      }
+                      if (char === "\n" || char === " " || char === "\t") colorClass = "text-transparent";
+                      else if (/[{}()\[\];,.]/.test(char)) colorClass = "text-white/15";
+                      else if (/[0-9]/.test(char)) colorClass = "text-amber-500/25";
+                      else if (char === '"' || char === "'" || char === '`') colorClass = "text-green-500/25";
+                    }
+
+                    // Render newlines as actual newlines
+                    if (char === "\n") {
+                      return (
+                        <span key={i} ref={(el) => { charRefs.current[i] = el; }} className={i < typedChars.length ? (typedChars[i] === "\n" ? "" : "text-red-400 bg-red-500/10") : ""}>
+                          {"\n"}
+                        </span>
+                      );
+                    }
+
+                    return (
+                      <span key={i} ref={(el) => { charRefs.current[i] = el; }} className={colorClass}>
+                        {char}
+                      </span>
+                    );
+                  })}
+                </pre>
+              </div>
+            </div>
           </div>
-        </div>
+        ) : (
+          /* ── Words / custom mode — 3 line scrolling display ── */
+          <div className="relative cursor-text overflow-hidden mt-16" style={{ height: LINE_HEIGHT * VISIBLE_LINES }}>
+            <div ref={textRef} className="relative font-mono text-[1.75rem] select-none"
+              style={{ lineHeight: `${LINE_HEIGHT}px`, transform: `translateY(-${scrollOffset}px)`, transition: "transform 200ms ease-out" }}
+            >
+              <SmoothCaret charRefs={charRefs} index={typedChars.length} containerRef={textRef} targetText={targetText} isTyping={isRunning} />
+              {targetText.split("").map((char, i) => {
+                let colorClass = "text-white/20";
+                if (i < typedChars.length) {
+                  colorClass = typedChars[i] === char ? "text-white" : "text-red-400 bg-red-500/10 rounded-sm";
+                }
+                return (
+                  <span key={i} ref={(el) => { charRefs.current[i] = el; }} className={colorClass}>{char}</span>
+                );
+              })}
+            </div>
+          </div>
+        )
       ) : isFinished ? (
         <div className="glass space-y-8 p-8 md:p-10">
           <h2 className="text-lg font-semibold text-white/70 tracking-wide uppercase">Results</h2>
@@ -468,20 +557,15 @@ export default function TypingArena() {
               <p className="mt-2 text-xs font-medium text-white/30 uppercase tracking-widest">Time</p>
             </div>
           </div>
-          {topMode === "code" && selectedSnippet?.personalBestWPM && (
+          {topMode === "code" && selectedCode?.personalBestWPM && (
             <p className="text-sm text-white/35">
-              Personal Best: <span className="text-blue-400 font-medium">{selectedSnippet.personalBestWPM} WPM</span>
+              Personal Best: <span className="text-blue-400 font-medium">{selectedCode.personalBestWPM} WPM</span>
             </p>
           )}
           <button
-            onClick={() => {
-              if (topMode === "custom") setCustomSubmitted(true);
-              loadText();
-            }}
+            onClick={() => { if (topMode === "custom") setCustomSubmitted(true); loadText(); }}
             className="rounded-2xl bg-blue-500 px-6 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
-          >
-            Try Again
-          </button>
+          >Try Again</button>
         </div>
       ) : topMode === "custom" && !customSubmitted ? (
         <div className="glass p-10 text-center text-white/25 text-sm">
