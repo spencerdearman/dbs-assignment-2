@@ -176,6 +176,13 @@ export default function TypingArena() {
     return codeSnippets.filter((s) => s.language === selectedLang);
   }, [codeSnippets, selectedLang]);
 
+  // When language filter changes, auto-select the first snippet in that language
+  useEffect(() => {
+    if (filteredSnippets.length > 0 && !filteredSnippets.find((s) => s.id === selectedCodeId)) {
+      setSelectedCodeId(filteredSnippets[0].id);
+    }
+  }, [filteredSnippets, selectedCodeId]);
+
   // Build keyword set for current language
   const currentKeywords = useMemo(() => {
     if (!isCodeMode || !selectedCode) return new Set<string>();
@@ -502,7 +509,7 @@ export default function TypingArena() {
               <span className="ml-auto text-[11px] text-white/20 uppercase tracking-widest">{selectedCode?.language}</span>
             </div>
             {/* Code area with line numbers */}
-            <div className="flex overflow-auto max-h-[420px]">
+            <div className="flex overflow-auto max-h-[600px]">
               {/* Line numbers */}
               <div className="sticky left-0 flex flex-col border-r border-white/[0.04] bg-white/[0.02] px-3 py-4 text-right font-mono text-xs text-white/15 select-none"
                 style={{ lineHeight: `${CODE_LINE_HEIGHT}px` }}
