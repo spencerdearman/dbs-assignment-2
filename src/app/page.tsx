@@ -286,8 +286,10 @@ export default function TypingArena() {
   const toggleBtn = (active: boolean, label: string, onClick: () => void) => (
     <button
       onClick={onClick}
-      className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-        active ? "bg-blue-500 text-white" : "text-white/40 hover:text-white/70"
+      className={`rounded-md px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ${
+        active
+          ? "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/30"
+          : "text-white/35 hover:text-white/60"
       }`}
     >
       {label}
@@ -295,16 +297,16 @@ export default function TypingArena() {
   );
 
   return (
-    <div className="space-y-5 outline-none" ref={containerRef} tabIndex={-1}>
+    <div className="space-y-6 outline-none" ref={containerRef} tabIndex={-1}>
       {/* ── Header ── */}
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold tracking-tight">Typing Arena</h1>
         {isRunning && (
-          <div className="font-mono text-lg tabular-nums text-white/70">
+          <div className="font-mono text-2xl tabular-nums font-light">
             {topMode === "words" ? (
-              <span className={timeLeft <= 5 ? "text-red-400" : ""}>{timeLeft}s</span>
+              <span className={timeLeft <= 5 ? "text-red-400" : "text-blue-400"}>{timeLeft}</span>
             ) : (
-              <span>{elapsed}s</span>
+              <span className="text-white/60">{elapsed}s</span>
             )}
           </div>
         )}
@@ -313,15 +315,15 @@ export default function TypingArena() {
       {/* ── Controls bar ── */}
       <div className="glass flex flex-wrap items-center gap-3 p-3">
         {/* Top mode selector */}
-        <div className="flex gap-1 rounded-lg bg-white/5 p-1">
+        <div className="flex gap-0.5 rounded-xl bg-white/[0.04] p-1">
           {(["words", "code", "custom"] as TopMode[]).map((m) => (
             <button
               key={m}
               onClick={() => { setTopMode(m); setCustomSubmitted(false); }}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium capitalize transition-colors ${
+              className={`rounded-lg px-3.5 py-1.5 text-[13px] font-medium capitalize transition-all duration-200 ${
                 topMode === m
-                  ? "bg-blue-500 text-white"
-                  : "text-white/50 hover:text-white/80"
+                  ? "bg-blue-500 text-white shadow-[0_0_10px_rgba(59,130,246,0.3)]"
+                  : "text-white/40 hover:text-white/70"
               }`}
             >
               {m}
@@ -333,15 +335,15 @@ export default function TypingArena() {
         {topMode === "words" && (
           <>
             {/* Time selector */}
-            <div className="flex gap-1 rounded-lg bg-white/5 p-1">
+            <div className="flex gap-0.5 rounded-xl bg-white/[0.04] p-1">
               {([15, 30, 60, 120] as TimerDuration[]).map((d) => (
                 <button
                   key={d}
                   onClick={() => setTimerDuration(d)}
-                  className={`rounded-md px-2.5 py-1 text-sm font-medium transition-colors ${
+                  className={`rounded-lg px-2.5 py-1 text-[13px] font-medium transition-all duration-200 ${
                     timerDuration === d
-                      ? "bg-white/15 text-white"
-                      : "text-white/40 hover:text-white/70"
+                      ? "bg-white/10 text-white"
+                      : "text-white/30 hover:text-white/60"
                   }`}
                 >
                   {d}s
@@ -349,7 +351,7 @@ export default function TypingArena() {
               ))}
             </div>
 
-            <span className="text-white/15">|</span>
+            <span className="text-white/10">|</span>
 
             {toggleBtn(punctuation, "@ punctuation", () => setPunctuation((p) => !p))}
             {toggleBtn(numbers, "# numbers", () => setNumbers((n) => !n))}
@@ -361,10 +363,10 @@ export default function TypingArena() {
           <select
             value={selectedSnippetId}
             onChange={(e) => setSelectedSnippetId(e.target.value)}
-            className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white outline-none focus:border-blue-500"
+            className="rounded-xl border border-white/[0.06] bg-white/[0.04] px-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
           >
             {typingSnippets.map((s) => (
-              <option key={s.id} value={s.id} className="bg-[#0a0a0f]">
+              <option key={s.id} value={s.id} className="bg-[#08080c]">
                 {s.title}
               </option>
             ))}
@@ -385,11 +387,11 @@ export default function TypingArena() {
               value={customText}
               onChange={(e) => setCustomText(e.target.value)}
               placeholder="Paste or type your custom text..."
-              className="flex-1 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white outline-none placeholder:text-white/30 focus:border-blue-500"
+              className="flex-1 rounded-xl border border-white/[0.06] bg-white/[0.04] px-3 py-1.5 text-[13px] text-white outline-none placeholder:text-white/25 transition-colors focus:border-blue-500/50"
             />
             <button
               type="submit"
-              className="rounded-lg bg-blue-500 px-4 py-1.5 text-sm font-medium text-white hover:bg-blue-600 transition-colors"
+              className="rounded-xl bg-blue-500 px-4 py-1.5 text-[13px] font-medium text-white shadow-[0_0_10px_rgba(59,130,246,0.3)] transition-all hover:bg-blue-400"
             >
               Go
             </button>
@@ -402,7 +404,7 @@ export default function TypingArena() {
             if (topMode === "custom") setCustomSubmitted(false);
             loadText();
           }}
-          className="ml-auto rounded-lg border border-white/10 px-3 py-1.5 text-sm text-white/40 transition-colors hover:border-white/20 hover:text-white/70"
+          className="ml-auto rounded-xl border border-white/[0.06] px-3 py-1.5 text-[13px] text-white/30 transition-all duration-200 hover:border-white/15 hover:text-white/60"
         >
           {topMode === "custom" && customSubmitted ? "Change text" : "Reset"}
         </button>
@@ -410,10 +412,10 @@ export default function TypingArena() {
 
       {/* ── Typing display ── */}
       {!isFinished && targetText ? (
-        <div className="glass relative cursor-text overflow-hidden p-6 md:p-8">
+        <div className="glass relative cursor-text overflow-hidden p-8 md:p-10">
           <div
             ref={textRef}
-            className="relative font-mono text-xl leading-[2] tracking-wide select-none"
+            className="relative font-mono text-[1.35rem] leading-[2.2] tracking-[0.02em] select-none"
           >
             <SmoothCaret
               charRefs={charRefs}
@@ -422,18 +424,18 @@ export default function TypingArena() {
               targetText={targetText}
             />
             {targetText.split("").map((char, i) => {
-              let colorClass = "text-white/25";
+              let colorClass = "text-white/20";
               if (i < typedChars.length) {
                 colorClass =
                   typedChars[i] === char
-                    ? "text-white/90"
-                    : "text-red-400 bg-red-400/10";
+                    ? "text-white"
+                    : "text-red-400 bg-red-500/10 rounded-sm";
               }
               return (
                 <span
                   key={i}
                   ref={(el) => { charRefs.current[i] = el; }}
-                  className={`${colorClass} transition-colors duration-75`}
+                  className={colorClass}
                 >
                   {char}
                 </span>
@@ -441,34 +443,36 @@ export default function TypingArena() {
             })}
           </div>
           {!isRunning && typedChars.length === 0 && (
-            <p className="mt-4 text-sm text-white/25">Start typing to begin...</p>
+            <p className="mt-6 text-[13px] text-white/20 tracking-wide">
+              Start typing to begin...
+            </p>
           )}
         </div>
       ) : isFinished ? (
         /* ── Results card ── */
-        <div className="glass space-y-6 p-8">
-          <h2 className="text-xl font-semibold">Results</h2>
+        <div className="glass space-y-8 p-8 md:p-10">
+          <h2 className="text-lg font-semibold text-white/70 tracking-wide uppercase">Results</h2>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            <div className="rounded-lg bg-white/5 p-4 text-center">
-              <p className="text-3xl font-bold text-blue-500">{wpm}</p>
-              <p className="mt-1 text-sm text-white/50">WPM</p>
+            <div className="rounded-2xl bg-blue-500/[0.08] ring-1 ring-blue-500/20 p-5 text-center">
+              <p className="text-4xl font-bold text-blue-400 tabular-nums">{wpm}</p>
+              <p className="mt-2 text-xs font-medium text-blue-400/60 uppercase tracking-widest">WPM</p>
             </div>
-            <div className="rounded-lg bg-white/5 p-4 text-center">
-              <p className="text-3xl font-bold text-white">{accuracy}%</p>
-              <p className="mt-1 text-sm text-white/50">Accuracy</p>
+            <div className="rounded-2xl bg-white/[0.03] ring-1 ring-white/[0.06] p-5 text-center">
+              <p className="text-4xl font-bold text-white/90 tabular-nums">{accuracy}%</p>
+              <p className="mt-2 text-xs font-medium text-white/30 uppercase tracking-widest">Accuracy</p>
             </div>
-            <div className="rounded-lg bg-white/5 p-4 text-center">
-              <p className="text-3xl font-bold text-white">{correctChars}</p>
-              <p className="mt-1 text-sm text-white/50">Correct</p>
+            <div className="rounded-2xl bg-white/[0.03] ring-1 ring-white/[0.06] p-5 text-center">
+              <p className="text-4xl font-bold text-white/90 tabular-nums">{correctChars}</p>
+              <p className="mt-2 text-xs font-medium text-white/30 uppercase tracking-widest">Correct</p>
             </div>
-            <div className="rounded-lg bg-white/5 p-4 text-center">
-              <p className="text-3xl font-bold text-white">{Math.round(effectiveElapsed)}s</p>
-              <p className="mt-1 text-sm text-white/50">Time</p>
+            <div className="rounded-2xl bg-white/[0.03] ring-1 ring-white/[0.06] p-5 text-center">
+              <p className="text-4xl font-bold text-white/90 tabular-nums">{Math.round(effectiveElapsed)}s</p>
+              <p className="mt-2 text-xs font-medium text-white/30 uppercase tracking-widest">Time</p>
             </div>
           </div>
           {topMode === "code" && selectedSnippet?.personalBestWPM && (
-            <p className="text-sm text-white/40">
-              Personal Best: <span className="text-blue-400">{selectedSnippet.personalBestWPM} WPM</span>
+            <p className="text-sm text-white/35">
+              Personal Best: <span className="text-blue-400 font-medium">{selectedSnippet.personalBestWPM} WPM</span>
             </p>
           )}
           <button
@@ -476,23 +480,23 @@ export default function TypingArena() {
               if (topMode === "custom") setCustomSubmitted(true);
               loadText();
             }}
-            className="rounded-lg bg-blue-500 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-600"
+            className="rounded-xl bg-blue-500 px-6 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
           >
             Try Again
           </button>
         </div>
       ) : topMode === "custom" && !customSubmitted ? (
-        <div className="glass p-8 text-center text-white/30">
+        <div className="glass p-10 text-center text-white/25 text-sm">
           Enter your custom text above and click Go.
         </div>
       ) : null}
 
       {/* ── Live stats ── */}
       {isRunning && (
-        <div className="flex gap-6 text-sm text-white/40">
-          <span>WPM: <span className="text-white/70 tabular-nums">{wpm}</span></span>
-          <span>Accuracy: <span className="text-white/70 tabular-nums">{accuracy}%</span></span>
-          <span>Chars: <span className="text-white/70 tabular-nums">{totalTyped}</span></span>
+        <div className="flex gap-8 text-[13px] text-white/30">
+          <span>WPM <span className="ml-1 text-white/60 tabular-nums font-medium">{wpm}</span></span>
+          <span>Accuracy <span className="ml-1 text-white/60 tabular-nums font-medium">{accuracy}%</span></span>
+          <span>Chars <span className="ml-1 text-white/60 tabular-nums font-medium">{totalTyped}</span></span>
         </div>
       )}
     </div>

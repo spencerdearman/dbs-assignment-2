@@ -2,10 +2,6 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 
-/**
- * Captures real keyboard shortcuts (e.g. pressing Cmd+Shift+P)
- * and displays them as formatted strings like "Cmd+Shift+P".
- */
 export default function KeystrokeInput({
   value,
   onChange,
@@ -25,7 +21,6 @@ export default function KeystrokeInput({
   const ref = useRef<HTMLDivElement>(null);
 
   const formatKeystroke = useCallback((e: KeyboardEvent): string | null => {
-    // Ignore standalone modifier presses
     if (
       e.key === "Meta" ||
       e.key === "Control" ||
@@ -40,7 +35,6 @@ export default function KeystrokeInput({
     if (e.altKey) parts.push("Alt");
     if (e.shiftKey) parts.push("Shift");
 
-    // Normalize key name
     let key = e.key;
     if (key === " ") key = "Space";
     else if (key === "ArrowUp") key = "Up";
@@ -53,7 +47,7 @@ export default function KeystrokeInput({
     else if (key === "Enter") key = "Enter";
     else if (key === "Tab") key = "Tab";
     else if (key.startsWith("F") && key.length > 1 && !isNaN(Number(key.slice(1)))) {
-      // F-keys: keep as-is (F1, F11, etc.)
+      // F-keys: keep as-is
     } else if (key === "`") key = "`";
     else if (key.length === 1) key = key.toUpperCase();
 
@@ -89,19 +83,19 @@ export default function KeystrokeInput({
       tabIndex={0}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
-      className={`flex items-center rounded-lg border bg-white/5 px-3 py-2 text-sm outline-none transition-colors ${
+      className={`flex items-center rounded-xl border bg-white/[0.04] px-4 py-2.5 text-sm outline-none transition-all duration-200 ${
         isFocused
-          ? "border-blue-500 ring-1 ring-blue-500/30"
-          : "border-white/10"
-      } ${disabled ? "pointer-events-none opacity-50" : "cursor-pointer"} ${className}`}
+          ? "border-blue-500/50 ring-1 ring-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.1)]"
+          : "border-white/[0.06]"
+      } ${disabled ? "pointer-events-none opacity-40" : "cursor-pointer"} ${className}`}
     >
       {value ? (
-        <kbd className="font-mono text-white">{value}</kbd>
+        <kbd className="font-mono text-white/90">{value}</kbd>
       ) : (
-        <span className="text-white/30">{placeholder}</span>
+        <span className="text-white/20">{placeholder}</span>
       )}
       {isFocused && !value && (
-        <span className="ml-1 inline-block h-4 w-[2px] animate-pulse bg-blue-500" />
+        <span className="ml-1 inline-block h-4 w-[2px] rounded-full bg-blue-500 animate-pulse" />
       )}
     </div>
   );

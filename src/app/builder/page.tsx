@@ -65,24 +65,29 @@ export default function BuilderPage() {
   };
 
   const inputClasses =
-    "w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none placeholder:text-white/30 focus:border-blue-500 transition-colors";
+    "w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-3.5 py-2.5 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20";
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-bold tracking-tight">The Builder</h1>
+    <div className="space-y-8">
+      <div>
+        <h1 className="text-2xl font-bold tracking-tight">The Builder</h1>
+        <p className="mt-1 text-sm text-white/30">Add typing snippets and keyboard shortcuts</p>
+      </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Form A: Add Typing Snippet */}
-        <form onSubmit={handleSnippetSubmit} className="glass space-y-4 p-6">
+        <form onSubmit={handleSnippetSubmit} className="glass space-y-5 p-7">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold">Add Typing Snippet</h2>
+            <h2 className="text-base font-semibold tracking-wide">Add Typing Snippet</h2>
             {snippetSuccess && (
-              <span className="text-sm text-green-400">Added!</span>
+              <span className="rounded-full bg-green-500/10 px-3 py-0.5 text-xs font-medium text-green-400 ring-1 ring-green-500/20">
+                Added!
+              </span>
             )}
           </div>
 
-          <div className="space-y-1">
-            <label className="text-xs font-medium text-white/50">Title</label>
+          <div className="space-y-1.5">
+            <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Title</label>
             <input
               type="text"
               value={snippetTitle}
@@ -93,8 +98,8 @@ export default function BuilderPage() {
             />
           </div>
 
-          <div className="space-y-1">
-            <label className="text-xs font-medium text-white/50">Text</label>
+          <div className="space-y-1.5">
+            <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Text</label>
             <textarea
               value={snippetText}
               onChange={(e) => setSnippetText(e.target.value)}
@@ -105,15 +110,15 @@ export default function BuilderPage() {
             />
           </div>
 
-          <div className="space-y-1">
-            <label className="text-xs font-medium text-white/50">Category</label>
+          <div className="space-y-1.5">
+            <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Category</label>
             <select
               value={snippetCategory}
               onChange={(e) => setSnippetCategory(e.target.value)}
               className={inputClasses}
             >
               {CATEGORIES.map((c) => (
-                <option key={c} value={c} className="bg-[#0a0a0f]">
+                <option key={c} value={c} className="bg-[#08080c]">
                   {c}
                 </option>
               ))}
@@ -122,31 +127,33 @@ export default function BuilderPage() {
 
           <button
             type="submit"
-            className="w-full rounded-lg bg-blue-500 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-600"
+            className="w-full rounded-xl bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
           >
             Add Snippet
           </button>
         </form>
 
         {/* Form B: Add Shortcut */}
-        <form onSubmit={handleShortcutSubmit} className="glass space-y-4 p-6">
+        <form onSubmit={handleShortcutSubmit} className="glass space-y-5 p-7">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold">Add Shortcut</h2>
+            <h2 className="text-base font-semibold tracking-wide">Add Shortcut</h2>
             {shortcutSuccess && (
-              <span className="text-sm text-green-400">Added!</span>
+              <span className="rounded-full bg-green-500/10 px-3 py-0.5 text-xs font-medium text-green-400 ring-1 ring-green-500/20">
+                Added!
+              </span>
             )}
           </div>
 
-          <div className="space-y-1">
-            <label className="text-xs font-medium text-white/50">Deck</label>
-            <div className="flex gap-1 rounded-lg bg-white/5 p-1">
+          <div className="space-y-1.5">
+            <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Deck</label>
+            <div className="flex gap-0.5 rounded-xl bg-white/[0.04] p-1">
               <button
                 type="button"
                 onClick={() => setDeckMode("existing")}
-                className={`flex-1 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`flex-1 rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
                   deckMode === "existing"
-                    ? "bg-blue-500 text-white"
-                    : "text-white/50 hover:text-white/80"
+                    ? "bg-blue-500 text-white shadow-[0_0_10px_rgba(59,130,246,0.3)]"
+                    : "text-white/40 hover:text-white/70"
                 }`}
               >
                 Existing
@@ -154,10 +161,10 @@ export default function BuilderPage() {
               <button
                 type="button"
                 onClick={() => setDeckMode("new")}
-                className={`flex-1 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`flex-1 rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
                   deckMode === "new"
-                    ? "bg-blue-500 text-white"
-                    : "text-white/50 hover:text-white/80"
+                    ? "bg-blue-500 text-white shadow-[0_0_10px_rgba(59,130,246,0.3)]"
+                    : "text-white/40 hover:text-white/70"
                 }`}
               >
                 New Deck
@@ -166,23 +173,23 @@ export default function BuilderPage() {
           </div>
 
           {deckMode === "existing" ? (
-            <div className="space-y-1">
-              <label className="text-xs font-medium text-white/50">Select Deck</label>
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Select Deck</label>
               <select
                 value={selectedDeckSlug}
                 onChange={(e) => setSelectedDeckSlug(e.target.value)}
                 className={inputClasses}
               >
                 {shortcutDecks.map((d) => (
-                  <option key={d.slug} value={d.slug} className="bg-[#0a0a0f]">
+                  <option key={d.slug} value={d.slug} className="bg-[#08080c]">
                     {d.deckName}
                   </option>
                 ))}
               </select>
             </div>
           ) : (
-            <div className="space-y-1">
-              <label className="text-xs font-medium text-white/50">New Deck Name</label>
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">New Deck Name</label>
               <input
                 type="text"
                 value={newDeckName}
@@ -194,8 +201,8 @@ export default function BuilderPage() {
             </div>
           )}
 
-          <div className="space-y-1">
-            <label className="text-xs font-medium text-white/50">Action</label>
+          <div className="space-y-1.5">
+            <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Action</label>
             <input
               type="text"
               value={shortcutAction}
@@ -206,8 +213,8 @@ export default function BuilderPage() {
             />
           </div>
 
-          <div className="space-y-1">
-            <label className="text-xs font-medium text-white/50">Keystroke</label>
+          <div className="space-y-1.5">
+            <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Keystroke</label>
             <KeystrokeInput
               value={shortcutKeystroke}
               onChange={setShortcutKeystroke}
@@ -218,7 +225,7 @@ export default function BuilderPage() {
 
           <button
             type="submit"
-            className="w-full rounded-lg bg-blue-500 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-600"
+            className="w-full rounded-xl bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
           >
             Add Shortcut
           </button>

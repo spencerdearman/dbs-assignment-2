@@ -34,7 +34,6 @@ export default function QuizPage() {
     }
   }, [currentIndex, shortcuts.length]);
 
-  // Auto-advance after correct answer
   useEffect(() => {
     if (feedback === "correct") {
       const timer = setTimeout(advance, 800);
@@ -42,7 +41,6 @@ export default function QuizPage() {
     }
   }, [feedback, advance]);
 
-  // Normalize keystroke for comparison: lowercase, no spaces, sort modifiers
   const normalize = (s: string) => {
     const parts = s.toLowerCase().replace(/\s+/g, "").split("+");
     const modOrder = ["cmd", "ctrl", "alt", "shift"];
@@ -51,7 +49,6 @@ export default function QuizPage() {
     return [...mods, ...keys].join("+");
   };
 
-  // Auto-check when keystroke is captured
   const handleKeystroke = useCallback(
     (keystroke: string) => {
       if (!current || feedback) return;
@@ -91,8 +88,8 @@ export default function QuizPage() {
     return (
       <div className="space-y-6">
         <h1 className="text-2xl font-bold tracking-tight">Deck not found</h1>
-        <div className="glass p-8">
-          <p className="text-white/50">
+        <div className="glass p-10">
+          <p className="text-white/40 text-sm">
             No deck with slug &quot;{slug}&quot;.{" "}
             <Link href="/decks" className="text-blue-400 hover:underline">
               Back to decks
@@ -106,33 +103,33 @@ export default function QuizPage() {
   if (isComplete) {
     const pct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
     return (
-      <div className="space-y-6">
+      <div className="space-y-8">
         <h1 className="text-2xl font-bold tracking-tight">{deck.deckName} — Complete</h1>
-        <div className="glass space-y-6 p-8">
+        <div className="glass space-y-8 p-8 md:p-10">
           <div className="grid grid-cols-3 gap-4">
-            <div className="rounded-lg bg-white/5 p-4 text-center">
-              <p className="text-3xl font-bold text-blue-500">{pct}%</p>
-              <p className="mt-1 text-sm text-white/50">Accuracy</p>
+            <div className="rounded-2xl bg-blue-500/[0.08] ring-1 ring-blue-500/20 p-5 text-center">
+              <p className="text-4xl font-bold text-blue-400 tabular-nums">{pct}%</p>
+              <p className="mt-2 text-xs font-medium text-blue-400/60 uppercase tracking-widest">Accuracy</p>
             </div>
-            <div className="rounded-lg bg-white/5 p-4 text-center">
-              <p className="text-3xl font-bold text-green-400">{score.correct}</p>
-              <p className="mt-1 text-sm text-white/50">Correct</p>
+            <div className="rounded-2xl bg-green-500/[0.06] ring-1 ring-green-500/15 p-5 text-center">
+              <p className="text-4xl font-bold text-green-400 tabular-nums">{score.correct}</p>
+              <p className="mt-2 text-xs font-medium text-green-400/50 uppercase tracking-widest">Correct</p>
             </div>
-            <div className="rounded-lg bg-white/5 p-4 text-center">
-              <p className="text-3xl font-bold text-white">{score.total}</p>
-              <p className="mt-1 text-sm text-white/50">Total</p>
+            <div className="rounded-2xl bg-white/[0.03] ring-1 ring-white/[0.06] p-5 text-center">
+              <p className="text-4xl font-bold text-white/90 tabular-nums">{score.total}</p>
+              <p className="mt-2 text-xs font-medium text-white/30 uppercase tracking-widest">Total</p>
             </div>
           </div>
           <div className="flex gap-3">
             <button
               onClick={restart}
-              className="rounded-lg bg-blue-500 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-600"
+              className="rounded-xl bg-blue-500 px-6 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all hover:bg-blue-400"
             >
               Try Again
             </button>
             <Link
               href="/decks"
-              className="rounded-lg border border-white/10 px-6 py-2 text-sm font-medium text-white/50 transition-colors hover:border-white/20 hover:text-white/80"
+              className="rounded-xl border border-white/[0.08] px-6 py-2.5 text-sm font-medium text-white/40 transition-all hover:border-white/15 hover:text-white/70"
             >
               All Decks
             </Link>
@@ -145,58 +142,64 @@ export default function QuizPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold tracking-tight">{deck.deckName}</h1>
-        <span className="text-sm text-white/40">
-          {currentIndex + 1} / {shortcuts.length}
+        <div>
+          <Link href="/decks" className="text-xs text-white/25 hover:text-white/50 transition-colors">
+            &larr; All Decks
+          </Link>
+          <h1 className="mt-1 text-2xl font-bold tracking-tight">{deck.deckName}</h1>
+        </div>
+        <span className="text-sm tabular-nums text-white/30 font-medium">
+          {currentIndex + 1}<span className="text-white/15"> / </span>{shortcuts.length}
         </span>
       </div>
 
       {/* Progress bar */}
-      <div className="h-1 w-full overflow-hidden rounded-full bg-white/10">
+      <div className="h-1 w-full overflow-hidden rounded-full bg-white/[0.06]">
         <div
-          className="h-full rounded-full bg-blue-500 transition-all duration-300"
+          className="h-full rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.4)] transition-all duration-500 ease-out"
           style={{ width: `${(currentIndex / shortcuts.length) * 100}%` }}
         />
       </div>
 
       {/* Flashcard */}
       <div
-        className={`glass p-8 transition-all duration-300 ${
+        className={`glass p-8 md:p-10 transition-all duration-300 ${
           feedback === "correct"
-            ? "border-green-500/40"
+            ? "border-green-500/30 shadow-[0_0_30px_rgba(34,197,94,0.08)]"
             : feedback === "incorrect"
-            ? "border-red-500/40"
+            ? "border-red-500/30 shadow-[0_0_30px_rgba(239,68,68,0.08)]"
             : ""
         }`}
       >
-        <p className="text-sm font-medium text-white/40">What is the shortcut for:</p>
-        <p className="mt-2 text-2xl font-semibold text-white">{current?.action}</p>
+        <p className="text-xs font-medium uppercase tracking-widest text-white/30">What is the shortcut for</p>
+        <p className="mt-3 text-3xl font-semibold text-white/90">{current?.action}</p>
 
-        <div className="mt-6">
+        <div className="mt-8">
           <KeystrokeInput
             value={userInput}
             onChange={handleKeystroke}
             disabled={!!feedback}
             placeholder="Press the key combination..."
-            className="w-full py-3 text-base"
+            className="w-full py-3.5 text-base"
             autoFocus
           />
         </div>
 
-        {/* Feedback */}
         {feedback === "correct" && (
-          <p className="mt-4 text-sm font-medium text-green-400">Correct!</p>
+          <p className="mt-5 text-sm font-medium text-green-400">Correct!</p>
         )}
 
         {feedback === "incorrect" && showAnswer && (
-          <div className="mt-4 space-y-2">
-            <p className="text-sm font-medium text-red-400">
-              Incorrect. The answer is:{" "}
-              <kbd className="rounded bg-white/10 px-2 py-0.5 font-mono text-white">{current?.keystroke}</kbd>
+          <div className="mt-5 space-y-3">
+            <p className="text-sm text-red-400/80">
+              Not quite. The answer is{" "}
+              <kbd className="ml-1 inline-flex items-center rounded-lg bg-white/[0.06] px-2.5 py-1 font-mono text-xs text-white ring-1 ring-white/[0.08]">
+                {current?.keystroke}
+              </kbd>
             </p>
             <button
               onClick={advance}
-              className="rounded-lg border border-white/10 px-4 py-1.5 text-sm text-white/50 transition-colors hover:border-white/20 hover:text-white/80"
+              className="rounded-xl border border-white/[0.08] px-5 py-2 text-sm text-white/40 transition-all hover:border-white/15 hover:text-white/70"
             >
               Next
             </button>
@@ -205,15 +208,15 @@ export default function QuizPage() {
       </div>
 
       {/* Score + Skip */}
-      <div className="flex items-center justify-between text-sm text-white/40">
-        <span>
-          Score: <span className="text-white/70">{score.correct}/{score.total}</span>
+      <div className="flex items-center justify-between text-sm">
+        <span className="text-white/25">
+          Score <span className="ml-1 font-medium tabular-nums text-white/50">{score.correct}/{score.total}</span>
         </span>
         <button
           onClick={handleSkip}
-          className="text-white/30 transition-colors hover:text-white/60"
+          className="text-white/20 transition-colors hover:text-white/50"
         >
-          Skip
+          Skip &rarr;
         </button>
       </div>
     </div>
