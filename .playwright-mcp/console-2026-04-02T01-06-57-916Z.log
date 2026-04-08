@@ -1,9 +1,0 @@
-[     776ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://c0.wp.com/c/6.9.4/wp-includes/js/jquery/jquery-migrate.min.js:1
-[     837ms] [LOG] Embedded.LinkInterceptor:intercepting-link https://sixcolors.com/?memberful_endpoint=auth @ https://js.memberful.com/embed.js:739
-[     837ms] [LOG] Embedded.LinkInterceptor:intercepting-link https://sixcolors.com/?memberful_endpoint=auth @ https://js.memberful.com/embed.js:739
-[     838ms] [LOG] Embedded.Rpc#listen(page.loaded) @ https://js.memberful.com/embed.js:739
-[     838ms] [LOG] Embedded.Rpc#listen(close) @ https://js.memberful.com/embed.js:739
-[     838ms] [LOG] Embedded.Rpc#listen(goTo) @ https://js.memberful.com/embed.js:739
-[     838ms] [LOG] Embedded.Rpc#listen(redirectOnOverlayCloseTo) @ https://js.memberful.com/embed.js:739
-[     838ms] [LOG] Embedded.Rpc#listen(scrollToTop) @ https://js.memberful.com/embed.js:739
-[     838ms] [LOG] Embedded.Rpc#listen(reloadOnCloseWith) @ https://js.memberful.com/embed.js:739
