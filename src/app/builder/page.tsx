@@ -9,13 +9,11 @@ const CATEGORIES = ["Code", "Prose", "Terminal", "Other"];
 export default function BuilderPage() {
   const { shortcutDecks, addSnippet, addShortcut } = useAppState();
 
-  // Snippet form state
   const [snippetTitle, setSnippetTitle] = useState("");
   const [snippetText, setSnippetText] = useState("");
   const [snippetCategory, setSnippetCategory] = useState(CATEGORIES[0]);
   const [snippetSuccess, setSnippetSuccess] = useState(false);
 
-  // Shortcut form state
   const [shortcutAction, setShortcutAction] = useState("");
   const [shortcutKeystroke, setShortcutKeystroke] = useState("");
   const [deckMode, setDeckMode] = useState<"existing" | "new">("existing");
@@ -64,8 +62,10 @@ export default function BuilderPage() {
     setTimeout(() => setShortcutSuccess(false), 2000);
   };
 
-  const inputClasses =
-    "w-full rounded-2xl border border-white/[0.06] bg-white/[0.04] px-3.5 py-2.5 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20";
+  // Radius: inputs 16px, toggle buttons 14px, toggle container 14+4=18px, submit buttons 18px
+  const fieldCls =
+    "w-full border border-white/[0.06] bg-white/[0.04] px-3.5 py-2.5 text-sm text-white outline-none placeholder:text-white/20 transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20";
+  const R = { field: { borderRadius: 16 }, toggleOuter: { borderRadius: 18 }, toggleBtn: { borderRadius: 14 }, submit: { borderRadius: 18 } };
 
   return (
     <div className="space-y-8">
@@ -93,7 +93,8 @@ export default function BuilderPage() {
               value={snippetTitle}
               onChange={(e) => setSnippetTitle(e.target.value)}
               placeholder="e.g. Python List Comprehensions"
-              className={inputClasses}
+              className={fieldCls}
+              style={R.field}
               required
             />
           </div>
@@ -105,7 +106,8 @@ export default function BuilderPage() {
               onChange={(e) => setSnippetText(e.target.value)}
               placeholder="Paste or type the text to be used for typing practice..."
               rows={4}
-              className={`${inputClasses} resize-none`}
+              className={`${fieldCls} resize-none`}
+              style={R.field}
               required
             />
           </div>
@@ -115,19 +117,19 @@ export default function BuilderPage() {
             <select
               value={snippetCategory}
               onChange={(e) => setSnippetCategory(e.target.value)}
-              className={inputClasses}
+              className={fieldCls}
+              style={R.field}
             >
               {CATEGORIES.map((c) => (
-                <option key={c} value={c} className="bg-[#08080c]">
-                  {c}
-                </option>
+                <option key={c} value={c} className="bg-[#08080c]">{c}</option>
               ))}
             </select>
           </div>
 
           <button
             type="submit"
-            className="w-full rounded-2xl bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+            className="w-full bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+            style={R.submit}
           >
             Add Snippet
           </button>
@@ -146,26 +148,28 @@ export default function BuilderPage() {
 
           <div className="space-y-1.5">
             <label className="text-[11px] font-medium uppercase tracking-widest text-white/35">Deck</label>
-            <div className="flex gap-0.5 rounded-2xl bg-white/[0.04] p-1">
+            <div className="flex gap-0.5 bg-white/[0.04] p-1" style={R.toggleOuter}>
               <button
                 type="button"
                 onClick={() => setDeckMode("existing")}
-                className={`flex-1 rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
+                className={`flex-1 px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
                   deckMode === "existing"
                     ? "bg-blue-500 text-white shadow-[0_0_10px_rgba(59,130,246,0.3)]"
                     : "text-white/40 hover:text-white/70"
                 }`}
+                style={R.toggleBtn}
               >
                 Existing
               </button>
               <button
                 type="button"
                 onClick={() => setDeckMode("new")}
-                className={`flex-1 rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
+                className={`flex-1 px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
                   deckMode === "new"
                     ? "bg-blue-500 text-white shadow-[0_0_10px_rgba(59,130,246,0.3)]"
                     : "text-white/40 hover:text-white/70"
                 }`}
+                style={R.toggleBtn}
               >
                 New Deck
               </button>
@@ -178,12 +182,11 @@ export default function BuilderPage() {
               <select
                 value={selectedDeckSlug}
                 onChange={(e) => setSelectedDeckSlug(e.target.value)}
-                className={inputClasses}
+                className={fieldCls}
+                style={R.field}
               >
                 {shortcutDecks.map((d) => (
-                  <option key={d.slug} value={d.slug} className="bg-[#08080c]">
-                    {d.deckName}
-                  </option>
+                  <option key={d.slug} value={d.slug} className="bg-[#08080c]">{d.deckName}</option>
                 ))}
               </select>
             </div>
@@ -195,7 +198,8 @@ export default function BuilderPage() {
                 value={newDeckName}
                 onChange={(e) => setNewDeckName(e.target.value)}
                 placeholder="e.g. Figma"
-                className={inputClasses}
+                className={fieldCls}
+                style={R.field}
                 required={deckMode === "new"}
               />
             </div>
@@ -208,7 +212,8 @@ export default function BuilderPage() {
               value={shortcutAction}
               onChange={(e) => setShortcutAction(e.target.value)}
               placeholder="e.g. Save File"
-              className={inputClasses}
+              className={fieldCls}
+              style={R.field}
               required
             />
           </div>
@@ -225,7 +230,8 @@ export default function BuilderPage() {
 
           <button
             type="submit"
-            className="w-full rounded-2xl bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+            className="w-full bg-blue-500 py-2.5 text-sm font-medium text-white shadow-[0_0_15px_rgba(59,130,246,0.25)] transition-all hover:bg-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+            style={R.submit}
           >
             Add Shortcut
           </button>
