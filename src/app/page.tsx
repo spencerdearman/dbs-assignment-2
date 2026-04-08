@@ -312,18 +312,19 @@ export default function TypingArena() {
         )}
       </div>
 
-      {/* ── Controls bar ── */}
-      <div className="glass flex flex-wrap items-center gap-3 p-3">
-        <div className="flex gap-0.5 rounded-2xl bg-white/[0.04] p-1">
+      {/* ── Controls bar — outer radius = inner radius + padding ── */}
+      <div className="glass flex flex-wrap items-center gap-3 p-2" style={{ borderRadius: 28 }}>
+        <div className="flex gap-0.5 bg-white/[0.04] p-1" style={{ borderRadius: 20 }}>
           {(["words", "code", "custom"] as TopMode[]).map((m) => (
             <button
               key={m}
               onClick={() => { setTopMode(m); setCustomSubmitted(false); }}
-              className={`rounded-2xl px-3.5 py-1.5 text-[13px] font-medium capitalize transition-all duration-200 ${
+              className={`px-3.5 py-1.5 text-[13px] font-medium capitalize transition-all duration-200 ${
                 topMode === m
                   ? "bg-blue-500 text-white shadow-[0_0_10px_rgba(59,130,246,0.3)]"
                   : "text-white/40 hover:text-white/70"
               }`}
+              style={{ borderRadius: 16 }}
             >
               {m}
             </button>
@@ -332,16 +333,17 @@ export default function TypingArena() {
 
         {topMode === "words" && (
           <>
-            <div className="flex gap-0.5 rounded-2xl bg-white/[0.04] p-1">
+            <div className="flex gap-0.5 bg-white/[0.04] p-1" style={{ borderRadius: 20 }}>
               {([15, 30, 60, 120] as TimerDuration[]).map((d) => (
                 <button
                   key={d}
                   onClick={() => setTimerDuration(d)}
-                  className={`rounded-2xl px-2.5 py-1 text-[13px] font-medium transition-all duration-200 ${
+                  className={`px-2.5 py-1 text-[13px] font-medium transition-all duration-200 ${
                     timerDuration === d
                       ? "bg-white/10 text-white"
                       : "text-white/30 hover:text-white/60"
                   }`}
+                  style={{ borderRadius: 16 }}
                 >
                   {d}s
                 </button>
@@ -396,7 +398,8 @@ export default function TypingArena() {
             if (topMode === "custom") setCustomSubmitted(false);
             loadText();
           }}
-          className="ml-auto rounded-2xl border border-white/[0.06] px-3 py-1.5 text-[13px] text-white/30 transition-all duration-200 hover:border-white/15 hover:text-white/60"
+          className="ml-auto border border-white/[0.06] px-4 py-1.5 text-[13px] text-white/30 transition-all duration-200 hover:border-white/15 hover:text-white/60"
+          style={{ borderRadius: 20 }}
         >
           {topMode === "custom" && customSubmitted ? "Change text" : "Reset"}
         </button>
@@ -405,7 +408,7 @@ export default function TypingArena() {
       {/* ── Typing display — 3 visible lines ── */}
       {!isFinished && targetText ? (
         <div
-          className="relative cursor-text overflow-hidden"
+          className="relative cursor-text overflow-hidden mt-16"
           style={{ height: LINE_HEIGHT * VISIBLE_LINES }}
         >
           <div
