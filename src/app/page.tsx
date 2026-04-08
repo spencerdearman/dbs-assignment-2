@@ -195,6 +195,9 @@ export default function TypingArena() {
   }, [isCodeMode, selectedCode]);
 
   /* ── Line scroll for words mode ── */
+  const scrollOffsetRef = useRef(0);
+  scrollOffsetRef.current = scrollOffset;
+
   useLayoutEffect(() => {
     if (isCodeMode) return;
     const chars = charRefs.current;
@@ -204,10 +207,10 @@ export default function TypingArena() {
     if (!cursorEl) return;
     const containerTop = container.getBoundingClientRect().top;
     const charTop = cursorEl.getBoundingClientRect().top;
-    const relativeTop = charTop - containerTop + scrollOffset;
+    const relativeTop = charTop - containerTop + scrollOffsetRef.current;
     const currentLine = Math.floor(relativeTop / LINE_HEIGHT);
     if (currentLine >= 1) setScrollOffset(currentLine * LINE_HEIGHT);
-  }, [typedChars.length, targetText, scrollOffset, isCodeMode]);
+  }, [typedChars.length, targetText, isCodeMode]);
 
   const loadText = useCallback(() => {
     setTypedChars([]);
