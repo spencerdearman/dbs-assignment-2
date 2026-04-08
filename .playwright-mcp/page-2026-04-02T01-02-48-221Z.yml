@@ -1,0 +1,154 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - navigation "Main Navigation" [ref=e3]:
+    - banner "Site header" [ref=e4]:
+      - navigation "Main navigation" [ref=e5]:
+        - link "iMore" [ref=e7] [cursor=pointer]:
+          - /url: https://www.imore.com
+          - img "iMore" [ref=e9]
+        - button "flag of US" [ref=e11] [cursor=pointer]:
+          - img "flag of US" [ref=e12]
+          - img [ref=e13]
+        - generic [ref=e15]:
+          - link "Visit us on Facebook" [ref=e16] [cursor=pointer]:
+            - /url: https://www.facebook.com/imorecom
+            - img [ref=e17]
+          - link "Visit us on Twitter" [ref=e20] [cursor=pointer]:
+            - /url: https://twitter.com/imore
+            - img [ref=e21]:
+              - img [ref=e25]
+          - link "Visit us on Youtube" [ref=e27] [cursor=pointer]:
+            - /url: https://www.youtube.com/user/imorevideo
+            - img [ref=e28]
+          - link "Visit us on Instagram" [ref=e31] [cursor=pointer]:
+            - /url: https://www.instagram.com/imoregram/
+            - img [ref=e32]
+          - link "Visit us on RSS" [ref=e35] [cursor=pointer]:
+            - /url: https://www.imore.com/feeds.xml
+            - img [ref=e36]
+          - link "Visit us on Flipboard" [ref=e38] [cursor=pointer]:
+            - /url: https://flipboard.com/@iMore
+            - img [ref=e39]
+          - link "RSS" [ref=e43] [cursor=pointer]:
+            - /url: https://www.imore.com/feeds.xml
+        - button "Subscribe" [ref=e45] [cursor=pointer]:
+          - text: Subscribe
+          - img [ref=e46]
+        - button "Search" [ref=e48] [cursor=pointer]:
+          - generic [ref=e49]: Search
+          - img [ref=e51]
+    - navigation [ref=e53]:
+      - list [ref=e56]:
+        - listitem [ref=e57]:
+          - link [ref=e58] [cursor=pointer]:
+            - /url: https://www.imore.com
+            - img [ref=e59]
+        - listitem [ref=e62]:
+          - link "iPhone" [ref=e63] [cursor=pointer]:
+            - /url: https://www.imore.com/iphone
+        - listitem [ref=e64]:
+          - link "Macs" [ref=e65] [cursor=pointer]:
+            - /url: https://www.imore.com/mac
+        - listitem [ref=e66]:
+          - link "Apple Watch" [ref=e67] [cursor=pointer]:
+            - /url: https://www.imore.com/health-fitness/apple-watch
+        - listitem [ref=e68]:
+          - link "iPad" [ref=e69] [cursor=pointer]:
+            - /url: https://www.imore.com/ipad
+        - listitem [ref=e70]:
+          - link "AirPods" [ref=e71] [cursor=pointer]:
+            - /url: https://www.imore.com/airpods
+        - listitem [ref=e72]:
+          - link "iOS" [ref=e73] [cursor=pointer]:
+            - /url: https://www.imore.com/ios
+        - listitem [ref=e74]:
+          - link "Vision Pro" [ref=e75] [cursor=pointer]:
+            - /url: https://www.imore.com/vision-pro
+        - listitem [ref=e76]:
+          - button "More" [ref=e77] [cursor=pointer]:
+            - text: More
+            - img [ref=e78]
+  - main [ref=e80]:
+    - article "article" [ref=e83]:
+      - heading "No articles found." [level=1] [ref=e85]
+      - paragraph [ref=e88]:
+        - text: The page you requested currently has no articles listed. Please check back later, or
+        - link "start again on our homepage" [ref=e89] [cursor=pointer]:
+          - /url: https://www.imore.com
+        - text: .
+      - generic [ref=e90]:
+        - searchbox "Type to search..." [ref=e91]
+        - button [ref=e92] [cursor=pointer]:
+          - img [ref=e94]
+  - region "Main footer"
+  - contentinfo "footer content" [ref=e96]:
+    - generic [ref=e97]:
+      - paragraph [ref=e98]:
+        - text: iMore is part of Future US Inc, an international media group and leading digital publisher.
+        - link "Visit our corporate site" [ref=e99] [cursor=pointer]:
+          - /url: https://futureplc.com/
+        - text: .
+      - link "Add as a preferred source on Google Add as a preferred source on Google" [ref=e100] [cursor=pointer]:
+        - /url: https://google.com/preferences/source?q=imore.com
+        - img "Add as a preferred source on Google" [ref=e102]
+        - generic [ref=e103]: Add as a preferred source on Google
+      - navigation "Footer Navigation" [ref=e104]:
+        - list [ref=e105]:
+          - listitem [ref=e106]:
+            - link "Terms and conditions" [ref=e107] [cursor=pointer]:
+              - /url: https://futureplc.com/terms-conditions/
+          - listitem [ref=e108]:
+            - link "Contact Future's experts" [ref=e109] [cursor=pointer]:
+              - /url: https://futureplc.com/contact/
+          - listitem [ref=e110]:
+            - link "Privacy policy" [ref=e111] [cursor=pointer]:
+              - /url: https://futureplc.com/privacy-policy/
+          - listitem [ref=e112]:
+            - link "Cookies policy" [ref=e113] [cursor=pointer]:
+              - /url: https://futureplc.com/cookies-policy/
+          - listitem [ref=e114]:
+            - link "Accessibility statement" [ref=e115] [cursor=pointer]:
+              - /url: https://futureplc.com/accessibility-statement/
+          - listitem [ref=e116]:
+            - link "Careers" [ref=e117] [cursor=pointer]:
+              - /url: https://futureplc.com/careers/
+          - listitem [ref=e118]:
+            - link "Licensing" [ref=e119] [cursor=pointer]:
+              - /url: https://futureplc.com/licensing/
+          - listitem [ref=e120]:
+            - link "External links disclosure" [ref=e121] [cursor=pointer]:
+              - /url: https://www.futureplc.com/terms-conditions/?utm_source=ac&utm_medium=footer&utm_campaign=navigation
+          - listitem [ref=e122]:
+            - link "About us" [ref=e123] [cursor=pointer]:
+              - /url: https://www.imore.com/about
+          - listitem [ref=e124]:
+            - link "Newsletter" [ref=e125] [cursor=pointer]:
+              - /url: https://www.imore.com/newsletter
+          - listitem [ref=e126]:
+            - link "Advertise with us" [ref=e127] [cursor=pointer]:
+              - /url: https://go.future-advertising.com/iMore-Media-Kit.html
+          - listitem [ref=e128]:
+            - link "Android Central" [ref=e129] [cursor=pointer]:
+              - /url: https://www.androidcentral.com/
+          - listitem [ref=e130]:
+            - link "Windows Central" [ref=e131] [cursor=pointer]:
+              - /url: https://www.windowscentral.com/
+          - listitem [ref=e132]:
+            - link "Do not sell or share my personal information" [ref=e133] [cursor=pointer]:
+              - /url: /privacy-portal
+      - paragraph [ref=e134]: © Future US, Inc. Full 7th Floor, 130 West 42nd Street, New York, NY 10036.
+  - generic [ref=e136]:
+    - iframe [ref=e139]:
+      - generic [active]:
+        - generic [ref=f349e2]:
+          - link "Advertisement" [ref=f349e5] [cursor=pointer]:
+            - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsv-GZFewOy4GvxZr_6ORN50-Z7ost9URTJHcKMnJ-FSZmI8E30E1jQLXoKA3hZEHiZWctugt5Bw2kB8qbk6FUjZf4ykSIXyIpe-PMVxRhAWNlgVDabc1MPjYxyAkjAORi7KNMQzJmQ00FmmDAHS_rpdzOPbCGvoXhjnE6bDMM5Oc98xmRL3TsCDvkJrc4hrMzZ8oO0aukpAFleXlOadIQ4pVK4yLSv-ubCof6bzmQsgL1bMI-Pmck84imMimXrZCXAL-1tiXic3zRw2gCZyDPefc_pEYcbC0qAHIXTzge0c04Rg0yS8Ca_MPIY2HeVCiBft9qPLcE9Kc_zMH-BsspRpb5_yEU9TQtPx3zZsTlKuTDMmSS9RAiDM9VnyTXervCuSiuYGOHpGm7j5kt_wOuPBTVfjhXU_4NkiHpR2R3qAZBJw5RhUz_mJEgqhBeu-1K-bK0tE3imD5RJeurxxfX2pKqXEb2WMVVKh7NiFiDjC_ODpoG9H8v52p5jGVm8malKmhqmzNIMSWEgqPndP8ot6LQZPitE_uDfhRPM-FlZtM11QudV6Xspjxjp9nhJ2v6FEvaOmjIDiLfbY_suZxty8c3097WexdW6qtsdiBWIndXt1eKTjaA-qaVZV4HQbxtA7qc-jgCI72SHiYvG7T_YNI2x8uHHkbVT2O_zb_n7i9uxYVkqU2B2bdOnU9T5pzZ_ctkMrd46LEHm6kUHRFdULPhe9A-Nk9glJR0Il04xjk1lpeuJ3oZJT1DOer3j1JbhFX4Dg260iEra7w_qHvh7GuKSgoyS2v3b7O1Pj_06xIhxmurpV6LxEL3kQ_q0efKElBomBhpiqwsltOTHHggfEc4IRRN5zeA0ZqH10TCGNNaq4I6TgNFNjlayHJ_IfV8a2TeKpk33Yd-NA5w1HzZ7HFSogvw_jInNoK5F-3mmOC9cnT3oDfvMu8Sct3lPhe8vg3HPGoJKOXOe6aIyQ6LKxo7ohlaHgZCGx3qED_VE8iES5guzcZ_9VprP-z7V0rTLCM5SIC_TxC_6Xs-w8z0DRqeLNhGf4bhCKSQxQsCsQ-PnyFYt854H2zvrBlWIGWy8vZe4QVqcgeLxRU5ivIuYGSQmHDrw8ukJLN8v4tV1jF2iYAY8c3NDgRsT33SBh2P50fXAM0ww5YSsPhDV08aW4wNRLAgiAsX2saTJCna5__3mZA742oxp8veo6_-djSTln014mEZC6Gh9PU6JReKxiZ5481099rvH4SIzOpDnJWRT1bONZfYpFXaKaE2BX1nJ12qBkZea5jB9Cg3Eed2_u-TpRiGi4o5QzVMRDAxDlZtWneEM1jOfy-it7llqoflsGNRUseW7dUP2DqecoHlXrpXlJZ8VKvZLVS2u2WR34snk_mYq4FDLv04coErlFUCOhs11KVrRe0Yp4kcyQTrNqikFJMZEPnRbScRgbzD_LmoILFMYUTPMp-9NJDRjC4iRWlDN8lsjstEQXWyFI5pNyGK-Bwanj6Zs5ECMDDGlVPOnBjHFMB83odZrHX95GlVe8ZWIRAjOj4i2-i6njS0kJLT7jDLE71XBpXd6NMwQ6qe0UapPV8kIJsgPJMflcRMzhua6Wt7gVIOSMyi9WX9jaf5Ye0i77VdzvC_NuM7XA4CLsLf_XwywrqjE4EJ9qovIPoFYGvh92kwnmbqr7u-0-r6Yxx_zsqZxtr5BwGVLqUE3Kn_OYvOIKXuixIEYE_F9LKsQzS0P5CWxCte7uXLRzUVyNlEqH1d79NnniSKHm-2xA8X8SF9BLRwY4BzOlEF9e75WrAxuape7LqpL1DHKr2FK0cFLWclLq49g&sai=AMfl-YRMq5Oey9seMs4gjvr4MdiRQA-jFG84UtAUFXOcePHM9yYcOQnx4gjHFS3lJN_LMZ1Wv3y48FnqwynsXsdTW8cGNDqTqmbU0uygei9hlygteeFaXuSpKY50inH3140dsiMvKYDcUNSXwNh3YEA2_XopfeZAoInjCjQ2NLr0qhk6VXiG11b4TEb9rMpTbYhNAzdNUyXrsdKHHVLprLy2pHmFSNmOaCMyX0vSlNw27dh56nlNfZX0c7vYz-wCqPs6PmTk0gfHAJWTSciivPxt7PdxD3j6ua91wBhqBwAxdW-J89Dq3DYuUg1lWJkCe4gYz-PBD5KsLCFGshHamz_2p4si1Wqq0cjl-opbG8i36ZHTVJ9Rx7UBEgtRH2Dzf0rInCBw1uP5ipGVWviW3Okufg3isb9zEvCFxWgiIOFmHblyvkhgvSjVlf0jOR7hwfVrU3GO65Mse0dGQWKTHzPR5DfWsT6Bt06DZzsxvFvXhTFKJn9k-PA8lm2T8Tkxdy0HEe6zH6NFQiNxLy05Yg6Hpqj04xPVOyvLbdKddbtYPWk_UbUXTQoUtJ6aoalmJvbGIiHojNQZlTfDOwYy_903cixt5DNpKXIxjUdE7a4S8cbmkR4A5ohEQku35UI3MYYcHLNK840-crAs24lXegBA45ngis_5S5aeWJIWxeJ-V8OHOO_5EiJJQiij5HsbfIiNnXN2_i8LLTVsIkdJeQW0VzceocoCN7Zl0RFlTS4HlFNhe6uolTi8ThjYoftMXRp8818D2U9VQdqeTbF-UcstcMTg92QEkyyq7LeW58T3J3NviF3dK6RDSk1Zdnpj_qWS_rFwghwHZBTTnTd93coTiQJ8ZvNjXvpNBVSEblVWKqLrdZwe5yaDPtUP68HEkU48ipocb8M&sig=Cg0ArKJSzK4CqnpJwv-y&cry=1&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://www.americanexpress.com/us/credit-cards/%3Feep%3D40513%26extlink%3DCH-dm-CU-us-BU-ccsg-REF-4776408_438024701_248024962%26dclid%3D%25edclid!%26gad_source%3D7%26gad_campaignid%3D23460832006
+            - img "Advertisement" [ref=f349e6]
+          - generic [ref=f349e7]:
+            - generic:
+              - img [ref=f349e11] [cursor=pointer]
+              - button [ref=f349e14] [cursor=pointer]:
+                - img [ref=f349e15]
+        - iframe
+    - img [ref=e141]

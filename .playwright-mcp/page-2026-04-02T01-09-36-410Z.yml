@@ -1,0 +1,70 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e6]:
+      - generic [ref=e8] [cursor=pointer]:
+        - link "NEW! Airport Intelligence View Live" [ref=e9]:
+          - /url: https://www.flighty.com/airports
+          - paragraph [ref=e13]: NEW! Airport Intelligence
+          - generic [ref=e15]:
+            - paragraph [ref=e17]: View Live
+            - img [ref=e20]
+        - img [ref=e25]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - link "Flighty" [ref=e31] [cursor=pointer]:
+            - /url: ./
+            - paragraph [ref=e37]: Flighty
+          - link "Get the app" [ref=e40] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/apple-store/id1358823008?pt=118988326&ct=Our%20Website&mt=8
+            - paragraph [ref=e42]: Get the app
+        - generic:
+          - link "Pricing" [ref=e49] [cursor=pointer]:
+            - /url: ./pricing
+            - img [ref=e54]
+            - paragraph [ref=e57]: Pricing
+          - link "About" [ref=e59] [cursor=pointer]:
+            - /url: ./about
+            - img [ref=e64]
+            - paragraph [ref=e67]: About
+          - link "Press" [ref=e69] [cursor=pointer]:
+            - /url: ./press
+            - img [ref=e74]
+            - paragraph [ref=e77]: Press
+          - link "Support" [ref=e79] [cursor=pointer]:
+            - /url: ./
+            - img [ref=e84]
+            - paragraph [ref=e87]: Support
+          - link "Gift Cards" [ref=e89] [cursor=pointer]:
+            - /url: ./gift-cards
+            - img [ref=e94]
+            - paragraph [ref=e97]: Gift Cards
+          - link "Businesses" [ref=e99] [cursor=pointer]:
+            - /url: ./business
+            - img [ref=e104]
+            - paragraph [ref=e107]: Businesses
+    - generic [ref=e132]:
+      - generic [ref=e133]:
+        - paragraph [ref=e136]: Newsletter
+        - generic [ref=e137]:
+          - paragraph [ref=e139]: Flighty Insiders
+          - paragraph [ref=e142]: We are flight nerds making the most powerful and beautiful flight tracking app. Sign up for our newsletter to be among the first to know what’s going on.
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - textbox [ref=e148]:
+            - /placeholder: Your email address...
+          - textbox [ref=e151]:
+            - /placeholder: Occupation / Interests...
+        - button "Join Flighty Insiders!" [ref=e154] [cursor=pointer]:
+          - paragraph [ref=e156]: Join Flighty Insiders!
+      - paragraph [ref=e167]: Join 15,000+ other flyers
+  - img [ref=e168]
+  - img [ref=e170]
+  - img [ref=e172]
+  - img [ref=e174]
+  - img [ref=e176]
+  - img [ref=e179]
+  - img [ref=e181]
+  - img [ref=e183]
+  - img [ref=e185]
+  - img [ref=e187]
+  - img [ref=e189]

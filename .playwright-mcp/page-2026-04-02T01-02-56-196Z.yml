@@ -1,0 +1,153 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e6]:
+      - generic [ref=e8] [cursor=pointer]:
+        - link "NEW! Airport Intelligence View Live" [ref=e9]:
+          - /url: https://www.flighty.com/airports
+          - paragraph [ref=e13]: NEW! Airport Intelligence
+          - generic [ref=e15]:
+            - paragraph [ref=e17]: View Live
+            - img [ref=e20]
+        - img [ref=e25]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - link "Flighty" [ref=e31] [cursor=pointer]:
+            - /url: ./
+            - paragraph [ref=e37]: Flighty
+          - link "Get the app" [ref=e40] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/apple-store/id1358823008?pt=118988326&ct=Our%20Website&mt=8
+            - paragraph [ref=e42]: Get the app
+        - generic:
+          - link "Pricing" [ref=e49] [cursor=pointer]:
+            - /url: ./pricing
+            - img [ref=e54]
+            - paragraph [ref=e57]: Pricing
+          - link "About" [ref=e59] [cursor=pointer]:
+            - /url: ./about
+            - img [ref=e64]
+            - paragraph [ref=e67]: About
+          - link "Press" [ref=e69] [cursor=pointer]:
+            - /url: ./press
+            - img [ref=e74]
+            - paragraph [ref=e77]: Press
+          - link "Support" [ref=e79] [cursor=pointer]:
+            - /url: ./
+            - img [ref=e84]
+            - paragraph [ref=e87]: Support
+          - link "Gift Cards" [ref=e89] [cursor=pointer]:
+            - /url: ./gift-cards
+            - img [ref=e94]
+            - paragraph [ref=e97]: Gift Cards
+          - link "Businesses" [ref=e99] [cursor=pointer]:
+            - /url: ./business
+            - img [ref=e104]
+            - paragraph [ref=e107]: Businesses
+    - generic [ref=e108]:
+      - generic [ref=e113]:
+        - img [ref=e116]
+        - paragraph [ref=e118]: MANIFESTO
+        - img [ref=e121]
+      - generic [ref=e122]:
+        - heading "Why we built" [level=1] [ref=e126]
+        - img [ref=e129]
+      - generic [ref=e131]:
+        - heading "Can you remember the first time you got on an airplane?" [level=2] [ref=e134]
+        - paragraph [ref=e137]: We can. It was a magical experience, in every sense of the word. As a kid you take trains, buses, cars—but getting on an airplane is a wholly different experience. And, maybe like you, we were hooked from the first takeoff.
+        - paragraph [ref=e140]: Unfortunately, as stories so often go, the magic fades as you get older. Flying starts to feel like a means to an end. Delays strike seemingly out of nowhere, your airplane gets a new gate 20 minutes before takeoff (and your airline often fails to notify you about this). While the kids in the airport marvel at the magic of air travel, you’re scrambling to the nearest flight board to make sure you’re headed to the right gate, that your flight is still on time.
+        - paragraph [ref=e143]: We’re flight nerds at heart. We built Flighty so that we, and all the other travelers around the world, could fall in love with flying all over again. So we could have smoother trips—where all the information we care about is in the palm of our hand, or available at the flick of a wrist. Not at the mercy of a faulty flight board or a text message from an airline.
+        - paragraph [ref=e146]: "We obsess over the little things: pilot-grade data, perfectly timed notifications, and quality design (in 2023, we won an Apple Design Award for this obsession)."
+        - paragraph [ref=e149]: We’ll worry about the details. You just have a nice flight.
+        - paragraph [ref=e152]: — Ryan, Markus, and Francesc
+      - generic [ref=e156]:
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - paragraph [ref=e164]: Product
+            - link "Pricing" [ref=e166] [cursor=pointer]:
+              - /url: ./pricing
+              - paragraph [ref=e168]: Pricing
+            - link "Passport" [ref=e170] [cursor=pointer]:
+              - /url: ./passport
+              - paragraph [ref=e172]: Passport
+            - link "Gift Cards" [ref=e174] [cursor=pointer]:
+              - /url: ./gift-cards
+              - paragraph [ref=e176]: Gift Cards
+            - link "Airports" [ref=e178] [cursor=pointer]:
+              - /url: https://www.flighty.com/airports
+              - paragraph [ref=e180]: Airports
+            - link "Flighty Insiders" [ref=e182] [cursor=pointer]:
+              - /url: ./insiders
+              - paragraph [ref=e184]: Flighty Insiders
+          - generic [ref=e185]:
+            - paragraph [ref=e187]: Compare
+            - link "Airline Apps" [ref=e189] [cursor=pointer]:
+              - /url: ./compare/airline-apps
+              - paragraph [ref=e191]: Airline Apps
+            - link "FlightAware" [ref=e193] [cursor=pointer]:
+              - /url: ./compare/flightaware
+              - paragraph [ref=e195]: FlightAware
+            - link "App In The Air" [ref=e197] [cursor=pointer]:
+              - /url: ./compare/app-in-the-air
+              - paragraph [ref=e199]: App In The Air
+            - link "FlightRadar24" [ref=e201] [cursor=pointer]:
+              - /url: ./compare/flightradar24
+              - paragraph [ref=e203]: FlightRadar24
+            - link "TripIt" [ref=e205] [cursor=pointer]:
+              - /url: ./compare/tripit
+              - paragraph [ref=e207]: TripIt
+          - generic [ref=e208]:
+            - paragraph [ref=e210]: Company
+            - link "About" [ref=e212] [cursor=pointer]:
+              - /url: ./about
+              - paragraph [ref=e214]: About
+            - link "Press" [ref=e216] [cursor=pointer]:
+              - /url: ./press
+              - paragraph [ref=e218]: Press
+            - link "Privacy Policy" [ref=e220] [cursor=pointer]:
+              - /url: ./legal/privacy
+              - paragraph [ref=e222]: Privacy Policy
+            - link "Terms of Service" [ref=e224] [cursor=pointer]:
+              - /url: ./legal/privacy
+              - paragraph [ref=e226]: Terms of Service
+          - generic [ref=e227]:
+            - paragraph [ref=e229]: Support
+            - link "Help Center" [ref=e231] [cursor=pointer]:
+              - /url: ./help
+              - paragraph [ref=e233]: Help Center
+            - link "Business" [ref=e235] [cursor=pointer]:
+              - /url: ./business
+              - paragraph [ref=e237]: Business
+            - generic [ref=e238]:
+              - link [ref=e239] [cursor=pointer]:
+                - /url: https://www.facebook.com/flightyapp/
+                - img [ref=e244]
+              - link [ref=e246] [cursor=pointer]:
+                - /url: https://x.com/flighty
+                - img [ref=e251]
+              - link [ref=e253] [cursor=pointer]:
+                - /url: https://www.instagram.com/flightyapp/
+                - img [ref=e258]
+              - link [ref=e260] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/flighty/?originalSubdomain=es
+                - img [ref=e265]
+        - generic [ref=e268]:
+          - paragraph [ref=e270]: Made with love in Austin,
+          - paragraph [ref=e277]: Barcelona
+          - paragraph [ref=e284]: and Oslo.
+  - img [ref=e290]
+  - img [ref=e292]
+  - img [ref=e294]
+  - img [ref=e296]
+  - img [ref=e298]
+  - img [ref=e301]
+  - img [ref=e303]
+  - img [ref=e305]
+  - img [ref=e307]
+  - img [ref=e309]
+  - img [ref=e311]
+  - img [ref=e313]
+  - img [ref=e314]
+  - img [ref=e315]
+  - img [ref=e319]
+  - img [ref=e322]
+  - img [ref=e324]
+  - img [ref=e328]

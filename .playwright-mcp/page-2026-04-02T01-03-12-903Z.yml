@@ -1,0 +1,690 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Guide" [active] [ref=e9] [cursor=pointer]:
+          - generic [ref=e12]:
+            - img
+        - link "YouTube Home" [ref=e14] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e19]:
+            - img
+        - button "Skip navigation" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: Skip navigation
+      - generic [ref=e28]:
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - combobox "Search" [expanded] [ref=e33]: flighty app review UI design
+              - button "Clear search query" [ref=e35] [cursor=pointer]:
+                - generic [ref=e38]:
+                  - img
+            - button "Search" [ref=e42] [cursor=pointer]:
+              - generic [ref=e45]:
+                - img
+        - generic [ref=e47]:
+          - button "Search with your voice" [ref=e49] [cursor=pointer]
+          - tooltip "tooltip"
+      - generic [ref=e56]:
+        - button "Settings" [ref=e61] [cursor=pointer]
+        - link "Sign in" [ref=e65] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fresults%253Fsearch_query%253Dflighty%252Bapp%252Breview%252BUI%252Bdesign&hl=en&ec=65620
+          - generic [ref=e68]: Sign in
+  - navigation [ref=e72]:
+    - generic [ref=e73]:
+      - link "Home" [ref=e75] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e77]: Home
+      - link "Shorts" [ref=e79] [cursor=pointer]:
+        - /url: /shorts/
+        - generic [ref=e81]: Shorts
+      - link "Subscriptions" [ref=e83] [cursor=pointer]:
+        - /url: /feed/subscriptions
+        - generic [ref=e85]: Subscriptions
+      - link "You" [ref=e87] [cursor=pointer]:
+        - /url: /feed/you
+        - generic [ref=e89]: You
+  - generic [ref=e90]:
+    - main [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e94]:
+          - generic [ref=e97]:
+            - tablist [ref=e99]:
+              - tab "All" [selected] [ref=e103] [cursor=pointer]:
+                - generic [ref=e105]: All
+              - tab "Shorts" [ref=e112] [cursor=pointer]:
+                - generic [ref=e114]: Shorts
+              - tab "Videos" [ref=e121] [cursor=pointer]:
+                - generic [ref=e123]: Videos
+              - tab "Unwatched" [ref=e130] [cursor=pointer]:
+                - generic [ref=e132]: Unwatched
+              - tab "Watched" [ref=e139] [cursor=pointer]:
+                - generic [ref=e141]: Watched
+              - tab "Recently uploaded" [ref=e148] [cursor=pointer]:
+                - generic [ref=e150]: Recently uploaded
+              - tab "Live" [ref=e157] [cursor=pointer]:
+                - generic [ref=e159]: Live
+              - tab "Under 4 min" [ref=e166] [cursor=pointer]:
+                - generic [ref=e168]: Under 4 min
+              - tab "4 - 20 min" [ref=e175] [cursor=pointer]:
+                - generic [ref=e177]: 4 - 20 min
+              - tab "Over 20 min" [ref=e184] [cursor=pointer]:
+                - generic [ref=e186]: Over 20 min
+            - button "Next" [ref=e194] [cursor=pointer]
+          - generic [ref=e201]:
+            - button "Search filters" [ref=e203] [cursor=pointer]:
+              - generic [ref=e204]: Filters
+            - tooltip "tooltip"
+        - generic [ref=e215]:
+          - generic [ref=e217]:
+            - link [ref=e219] [cursor=pointer]:
+              - /url: /watch?v=416HPuDjh1g&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+              - img [ref=e221]
+              - img [ref=e224]:
+                - generic [ref=e225]: 4:57
+              - generic:
+                - generic: Now playing
+                - generic:
+                  - img
+            - generic [ref=e226] [cursor=pointer]:
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - 'heading "Smart travel app beats airlines: Flighty CEO Ryan Jones on how the app works 4 minutes, 57 seconds" [level=3] [ref=e229]':
+                    - 'link "Smart travel app beats airlines: Flighty CEO Ryan Jones on how the app works 4 minutes, 57 seconds" [ref=e230]':
+                      - /url: /watch?v=416HPuDjh1g&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                      - text: "Smart travel app beats airlines: Flighty CEO Ryan Jones on how the app works"
+                  - button "Action menu" [ref=e234]
+                - generic [ref=e238]:
+                  - generic [ref=e239]: 4.7K views
+                  - generic [ref=e240]: •4 months ago
+              - generic [ref=e241]:
+                - link "Go to channel CNBC Television" [ref=e242]:
+                  - /url: /@CNBCtelevision
+                - generic [ref=e244]:
+                  - link "CNBC Television" [ref=e248]:
+                    - /url: /@CNBCtelevision
+                  - img "Verified" [ref=e251]
+              - generic [ref=e253]:
+                - generic [ref=e254]: Ryan Jones, Flighty CEO, joins 'Squawk Box' to discuss the how the company is able to provide live flight tracking and alerts to ...
+                - tooltip "tooltip"
+              - img "Closed captions" [ref=e257]:
+                - generic [ref=e258]: CC
+          - generic [ref=e259]:
+            - generic [ref=e262]:
+              - img [ref=e264]
+              - heading "Shorts" [level=2] [ref=e267]
+            - generic [ref=e269]:
+              - generic [ref=e272]:
+                - link [ref=e273] [cursor=pointer]:
+                  - /url: /shorts/-SeoMOzm97Y
+                - generic [ref=e277] [cursor=pointer]:
+                  - link "Flighty The Ultimate App for Organizing and Tracking your Flights" [ref=e278]:
+                    - /url: /shorts/-SeoMOzm97Y
+                  - generic [ref=e279]: 13K views
+                - button "More actions" [ref=e281] [cursor=pointer]
+              - generic [ref=e289]:
+                - link [ref=e290] [cursor=pointer]:
+                  - /url: /shorts/L2qWpr-agmo
+                - generic [ref=e294] [cursor=pointer]:
+                  - link "AirFly - Flight Booking Interaction App UI" [ref=e295]:
+                    - /url: /shorts/L2qWpr-agmo
+                  - generic [ref=e296]: 685 views
+                - button "More actions" [ref=e298] [cursor=pointer]
+              - generic [ref=e306]:
+                - link [ref=e307] [cursor=pointer]:
+                  - /url: /shorts/YWdrOtskdjU
+                - generic [ref=e311] [cursor=pointer]:
+                  - link "Speed UI UX Design | How to design Flight App Design by UIDesignz" [ref=e312]:
+                    - /url: /shorts/YWdrOtskdjU
+                  - generic [ref=e313]: 147 views
+                - button "More actions" [ref=e315] [cursor=pointer]
+            - button "Show more" [ref=e324] [cursor=pointer]:
+              - generic [ref=e325]: Show more
+          - generic [ref=e332]:
+            - link [ref=e334] [cursor=pointer]:
+              - /url: /watch?v=gz6TOdq1qjU&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+              - img [ref=e336]
+              - img [ref=e339]:
+                - generic [ref=e340]: 2:35
+              - generic:
+                - generic: Now playing
+                - generic:
+                  - img
+            - generic [ref=e341] [cursor=pointer]:
+              - generic [ref=e342]:
+                - generic [ref=e343]:
+                  - heading "Flighty App Review (2026) - Is It WORTH IT? 2 minutes, 35 seconds" [level=3] [ref=e344]:
+                    - link "Flighty App Review (2026) - Is It WORTH IT? 2 minutes, 35 seconds" [ref=e345]:
+                      - /url: /watch?v=gz6TOdq1qjU&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                      - text: Flighty App Review (2026) - Is It WORTH IT?
+                  - button "Action menu" [ref=e349]
+                - generic [ref=e353]:
+                  - generic [ref=e354]: 233 views
+                  - generic [ref=e355]: •4 months ago
+              - generic [ref=e356]:
+                - link "Go to channel Paperclick" [ref=e357]:
+                  - /url: /@PaperclickYT
+                - link "Paperclick" [ref=e363]:
+                  - /url: /@PaperclickYT
+              - generic [ref=e364]:
+                - generic [ref=e365]: Flighty App Review (2026) – Is It WORTH IT? In this 2026 review, we take a deep dive into the Flighty app, one of the most popular ...
+                - tooltip "tooltip"
+          - generic [ref=e367]:
+            - link [ref=e369] [cursor=pointer]:
+              - /url: /watch?v=lIWHbx08RYI&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e371] [cursor=pointer]:
+              - generic [ref=e372]:
+                - generic [ref=e373]:
+                  - heading "The Magic of Flighty 8 minutes, 20 seconds" [level=3] [ref=e374]:
+                    - link "The Magic of Flighty 8 minutes, 20 seconds" [ref=e375]:
+                      - /url: /watch?v=lIWHbx08RYI&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                      - text: The Magic of Flighty
+                  - button "Action menu" [ref=e379]
+                - generic [ref=e383]:
+                  - generic [ref=e384]: 13K views
+                  - generic [ref=e385]: •1 year ago
+              - generic [ref=e386]:
+                - link "Go to channel techyOS" [ref=e387]:
+                  - /url: /@techyOS
+                - link "techyOS" [ref=e393]:
+                  - /url: /@techyOS
+              - generic [ref=e394]:
+                - generic [ref=e395]: Flighty is a flight tracking app on the App Store. Pretty obvious. However, it has a few techniques and tricks up its sleeve that make ...
+                - tooltip "tooltip"
+              - generic [ref=e396]:
+                - img "4K" [ref=e398]:
+                  - generic [ref=e399]: 4K
+                - img "Closed captions" [ref=e401]:
+                  - generic [ref=e402]: CC
+              - generic [ref=e405]:
+                - generic [ref=e406]:
+                  - generic [ref=e410]: 9 chapters
+                  - button "Intro | Design and Simplicity | It. Just. Works. | The Social Factor | Innovation and Trendsetting | Care for the Free User | Apps for Every Apple Device | Critiques (Flash Round) | Outro" [ref=e411]
+                - button "More" [ref=e416]
+          - generic [ref=e423]:
+            - link [ref=e425] [cursor=pointer]:
+              - /url: /watch?v=rastn1RStaU&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e427] [cursor=pointer]:
+              - generic [ref=e428]:
+                - generic [ref=e429]:
+                  - heading "Flighty App Review | Is It Worth Your Money in 2025? 1 minute, 27 seconds" [level=3] [ref=e430]:
+                    - link "Flighty App Review | Is It Worth Your Money in 2025? 1 minute, 27 seconds" [ref=e431]:
+                      - /url: /watch?v=rastn1RStaU&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                      - text: Flighty App Review | Is It Worth Your Money in 2025?
+                  - button "Action menu" [ref=e435]
+                - generic [ref=e439]:
+                  - generic [ref=e440]: 1.6K views
+                  - generic [ref=e441]: •6 months ago
+              - generic [ref=e442]:
+                - link "Go to channel Tobi Teaches" [ref=e443]:
+                  - /url: /@tobiteaches
+                - link "Tobi Teaches" [ref=e448]:
+                  - /url: /@tobiteaches
+              - generic [ref=e449]:
+                - generic [ref=e450]: Tired of stressful travel and flight delays? In this video, we take a deep dive into Flighty, the premium flight-tracking app built for ...
+                - tooltip "tooltip"
+          - generic [ref=e451]:
+            - generic [ref=e454]:
+              - img [ref=e456]
+              - heading "Shorts" [level=2] [ref=e459]
+            - generic [ref=e461]:
+              - generic [ref=e464]:
+                - link [ref=e465] [cursor=pointer]:
+                  - /url: /shorts/ukUwBvRLnQ4
+                - generic [ref=e469] [cursor=pointer]:
+                  - link "Creative & Modern UI design of Flight Ticket Booking Application." [ref=e470]:
+                    - /url: /shorts/ukUwBvRLnQ4
+                  - generic [ref=e471]: 3.3K views
+                - button "More actions" [ref=e473] [cursor=pointer]
+              - generic [ref=e481]:
+                - link [ref=e482] [cursor=pointer]:
+                  - /url: /shorts/VxsIsbExI68
+                - generic [ref=e486] [cursor=pointer]:
+                  - 'link "Complex Flight App UI with Animations | #apple #swiftui #animation #ui #ios" [ref=e487]':
+                    - /url: /shorts/VxsIsbExI68
+                  - generic [ref=e488]: 8.6K views
+                - button "More actions" [ref=e490] [cursor=pointer]
+              - generic [ref=e498]:
+                - link [ref=e499] [cursor=pointer]:
+                  - /url: /shorts/HCcP8jR_Kq8
+                - generic [ref=e503] [cursor=pointer]:
+                  - 'link "#flight App UI Design Concept 💥 #minidesign #viralvideo #shorts #uidesign" [ref=e504]':
+                    - /url: /shorts/HCcP8jR_Kq8
+                  - generic [ref=e505]: 247 views
+                - button "More actions" [ref=e507] [cursor=pointer]
+            - button "Show more" [ref=e516] [cursor=pointer]:
+              - generic [ref=e517]: Show more
+          - generic [ref=e524]:
+            - link [ref=e526] [cursor=pointer]:
+              - /url: /watch?v=-d2fPhuZWJQ&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e528] [cursor=pointer]:
+              - generic [ref=e529]:
+                - generic [ref=e530]:
+                  - heading "Flighty App Review (2026) - Is It Worth It? 3 minutes, 35 seconds" [level=3] [ref=e531]:
+                    - link "Flighty App Review (2026) - Is It Worth It? 3 minutes, 35 seconds" [ref=e532]:
+                      - /url: /watch?v=-d2fPhuZWJQ&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                      - text: Flighty App Review (2026) - Is It Worth It?
+                  - button "Action menu" [ref=e536]
+                - generic [ref=e540]:
+                  - generic [ref=e541]: 470 views
+                  - generic [ref=e542]: •4 months ago
+              - generic [ref=e543]:
+                - link "Go to channel Review Radar" [ref=e544]:
+                  - /url: /@Review-Radar-Official
+                - link "Review Radar" [ref=e549]:
+                  - /url: /@Review-Radar-Official
+              - generic [ref=e550]:
+                - generic [ref=e551]: Flighty App Review (2026) - Is It Worth It? In today's Flighty App Review. I just want to tell you everything you need to know about ...
+                - tooltip "tooltip"
+          - generic [ref=e553]:
+            - link [ref=e555] [cursor=pointer]:
+              - /url: /watch?v=SqU-doJsTng&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e557] [cursor=pointer]:
+              - generic [ref=e558]:
+                - generic [ref=e559]:
+                  - heading "Flighty App Review (2026) 4 minutes, 1 second" [level=3] [ref=e560]:
+                    - link "Flighty App Review (2026) 4 minutes, 1 second" [ref=e561]:
+                      - /url: /watch?v=SqU-doJsTng&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                      - text: Flighty App Review (2026)
+                  - button "Action menu" [ref=e565]
+                - generic [ref=e569]:
+                  - generic [ref=e570]: 4.8K views
+                  - generic [ref=e571]: •10 months ago
+              - generic [ref=e572]:
+                - link "Go to channel Dani's Tutorials" [ref=e573]:
+                  - /url: /@danistutorials.
+                - link "Dani's Tutorials" [ref=e578]:
+                  - /url: /@danistutorials.
+              - generic [ref=e579]:
+                - generic [ref=e580]: In this video I'll give you an honest Flighty App Review. ❓ Need a tool for Funnels, CRMs, Email Marketing, Courses and So Much ...
+                - tooltip "tooltip"
+          - generic [ref=e582]:
+            - link [ref=e584] [cursor=pointer]:
+              - /url: /watch?v=tfrdEkSRuaQ&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbtIHCQnZCgGHKiGM7w%3D%3D
+            - generic [ref=e586] [cursor=pointer]:
+              - generic [ref=e587]:
+                - 'heading "Flighty App Review: Faster Than Airlines at Delays? (2026) 4 minutes, 24 seconds" [level=3] [ref=e589]':
+                  - 'link "Flighty App Review: Faster Than Airlines at Delays? (2026) 4 minutes, 24 seconds" [ref=e590]':
+                    - /url: /watch?v=tfrdEkSRuaQ&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbtIHCQnZCgGHKiGM7w%3D%3D
+                    - text: "Flighty App Review: Faster Than Airlines at Delays? (2026)"
+                - generic [ref=e593]:
+                  - generic [ref=e594]: 140 views
+                  - generic [ref=e595]: •3 months ago
+              - generic [ref=e596]:
+                - link "Go to channel Savage Reviews" [ref=e597]:
+                  - /url: /@SavageReviewsOfficial
+                - link "Savage Reviews" [ref=e602]:
+                  - /url: /@SavageReviewsOfficial
+              - generic [ref=e603]:
+                - generic [ref=e604]: "Keywords: Flighty app review, Flighty worth it, flight tracking app, Flighty delay predictions, best travel app 2026, Flighty vs airline ..."
+                - tooltip "tooltip"
+          - generic [ref=e606]:
+            - link [ref=e608] [cursor=pointer]:
+              - /url: /watch?v=I3fU8d-DCrE&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbtIHCQnZCgGHKiGM7w%3D%3D
+            - generic [ref=e610] [cursor=pointer]:
+              - generic [ref=e611]:
+                - heading "Flight Booking App UI Design - Free Course 52 minutes" [level=3] [ref=e613]:
+                  - link "Flight Booking App UI Design - Free Course 52 minutes" [ref=e614]:
+                    - /url: /watch?v=I3fU8d-DCrE&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbtIHCQnZCgGHKiGM7w%3D%3D
+                    - text: Flight Booking App UI Design - Free Course
+                - generic [ref=e617]:
+                  - generic [ref=e618]: 51K views
+                  - generic [ref=e619]: •3 years ago
+              - generic [ref=e620]:
+                - link "Go to channel DesignCode" [ref=e621]:
+                  - /url: /@DesignCodeTeam
+                - link "DesignCode" [ref=e626]:
+                  - /url: /@DesignCodeTeam
+              - generic [ref=e627]:
+                - generic [ref=e628]: Design a beautiful flight book app from scratch in Figma, source file included. Sponsored by Play - https://www.createwithplay.com ...
+                - tooltip "tooltip"
+              - generic [ref=e629]:
+                - img "4K" [ref=e631]:
+                  - generic [ref=e632]: 4K
+                - img "Closed captions" [ref=e634]:
+                  - generic [ref=e635]: CC
+              - generic [ref=e638]:
+                - generic [ref=e639]:
+                  - generic [ref=e643]: 5 chapters
+                  - button "Intro | Homepage | Book Your Flight | Select Your Flight | Boarding Pass" [ref=e644]
+                - button "More" [ref=e649]
+          - generic [ref=e656]:
+            - link [ref=e658] [cursor=pointer]:
+              - /url: /watch?v=lzNUV46VfIc&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e660] [cursor=pointer]:
+              - generic [ref=e661]:
+                - heading "Flighty iPhone App Review // All Airlines Tracker // BEST Travel Companion? ✈️ 12 minutes, 30 seconds" [level=3] [ref=e663]:
+                  - link "Flighty iPhone App Review // All Airlines Tracker // BEST Travel Companion? ✈️ 12 minutes, 30 seconds" [ref=e664]:
+                    - /url: /watch?v=lzNUV46VfIc&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                    - text: Flighty iPhone App Review // All Airlines Tracker // BEST Travel Companion? ✈️
+                - generic [ref=e667]:
+                  - generic [ref=e668]: 24K views
+                  - generic [ref=e669]: •4 years ago
+              - generic [ref=e670]:
+                - link "Go to channel SlimothyTV" [ref=e671]:
+                  - /url: /@Slimothy
+                - link "SlimothyTV" [ref=e676]:
+                  - /url: /@Slimothy
+              - generic [ref=e677]:
+                - generic [ref=e678]: Today we're reviewing Flighty - All Airlines Tracker for the iPhone. This might just be the BEST flight tracker app, and is definitely a ...
+                - tooltip "tooltip"
+              - img "4K" [ref=e681]:
+                - generic [ref=e682]: 4K
+              - generic [ref=e685]:
+                - generic [ref=e686]:
+                  - generic [ref=e690]: 6 moments
+                  - button "Notification Settings | Automatic Syncing | Calendar Sync | Basic Settings | Latest Travel Restrictions | Arrival Weather" [ref=e691]
+                - button "More" [ref=e696]
+          - generic [ref=e703]:
+            - link [ref=e705] [cursor=pointer]:
+              - /url: /watch?v=Peg7RMzhICU&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e707] [cursor=pointer]:
+              - generic [ref=e708]:
+                - 'heading "Design Inspiration: Flight Booking App AI Flight search by Musemind UI/UX Agency 31 seconds" [level=3] [ref=e710]':
+                  - 'link "Design Inspiration: Flight Booking App AI Flight search by Musemind UI/UX Agency 31 seconds" [ref=e711]':
+                    - /url: /watch?v=Peg7RMzhICU&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                    - text: "Design Inspiration: Flight Booking App AI Flight search by Musemind UI/UX Agency"
+                - generic [ref=e714]:
+                  - generic [ref=e715]: 141 views
+                  - generic [ref=e716]: •2 years ago
+              - generic [ref=e717]:
+                - link "Go to channel They Make Design" [ref=e718]:
+                  - /url: /@theymakedesign3652
+                - link "They Make Design" [ref=e723]:
+                  - /url: /@theymakedesign3652
+              - generic [ref=e724]:
+                - generic [ref=e725]: "From Author: Muse AI- Travel booking app How far can AI enhance your digital experience? That's what we tried to find out in our ..."
+                - tooltip "tooltip"
+          - generic [ref=e727]:
+            - heading "People also watched" [level=2] [ref=e730]:
+              - generic [ref=e732]: People also watched
+            - generic [ref=e734]:
+              - generic [ref=e735]:
+                - generic [ref=e737]:
+                  - link [ref=e739] [cursor=pointer]:
+                    - /url: /watch?v=DTWLmCPAsC4&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                  - generic [ref=e741] [cursor=pointer]:
+                    - generic [ref=e742]:
+                      - heading "TUTORIAL DESAIN FIGMA | How to make modern Flight Ticket booking App UI Design 31 minutes" [level=3] [ref=e744]:
+                        - link "TUTORIAL DESAIN FIGMA | How to make modern Flight Ticket booking App UI Design 31 minutes" [ref=e745]:
+                          - /url: /watch?v=DTWLmCPAsC4&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                          - text: TUTORIAL DESAIN FIGMA | How to make modern Flight Ticket booking App UI Design
+                      - generic [ref=e748]:
+                        - generic [ref=e749]: 11K views
+                        - generic [ref=e750]: •3 years ago
+                    - generic [ref=e751]:
+                      - link "Go to channel K DESAIN" [ref=e752]:
+                        - /url: /@design_inspiration
+                      - link "K DESAIN" [ref=e757]:
+                        - /url: /@design_inspiration
+                    - generic [ref=e758]:
+                      - generic [ref=e759]: This time I will discuss about how to create an Flight Ticket bookingApp UI design in Figma. The method is very easy, please ...
+                      - tooltip "tooltip"
+                    - img "4K" [ref=e762]:
+                      - generic [ref=e763]: 4K
+                - generic [ref=e765]:
+                  - link [ref=e767] [cursor=pointer]:
+                    - /url: /watch?v=eRhTnXkD9V8&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                  - generic [ref=e769] [cursor=pointer]:
+                    - generic [ref=e770]:
+                      - 'heading "Beyond Google Flights: Three Flight Apps You Need In Your Life 🤯 5 minutes, 52 seconds" [level=3] [ref=e772]':
+                        - 'link "Beyond Google Flights: Three Flight Apps You Need In Your Life 🤯 5 minutes, 52 seconds" [ref=e773]':
+                          - /url: /watch?v=eRhTnXkD9V8&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                          - text: "Beyond Google Flights: Three Flight Apps You Need In Your Life 🤯"
+                      - generic [ref=e776]:
+                        - generic [ref=e777]: 10K views
+                        - generic [ref=e778]: •3 years ago
+                    - generic [ref=e779]:
+                      - link "Go to channel Away Together w/ Nik and Allie" [ref=e780]:
+                        - /url: /@awaytogether
+                      - generic [ref=e781]:
+                        - link "Away Together w/ Nik and Allie" [ref=e785]:
+                          - /url: /@awaytogether
+                        - img "Verified" [ref=e788]
+                    - generic [ref=e790]:
+                      - generic [ref=e791]: Google Flights is Amazing, but it doesn't do everything! These Three Flight Apps will revolutionize your travel experience, from ...
+                      - tooltip "tooltip"
+                    - img "4K" [ref=e794]:
+                      - generic [ref=e795]: 4K
+                    - generic [ref=e798]:
+                      - generic [ref=e799]:
+                        - generic [ref=e803]: 6 chapters
+                        - button "Google Flights Can't Do This | Flight Connections | Flight Connections Walkthrough | Seat Guru | How to use Seat Guru | Flight Aware Flight Tracking" [ref=e804]
+                      - button "More" [ref=e809]
+                - generic [ref=e816]:
+                  - link [ref=e818] [cursor=pointer]:
+                    - /url: /watch?v=D1KfWQjpGWc&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                  - generic [ref=e820] [cursor=pointer]:
+                    - generic [ref=e821]:
+                      - heading "Create a Flight Ticket Booking Application using Figma 15 minutes" [level=3] [ref=e823]:
+                        - link "Create a Flight Ticket Booking Application using Figma 15 minutes" [ref=e824]:
+                          - /url: /watch?v=D1KfWQjpGWc&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                          - text: Create a Flight Ticket Booking Application using Figma
+                      - generic [ref=e827]:
+                        - generic [ref=e828]: 6.4K views
+                        - generic [ref=e829]: •2 years ago
+                    - generic [ref=e830]:
+                      - link "Go to channel Design with Jay" [ref=e831]:
+                        - /url: /@Jaydesigns76
+                      - link "Design with Jay" [ref=e836]:
+                        - /url: /@Jaydesigns76
+                    - generic [ref=e837]:
+                      - generic [ref=e838]: In this design tutorial, you are going to learn how to design and prototype a Flight Ticket Booking mobile app using Figma.
+                      - tooltip "tooltip"
+                - generic [ref=e840]:
+                  - link [ref=e842] [cursor=pointer]:
+                    - /url: /watch?v=kVPN0ZKGA_Q&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbtIHCQnZCgGHKiGM7w%3D%3D
+                  - generic [ref=e844] [cursor=pointer]:
+                    - generic [ref=e845]:
+                      - heading "Flighty 3 app overview - how to use 4 minutes, 10 seconds" [level=3] [ref=e847]:
+                        - link "Flighty 3 app overview - how to use 4 minutes, 10 seconds" [ref=e848]:
+                          - /url: /watch?v=kVPN0ZKGA_Q&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbtIHCQnZCgGHKiGM7w%3D%3D
+                          - text: Flighty 3 app overview - how to use
+                      - generic [ref=e851]:
+                        - generic [ref=e852]: 2.1K views
+                        - generic [ref=e853]: •2 years ago
+                    - generic [ref=e854]:
+                      - link "Go to channel mrhackio" [ref=e855]:
+                        - /url: /@mrhack
+                      - link "mrhackio" [ref=e860]:
+                        - /url: /@mrhack
+                    - generic [ref=e861]:
+                      - text: SUBSCRIBE ▻ https://tinyurl.com/mrhackio.
+                      - tooltip "tooltip"
+              - generic "+6 more" [ref=e863] [cursor=pointer]
+          - generic [ref=e865]:
+            - link [ref=e867] [cursor=pointer]:
+              - /url: /watch?v=wEgtqOSICgA&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e869] [cursor=pointer]:
+              - generic [ref=e870]:
+                - heading "Flight Ticket App Interface Design Part 1 • UI Design Tutorial 9 minutes, 44 seconds" [level=3] [ref=e872]:
+                  - link "Flight Ticket App Interface Design Part 1 • UI Design Tutorial 9 minutes, 44 seconds" [ref=e873]:
+                    - /url: /watch?v=wEgtqOSICgA&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                    - text: Flight Ticket App Interface Design Part 1 • UI Design Tutorial
+                - generic [ref=e876]:
+                  - generic [ref=e877]: 10K views
+                  - generic [ref=e878]: •8 years ago
+              - generic [ref=e879]:
+                - link "Go to channel Jesse Showalter" [ref=e880]:
+                  - /url: /@jesseshowalter
+                - generic [ref=e881]:
+                  - link "Jesse Showalter" [ref=e885]:
+                    - /url: /@jesseshowalter
+                  - img "Verified" [ref=e888]
+              - generic [ref=e890]:
+                - generic [ref=e891]: This is part 2 of 2 in the design of this cool flight ticketing app interface. In this video, we will finish out the design by building the ...
+                - tooltip "tooltip"
+              - generic [ref=e894]:
+                - generic [ref=e895]:
+                  - generic [ref=e899]: 8 chapters
+                  - button "Intro | Project Overview | Sketching | Gradient | Flight Title | Pairing Fonts | Background | Ticket Card" [ref=e900]
+                - button "More" [ref=e905]
+          - generic [ref=e912]:
+            - link [ref=e914] [cursor=pointer]:
+              - /url: /watch?v=iKl8ey3C2yg&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e916] [cursor=pointer]:
+              - generic [ref=e917]:
+                - heading "Why Flighty is Our Favorite Travel App, with CEO Ryan Jones 1 hour, 4 minutes" [level=3] [ref=e919]:
+                  - link "Why Flighty is Our Favorite Travel App, with CEO Ryan Jones 1 hour, 4 minutes" [ref=e920]:
+                    - /url: /watch?v=iKl8ey3C2yg&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                    - text: Why Flighty is Our Favorite Travel App, with CEO Ryan Jones
+                - generic [ref=e923]:
+                  - generic [ref=e924]: 2.1K views
+                  - generic [ref=e925]: •6 months ago
+              - generic [ref=e926]:
+                - link "Go to channel Thrifty Traveler" [ref=e927]:
+                  - /url: /@thriftytraveler
+                - link "Thrifty Traveler" [ref=e932]:
+                  - /url: /@thriftytraveler
+              - generic [ref=e933]:
+                - generic [ref=e934]: "This week, the guys dig deep on their favorite travel app: Flighty! Ryan Jones, the CEO of the incredibly powerful and beautifully ..."
+                - tooltip "tooltip"
+              - generic [ref=e937]:
+                - generic [ref=e938]:
+                  - generic [ref=e942]: 10 chapters
+                  - 'button "Introducing Flighty CEO (& Eagle Scout!) Ryan Jones | Everything you need to know about the Flighty app & how it works | A sneak peek at the newest Flighty update in iOS! | Flighty’s delay predictions – & who has the most total hours lost to delays | Why flight tracking? How Flighty started at an airport Chili’s | Are airlines getting better or worse at flying on-time? | Underrated Flighty features: Decoding delays, Friends Flights, previous flights & more | How to use Flighty Pro as a regular traveler - it’s not just for just road warriors! | Listener Question: What are your favorite travel apps and websites? | On the Spot: Have you ever missed a flight?" [ref=e943]'
+                - button "More" [ref=e948]
+          - generic [ref=e955]:
+            - link [ref=e957] [cursor=pointer]:
+              - /url: /watch?v=aAGAF1hMgEk&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e959] [cursor=pointer]:
+              - generic [ref=e960]:
+                - heading "Flighty App Review 1 minute, 57 seconds" [level=3] [ref=e962]:
+                  - link "Flighty App Review 1 minute, 57 seconds" [ref=e963]:
+                    - /url: /watch?v=aAGAF1hMgEk&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                    - text: Flighty App Review
+                - generic [ref=e966]:
+                  - generic [ref=e967]: 108 views
+                  - generic [ref=e968]: •6 months ago
+              - generic [ref=e969]:
+                - link "Go to channel Simple Flow" [ref=e970]:
+                  - /url: /@SimpleFlow3
+                - link "Simple Flow" [ref=e975]:
+                  - /url: /@SimpleFlow3
+          - generic [ref=e977]:
+            - link [ref=e979] [cursor=pointer]:
+              - /url: /shorts/rbg163YlFg8
+            - generic [ref=e981] [cursor=pointer]:
+              - generic [ref=e982]:
+                - 'heading "#Flight #App #UI #Design FlightApp Concept #appdesign #d2c #designing2coding by Saim Tech Studio 189 views 2 years ago 31 seconds - play Short" [level=3] [ref=e984]':
+                  - 'link "#Flight #App #UI #Design FlightApp Concept #appdesign #d2c #designing2coding by Saim Tech Studio 189 views 2 years ago 31 seconds - play Short" [ref=e985]':
+                    - /url: /shorts/rbg163YlFg8
+                    - text: "#Flight #App #UI #Design FlightApp Concept #appdesign #d2c #designing2coding"
+                - generic [ref=e988]:
+                  - generic [ref=e989]: 189 views
+                  - generic [ref=e990]: •2 years ago
+              - generic [ref=e991]:
+                - link "Go to channel Saim Tech Studio" [ref=e992]:
+                  - /url: /@saimtechstudio
+                - link "Saim Tech Studio" [ref=e997]:
+                  - /url: /@saimtechstudio
+          - generic [ref=e999]:
+            - link [ref=e1001] [cursor=pointer]:
+              - /url: /watch?v=4sgpcQHj-tA&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbtIHCQnZCgGHKiGM7w%3D%3D
+            - generic [ref=e1003] [cursor=pointer]:
+              - generic [ref=e1004]:
+                - heading "Smartwatch Flight App 14 seconds" [level=3] [ref=e1006]:
+                  - link "Smartwatch Flight App 14 seconds" [ref=e1007]:
+                    - /url: /watch?v=4sgpcQHj-tA&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbtIHCQnZCgGHKiGM7w%3D%3D
+                    - text: Smartwatch Flight App
+                - generic [ref=e1010]:
+                  - generic [ref=e1011]: 126 views
+                  - generic [ref=e1012]: •3 years ago
+              - generic [ref=e1013]:
+                - link "Go to channel RadishWerks Design House" [ref=e1014]:
+                  - /url: /@radishwerks
+                - link "RadishWerks Design House" [ref=e1019]:
+                  - /url: /@radishwerks
+              - generic [ref=e1020]:
+                - generic [ref=e1021]: This is a concept UI design & Interaction Design for Smartwatch Flight assist app. o------------------------------------------------o Check my ...
+                - tooltip "tooltip"
+          - generic [ref=e1023]:
+            - link [ref=e1025] [cursor=pointer]:
+              - /url: /watch?v=hzwneOpAUbQ&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e1027] [cursor=pointer]:
+              - generic [ref=e1028]:
+                - heading "How to design Flight Web App UI in Photoshop | Learn step by step 25 minutes" [level=3] [ref=e1030]:
+                  - link "How to design Flight Web App UI in Photoshop | Learn step by step 25 minutes" [ref=e1031]:
+                    - /url: /watch?v=hzwneOpAUbQ&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                    - text: How to design Flight Web App UI in Photoshop | Learn step by step
+                - generic [ref=e1034]:
+                  - generic [ref=e1035]: 712 views
+                  - generic [ref=e1036]: •7 years ago
+              - generic [ref=e1037]:
+                - link "Go to channel Harshil Acharya" [ref=e1038]:
+                  - /url: /@HarshilDesigner
+                - link "Harshil Acharya" [ref=e1043]:
+                  - /url: /@HarshilDesigner
+              - generic [ref=e1044]:
+                - generic [ref=e1045]: "Hello guys, Here is full process of UI Design of Flight Web App. Hope you like it. You can check detailed design here: ..."
+                - tooltip "tooltip"
+          - generic [ref=e1047]:
+            - link [ref=e1049] [cursor=pointer]:
+              - /url: /shorts/E_TyBMHL2hQ
+            - generic [ref=e1051] [cursor=pointer]:
+              - generic [ref=e1052]:
+                - 'heading "Plane hack! #plane #planehack #travelgadgets #holiday #gadgets by Jiny Maeng 9,885,041 views 2 years ago 33 seconds - play Short" [level=3] [ref=e1054]':
+                  - 'link "Plane hack! #plane #planehack #travelgadgets #holiday #gadgets by Jiny Maeng 9,885,041 views 2 years ago 33 seconds - play Short" [ref=e1055]':
+                    - /url: /shorts/E_TyBMHL2hQ
+                    - text: "Plane hack! #plane #planehack #travelgadgets #holiday #gadgets"
+                - generic [ref=e1058]:
+                  - generic [ref=e1059]: 9.8M views
+                  - generic [ref=e1060]: •2 years ago
+              - generic [ref=e1061]:
+                - link "Go to channel Jiny Maeng" [ref=e1062]:
+                  - /url: /@jinymaeng
+                - link "Jiny Maeng" [ref=e1067]:
+                  - /url: /@jinymaeng
+          - generic [ref=e1069]:
+            - link [ref=e1071] [cursor=pointer]:
+              - /url: /shorts/6EMKPSaaFa4
+            - generic [ref=e1073] [cursor=pointer]:
+              - generic [ref=e1074]:
+                - heading "Testing Starlink Mini on an Airplane by Shervin Shares 412,618 views 1 year ago 27 seconds - play Short" [level=3] [ref=e1076]:
+                  - link "Testing Starlink Mini on an Airplane by Shervin Shares 412,618 views 1 year ago 27 seconds - play Short" [ref=e1077]:
+                    - /url: /shorts/6EMKPSaaFa4
+                    - text: Testing Starlink Mini on an Airplane
+                - generic [ref=e1080]:
+                  - generic [ref=e1081]: 412K views
+                  - generic [ref=e1082]: •1 year ago
+              - generic [ref=e1083]:
+                - link "Go to channel Shervin Shares" [ref=e1084]:
+                  - /url: /@ShervinShares
+                - generic [ref=e1085]:
+                  - link "Shervin Shares" [ref=e1089]:
+                    - /url: /@ShervinShares
+                  - img "Verified" [ref=e1092]
+              - generic [ref=e1094]:
+                - link "0 seconds - [Narrator] Wi-Fi on a airplane is very expensive and extremely slow, so I decided to take a Starlink Mini on my next <b>flight</b> to see if&nbsp;..." [ref=e1095]:
+                  - /url: /watch?v=6EMKPSaaFa4
+                  - text: 0:00
+                  - generic [ref=e1096]: "- [Narrator] Wi-Fi on a airplane is very expensive and extremely slow, so I decided to take a Starlink Mini on my next flight to see if ..."
+                - tooltip "tooltip"
+              - generic [ref=e1097]:
+                - img "4K" [ref=e1099]:
+                  - generic [ref=e1100]: 4K
+                - img "Closed captions" [ref=e1102]:
+                  - generic [ref=e1103]: CC
+          - generic [ref=e1105]:
+            - link [ref=e1107] [cursor=pointer]:
+              - /url: /watch?v=t52ZCvnDVzs&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+            - generic [ref=e1109] [cursor=pointer]:
+              - generic [ref=e1110]:
+                - heading "Connecting Flight App UI 1 minute, 17 seconds" [level=3] [ref=e1112]:
+                  - link "Connecting Flight App UI 1 minute, 17 seconds" [ref=e1113]:
+                    - /url: /watch?v=t52ZCvnDVzs&pp=ygUcZmxpZ2h0eSBhcHAgcmV2aWV3IFVJIGRlc2lnbg%3D%3D
+                    - text: Connecting Flight App UI
+                - generic [ref=e1116]:
+                  - generic [ref=e1117]: 53 views
+                  - generic [ref=e1118]: •4 years ago
+              - generic [ref=e1119]:
+                - link "Go to channel UIUX JARVIS" [ref=e1120]:
+                  - /url: /@uiuxjarvis
+                - link "UIUX JARVIS" [ref=e1125]:
+                  - /url: /@uiuxjarvis
+              - generic [ref=e1126]:
+                - generic [ref=e1127]: Hi there, this is the prototype of Crowwwn's "Connection Flight challenge." Problem Statement - When I have a connecting flight, ...
+                - tooltip "tooltip"
+              - img "4K" [ref=e1130]:
+                - generic [ref=e1131]: 4K
+    - text: •

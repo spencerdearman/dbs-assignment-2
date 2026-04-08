@@ -1,0 +1,4 @@
+[     830ms] [LOG] Failure callback complete. @ https://www.designernews.co/stories/flighty:339
+[     831ms] [LOG] Failure callback complete. @ https://www.designernews.co/stories/flighty:339
+[     831ms] [LOG] null @ https://www.designernews.co/stories/flighty:392
+[    1242ms] [ERROR] Failed to load resource: net::ERR_FAILED @ chrome-extension://invalid/:0

@@ -1,0 +1,7 @@
+[      38ms] [LOG] DEBUG - (ATS-ENVELOPE-MODULE) Consent is given, module will start! @ https://www.theverge.com/_next/static/chunks/pages/_app-652b7614e964e869.js:193
+[      39ms] [INFO] INFO - (ATS-ENVELOPE-MODULE) (Geo location) persisted cached location data @ https://www.theverge.com/_next/static/chunks/pages/_app-652b7614e964e869.js:193
+[      39ms] [LOG] DEBUG - (ATS-ENVELOPE-MODULE) LIVERAMP envelope not found in storage! New envelope will be acquired. @ https://www.theverge.com/_next/static/chunks/pages/_app-652b7614e964e869.js:193
+[      39ms] [LOG] DEBUG - (ATS-DETECTION-MODULE) Consent is given, module will start! @ https://www.theverge.com/_next/static/chunks/pages/_app-652b7614e964e869.js:193
+[      39ms] [INFO] INFO - (ATS-DETECTION-MODULE) (Geo location) persisted cached location data @ https://www.theverge.com/_next/static/chunks/pages/_app-652b7614e964e869.js:193
+[      41ms] [INFO] INFO - (ATS-ENVELOPE-MODULE) Catching identifier configured. @ https://www.theverge.com/_next/static/chunks/pages/_app-652b7614e964e869.js:193
+[     786ms] [LOG] [Framer On-Page Editing] Unavailable because not on a `framer.app` subdomain and access status is no-auth @ https://app.framerstatic.com/editorbar.ITMSDDWZ.mjs:0

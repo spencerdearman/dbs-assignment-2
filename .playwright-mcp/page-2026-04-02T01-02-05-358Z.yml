@@ -1,0 +1,415 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e6]:
+      - generic [ref=e8] [cursor=pointer]:
+        - link "NEW! Airport Intelligence View Live" [ref=e9]:
+          - /url: https://www.flighty.com/airports
+          - paragraph [ref=e13]: NEW! Airport Intelligence
+          - generic [ref=e15]:
+            - paragraph [ref=e17]: View Live
+            - img [ref=e20]
+        - img [ref=e25]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - link "Flighty" [ref=e31] [cursor=pointer]:
+            - /url: ./
+            - paragraph [ref=e37]: Flighty
+          - link "Get the app" [ref=e40] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/apple-store/id1358823008?pt=118988326&ct=Our%20Website&mt=8
+            - paragraph [ref=e42]: Get the app
+        - generic:
+          - link "Pricing" [ref=e49] [cursor=pointer]:
+            - /url: ./pricing
+            - img [ref=e54]
+            - paragraph [ref=e57]: Pricing
+          - link "About" [ref=e59] [cursor=pointer]:
+            - /url: ./about
+            - img [ref=e64]
+            - paragraph [ref=e67]: About
+          - link "Press" [ref=e69] [cursor=pointer]:
+            - /url: ./press
+            - img [ref=e74]
+            - paragraph [ref=e77]: Press
+          - link "Support" [ref=e79] [cursor=pointer]:
+            - /url: ./
+            - img [ref=e84]
+            - paragraph [ref=e87]: Support
+          - link "Gift Cards" [ref=e89] [cursor=pointer]:
+            - /url: ./gift-cards
+            - img [ref=e94]
+            - paragraph [ref=e97]: Gift Cards
+          - link "Businesses" [ref=e99] [cursor=pointer]:
+            - /url: ./business
+            - img [ref=e104]
+            - paragraph [ref=e107]: Businesses
+    - generic [ref=e108]:
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - heading "Level up with" [level=1] [ref=e118]
+          - heading "Flighty Pro" [level=1] [ref=e121]:
+            - generic [ref=e122]: Flighty Pro
+        - paragraph [ref=e126]: The world’s most powerful flight tracker.
+      - generic [ref=e127]:
+        - link "Give Flighty a try" [ref=e130] [cursor=pointer]:
+          - /url: https://apps.apple.com/app/apple-store/id1358823008?pt=118988326&ct=Our%20Website&mt=8
+          - paragraph [ref=e136]: Give Flighty a try
+        - generic [ref=e139]:
+          - generic [ref=e142] [cursor=pointer]:
+            - paragraph [ref=e146]: Personal
+            - paragraph [ref=e149]: Family
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e155]:
+                - paragraph [ref=e158]: Free
+                - paragraph [ref=e161]: $0
+                - paragraph [ref=e164]: Forever
+              - generic [ref=e165]:
+                - img [ref=e168]
+                - img [ref=e172]
+                - img [ref=e176]
+              - paragraph [ref=e182]: Limited flight history
+            - generic [ref=e183]:
+              - generic [ref=e187]:
+                - paragraph [ref=e190]: Pay-As-You-Go
+                - generic [ref=e191]:
+                  - paragraph [ref=e193]: $4.99
+                  - paragraph [ref=e196]: / week
+                - paragraph [ref=e198]: Billed weekly
+              - generic [ref=e199]:
+                - img [ref=e202]
+                - img [ref=e206]
+                - img [ref=e210]
+              - paragraph [ref=e216]: Email Import, Calendar Sync, and TripIt Sync not included
+            - generic [ref=e217]:
+              - generic [ref=e221]:
+                - paragraph [ref=e224]: Unlimited Annual
+                - generic [ref=e225]:
+                  - paragraph [ref=e227]: $4.99
+                  - paragraph [ref=e230]: / month
+                - paragraph [ref=e232]: $59.99 billed annually
+              - generic [ref=e233]:
+                - img [ref=e236]
+                - img [ref=e240]
+                - img [ref=e244]
+              - generic [ref=e245]:
+                - paragraph [ref=e250]: Our most popular plan
+                - paragraph [ref=e255]: Unlimited flights and features
+            - generic [ref=e256]:
+              - generic [ref=e260]:
+                - paragraph [ref=e263]: Lifetime
+                - paragraph [ref=e266]: $299
+                - paragraph [ref=e268]: One-Time Purchase
+              - generic [ref=e269]:
+                - img [ref=e272]
+                - img [ref=e276]
+                - img [ref=e280]
+              - generic [ref=e281]:
+                - paragraph [ref=e286]: No subscription
+                - paragraph [ref=e291]: Unlimited flights and features
+      - generic [ref=e292]:
+        - generic [ref=e293]:
+          - paragraph [ref=e297]: Compare plans
+          - generic [ref=e298]:
+            - paragraph [ref=e300]: Free
+            - paragraph [ref=e302]: Flighty Pro
+        - generic [ref=e303]:
+          - paragraph [ref=e306]: Unlimited Flights
+          - generic [ref=e307]:
+            - generic [ref=e311]:
+              - img [ref=e314]
+              - generic:
+                - paragraph
+            - generic [ref=e319]:
+              - img [ref=e322]
+              - generic:
+                - paragraph
+        - generic [ref=e324]:
+          - paragraph [ref=e327]: Live Pilot-Grade Data
+          - generic [ref=e328]:
+            - generic [ref=e332]:
+              - img [ref=e335]
+              - generic:
+                - paragraph
+            - generic [ref=e340]:
+              - img [ref=e343]
+              - generic:
+                - paragraph
+        - generic [ref=e345]:
+          - paragraph [ref=e349]: Push Alerts
+          - generic [ref=e350]:
+            - generic [ref=e354]:
+              - img [ref=e357]
+              - generic:
+                - paragraph
+            - generic [ref=e362]:
+              - img [ref=e365]
+              - generic:
+                - paragraph
+        - generic [ref=e367]:
+          - paragraph [ref=e370]: Live Activities
+          - generic [ref=e371]:
+            - generic [ref=e375]:
+              - img [ref=e378]
+              - generic:
+                - paragraph
+            - generic [ref=e383]:
+              - img [ref=e386]
+              - generic:
+                - paragraph
+        - generic [ref=e388]:
+          - paragraph [ref=e391]: 25Hr Where's My Plane
+          - generic [ref=e392]:
+            - generic [ref=e396]:
+              - img [ref=e399]
+              - generic:
+                - paragraph
+            - generic [ref=e404]:
+              - img [ref=e407]
+              - generic:
+                - paragraph
+        - generic [ref=e409]:
+          - paragraph [ref=e412]: Late Inbound Aircraft Alerts
+          - generic [ref=e413]:
+            - generic [ref=e417]:
+              - img [ref=e420]
+              - generic:
+                - paragraph
+            - generic [ref=e425]:
+              - img [ref=e428]
+              - generic:
+                - paragraph
+        - generic [ref=e430]:
+          - paragraph [ref=e433]: Storm, Wind, Traffic Delays
+          - generic [ref=e434]:
+            - generic [ref=e438]:
+              - img [ref=e441]
+              - generic:
+                - paragraph
+            - generic [ref=e446]:
+              - img [ref=e449]
+              - generic:
+                - paragraph
+        - generic [ref=e451]:
+          - paragraph [ref=e454]: Predicted Departure Time
+          - generic [ref=e455]:
+            - generic [ref=e459]:
+              - img [ref=e462]
+              - generic:
+                - paragraph
+            - generic [ref=e467]:
+              - img [ref=e470]
+              - generic:
+                - paragraph
+        - generic [ref=e472]:
+          - paragraph [ref=e475]: Arrival Forecast
+          - generic [ref=e476]:
+            - generic [ref=e480]:
+              - img [ref=e483]
+              - generic:
+                - paragraph
+            - generic [ref=e488]:
+              - img [ref=e491]
+              - generic:
+                - paragraph
+        - generic [ref=e493]:
+          - paragraph [ref=e496]: Calendar Sync
+          - generic [ref=e497]:
+            - generic [ref=e501]:
+              - img [ref=e504]
+              - generic:
+                - paragraph
+            - generic [ref=e509]:
+              - img [ref=e512]
+              - generic:
+                - paragraph
+        - generic [ref=e514]:
+          - paragraph [ref=e517]: Connection Assistant
+          - generic [ref=e518]:
+            - generic [ref=e522]:
+              - img [ref=e525]
+              - generic:
+                - paragraph
+            - generic [ref=e530]:
+              - img [ref=e533]
+              - generic:
+                - paragraph
+        - generic [ref=e535]:
+          - paragraph [ref=e538]: Email and TripIt Import
+          - generic [ref=e539]:
+            - generic [ref=e543]:
+              - img [ref=e546]
+              - generic:
+                - paragraph
+            - generic [ref=e551]:
+              - img [ref=e554]
+              - generic:
+                - paragraph
+        - generic [ref=e556]:
+          - paragraph [ref=e559]: Weather Radar
+          - generic [ref=e560]:
+            - generic [ref=e564]:
+              - img [ref=e567]
+              - generic:
+                - paragraph
+            - generic [ref=e572]:
+              - img [ref=e575]
+              - generic:
+                - paragraph
+        - generic [ref=e577]:
+          - paragraph [ref=e580]: Watch Widgets
+          - generic [ref=e581]:
+            - generic [ref=e585]:
+              - img [ref=e588]
+              - generic:
+                - paragraph
+            - generic [ref=e593]:
+              - img [ref=e596]
+              - generic:
+                - paragraph
+        - generic [ref=e598]:
+          - paragraph [ref=e601]: Watch App
+          - generic [ref=e602]:
+            - generic [ref=e606]:
+              - img [ref=e609]
+              - generic:
+                - paragraph
+            - generic [ref=e614]:
+              - img [ref=e617]
+              - generic:
+                - paragraph
+        - generic [ref=e619]:
+          - paragraph [ref=e622]: Past Flight Import
+          - generic [ref=e623]:
+            - generic [ref=e627]:
+              - img [ref=e630]
+              - paragraph [ref=e633]: Last 12 Months
+            - generic [ref=e637]:
+              - img [ref=e640]
+              - paragraph [ref=e643]: Unlimited
+        - generic [ref=e644]:
+          - paragraph [ref=e647]: Private and Secure
+          - generic [ref=e648]:
+            - generic [ref=e652]:
+              - img [ref=e655]
+              - generic:
+                - paragraph
+            - generic [ref=e660]:
+              - img [ref=e663]
+              - generic:
+                - paragraph
+        - generic [ref=e665]:
+          - paragraph [ref=e668]: Online and offline across all devices
+          - generic [ref=e669]:
+            - generic [ref=e673]:
+              - img [ref=e676]
+              - generic:
+                - paragraph
+            - generic [ref=e681]:
+              - img [ref=e684]
+              - generic:
+                - paragraph
+      - link "Give Flighty a try" [ref=e689] [cursor=pointer]:
+        - /url: https://apps.apple.com/app/apple-store/id1358823008?pt=118988326&ct=Our%20Website&mt=8
+        - paragraph [ref=e695]: Give Flighty a try
+      - generic [ref=e700]:
+        - paragraph [ref=e702]: Flighty Gift Cards
+        - paragraph [ref=e705]: Give the gift of stress-free flying
+        - link "Explore" [ref=e707] [cursor=pointer]:
+          - /url: ./gift-cards
+          - img [ref=e713]
+          - paragraph [ref=e716]: Explore
+      - generic [ref=e720]:
+        - generic [ref=e725]:
+          - generic [ref=e726]:
+            - paragraph [ref=e728]: Product
+            - link "Pricing" [ref=e730] [cursor=pointer]:
+              - /url: ./pricing
+              - paragraph [ref=e732]: Pricing
+            - link "Passport" [ref=e734] [cursor=pointer]:
+              - /url: ./passport
+              - paragraph [ref=e736]: Passport
+            - link "Gift Cards" [ref=e738] [cursor=pointer]:
+              - /url: ./gift-cards
+              - paragraph [ref=e740]: Gift Cards
+            - link "Airports" [ref=e742] [cursor=pointer]:
+              - /url: https://www.flighty.com/airports
+              - paragraph [ref=e744]: Airports
+            - link "Flighty Insiders" [ref=e746] [cursor=pointer]:
+              - /url: ./insiders
+              - paragraph [ref=e748]: Flighty Insiders
+          - generic [ref=e749]:
+            - paragraph [ref=e751]: Compare
+            - link "Airline Apps" [ref=e753] [cursor=pointer]:
+              - /url: ./compare/airline-apps
+              - paragraph [ref=e755]: Airline Apps
+            - link "FlightAware" [ref=e757] [cursor=pointer]:
+              - /url: ./compare/flightaware
+              - paragraph [ref=e759]: FlightAware
+            - link "App In The Air" [ref=e761] [cursor=pointer]:
+              - /url: ./compare/app-in-the-air
+              - paragraph [ref=e763]: App In The Air
+            - link "FlightRadar24" [ref=e765] [cursor=pointer]:
+              - /url: ./compare/flightradar24
+              - paragraph [ref=e767]: FlightRadar24
+            - link "TripIt" [ref=e769] [cursor=pointer]:
+              - /url: ./compare/tripit
+              - paragraph [ref=e771]: TripIt
+          - generic [ref=e772]:
+            - paragraph [ref=e774]: Company
+            - link "About" [ref=e776] [cursor=pointer]:
+              - /url: ./about
+              - paragraph [ref=e778]: About
+            - link "Press" [ref=e780] [cursor=pointer]:
+              - /url: ./press
+              - paragraph [ref=e782]: Press
+            - link "Privacy Policy" [ref=e784] [cursor=pointer]:
+              - /url: ./legal/privacy
+              - paragraph [ref=e786]: Privacy Policy
+            - link "Terms of Service" [ref=e788] [cursor=pointer]:
+              - /url: ./legal/privacy
+              - paragraph [ref=e790]: Terms of Service
+          - generic [ref=e791]:
+            - paragraph [ref=e793]: Support
+            - link "Help Center" [ref=e795] [cursor=pointer]:
+              - /url: ./help
+              - paragraph [ref=e797]: Help Center
+            - link "Business" [ref=e799] [cursor=pointer]:
+              - /url: ./business
+              - paragraph [ref=e801]: Business
+            - generic [ref=e802]:
+              - link [ref=e803] [cursor=pointer]:
+                - /url: https://www.facebook.com/flightyapp/
+                - img [ref=e808]
+              - link [ref=e810] [cursor=pointer]:
+                - /url: https://x.com/flighty
+                - img [ref=e815]
+              - link [ref=e817] [cursor=pointer]:
+                - /url: https://www.instagram.com/flightyapp/
+                - img [ref=e822]
+              - link [ref=e824] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/flighty/?originalSubdomain=es
+                - img [ref=e829]
+        - generic [ref=e832]:
+          - paragraph [ref=e834]: Made with love in Austin,
+          - paragraph [ref=e841]: Barcelona
+          - paragraph [ref=e848]: and Oslo.
+  - img [ref=e854]
+  - img [ref=e856]
+  - img [ref=e858]
+  - img [ref=e860]
+  - img [ref=e862]
+  - img [ref=e865]
+  - img [ref=e867]
+  - img [ref=e869]
+  - img [ref=e871]
+  - img [ref=e873]
+  - img [ref=e875]
+  - img [ref=e877]
+  - img [ref=e879]
+  - img [ref=e880]
+  - img [ref=e882]
+  - img [ref=e884]
+  - img [ref=e886]
+  - img [ref=e889]
+  - img [ref=e891]
+  - img [ref=e895]

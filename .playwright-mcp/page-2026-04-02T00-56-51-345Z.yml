@@ -1,0 +1,49 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - generic [ref=e6]:
+            - generic [ref=e7]: WED
+            - generic [ref=e8]: "1"
+          - generic [ref=e9]:
+            - heading "Wednesday, April 1" [level=1] [ref=e10]
+            - paragraph [ref=e11]: 5 events scheduled
+        - button "New Event" [ref=e12]:
+          - img [ref=e13]
+          - text: New Event
+    - generic [ref=e16]:
+      - generic:
+        - generic [ref=e18] [cursor=pointer]: 6 AM
+        - generic [ref=e23] [cursor=pointer]: 7 AM
+        - generic [ref=e28] [cursor=pointer]: 8 AM
+        - generic [ref=e33] [cursor=pointer]: 9 AM
+        - generic [ref=e38] [cursor=pointer]: 10 AM
+        - generic [ref=e43] [cursor=pointer]: 11 AM
+        - generic [ref=e48] [cursor=pointer]: 12 PM
+        - generic [ref=e53] [cursor=pointer]: 1 PM
+        - generic [ref=e58] [cursor=pointer]: 2 PM
+        - generic [ref=e63] [cursor=pointer]: 3 PM
+        - generic [ref=e68] [cursor=pointer]: 4 PM
+        - generic [ref=e73] [cursor=pointer]: 5 PM
+        - generic [ref=e78] [cursor=pointer]: 6 PM
+        - generic [ref=e83] [cursor=pointer]: 7 PM
+        - generic [ref=e88] [cursor=pointer]: 8 PM
+        - generic [ref=e93] [cursor=pointer]: 9 PM
+      - button "Morning standup" [ref=e98] [cursor=pointer]:
+        - paragraph [ref=e99]: Morning standup
+      - button "Deep work block 10 AM – 12 PM" [ref=e101] [cursor=pointer]:
+        - paragraph [ref=e102]: Deep work block
+        - paragraph [ref=e103]: 10 AM – 12 PM
+      - button "Lunch 12:30 PM – 1:30 PM" [ref=e105] [cursor=pointer]:
+        - paragraph [ref=e106]: Lunch
+        - paragraph [ref=e107]: 12:30 PM – 1:30 PM
+      - button "Design review 2 PM – 3 PM" [ref=e109] [cursor=pointer]:
+        - paragraph [ref=e110]: Design review
+        - paragraph [ref=e111]: 2 PM – 3 PM
+      - button "Team sync 4 PM – 5 PM" [ref=e190] [cursor=pointer]:
+        - paragraph [ref=e191]: Team sync
+        - paragraph [ref=e192]: 4 PM – 5 PM
+  - button "Open Next.js Dev Tools" [ref=e117] [cursor=pointer]:
+    - img [ref=e118]
+  - alert [ref=e121]

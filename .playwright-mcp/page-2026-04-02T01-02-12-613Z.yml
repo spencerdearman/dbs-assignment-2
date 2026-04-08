@@ -1,0 +1,173 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e6]:
+      - generic [ref=e8] [cursor=pointer]:
+        - link "NEW! Airport Intelligence View Live" [ref=e9]:
+          - /url: https://www.flighty.com/airports
+          - paragraph [ref=e13]: NEW! Airport Intelligence
+          - generic [ref=e15]:
+            - paragraph [ref=e17]: View Live
+            - img [ref=e20]
+        - img [ref=e25]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - link "Flighty" [ref=e31] [cursor=pointer]:
+            - /url: ./
+            - paragraph [ref=e37]: Flighty
+          - link "Get the app" [ref=e40] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/apple-store/id1358823008?pt=118988326&ct=Our%20Website&mt=8
+            - paragraph [ref=e42]: Get the app
+        - generic:
+          - link "Pricing" [ref=e49] [cursor=pointer]:
+            - /url: ./pricing
+            - img [ref=e54]
+            - paragraph [ref=e57]: Pricing
+          - link "About" [ref=e59] [cursor=pointer]:
+            - /url: ./about
+            - img [ref=e64]
+            - paragraph [ref=e67]: About
+          - link "Press" [ref=e69] [cursor=pointer]:
+            - /url: ./press
+            - img [ref=e74]
+            - paragraph [ref=e77]: Press
+          - link "Support" [ref=e79] [cursor=pointer]:
+            - /url: ./
+            - img [ref=e84]
+            - paragraph [ref=e87]: Support
+          - link "Gift Cards" [ref=e89] [cursor=pointer]:
+            - /url: ./gift-cards
+            - img [ref=e94]
+            - paragraph [ref=e97]: Gift Cards
+          - link "Businesses" [ref=e99] [cursor=pointer]:
+            - /url: ./business
+            - img [ref=e104]
+            - paragraph [ref=e107]: Businesses
+    - generic [ref=e108]:
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - heading "Press" [level=1] [ref=e117]
+          - paragraph [ref=e120]: Get all of our press and media resources here, or get in touch with us.
+          - link "press@flightyapp.com" [ref=e124] [cursor=pointer]:
+            - /url: mailto:press@flightyapp.com
+            - img [ref=e130]
+            - paragraph [ref=e133]: press@flightyapp.com
+        - generic [ref=e134]:
+          - paragraph [ref=e136]: About Flighty
+          - paragraph [ref=e138]: Flighty is a highly-decorated flight app with the power to revolutionize your travel game. It launched in 2019 by a team of just 3 flight nerds from across the globe and has quickly become the preferred app of flight crews and frequent fliers worldwide.
+          - paragraph [ref=e140]: The app elegantly combines an award-winning interface that’s comforting and easy to use, with powerful and detailed real-time flight details, such as delays, gate changes, and cancellations – often long before airlines communicate them to you.
+          - paragraph [ref=e142]: Flighty acts as both a flight companion and a travel log, allowing you to quickly load your previous and future flights onto the app with flight numbers and booking references from your email, calendar, TripIt, or manually. The app was a 2023 App of the Year Finalist, 2023 Apple Design Award winner, and boasts millions of users.
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - paragraph [ref=e146]: Join our Media List
+            - paragraph [ref=e148]: Stay in the loop with the latest Flighty news and updates sent straight to your inbox.
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e151]:
+                - heading "First Name" [level=6] [ref=e153]
+                - textbox "First Name" [ref=e155]:
+                  - /placeholder: Your First Name
+              - generic [ref=e156]:
+                - heading "Last Name" [level=6] [ref=e158]
+                - textbox "Last Name" [ref=e160]:
+                  - /placeholder: Your Last Name
+            - generic [ref=e161]:
+              - heading "Email" [level=6] [ref=e163]
+              - textbox "Email" [ref=e165]:
+                - /placeholder: Where should we send updates?
+            - generic [ref=e166]:
+              - heading "Publication/Organization" [level=6] [ref=e168]
+              - textbox "Publication/Organization" [ref=e170]:
+                - /placeholder: Which publication do you represent?
+            - button "Join Now" [ref=e173] [cursor=pointer]:
+              - paragraph [ref=e175]: Join Now
+      - generic [ref=e179]:
+        - generic [ref=e184]:
+          - generic [ref=e185]:
+            - paragraph [ref=e187]: Product
+            - link "Pricing" [ref=e189] [cursor=pointer]:
+              - /url: ./pricing
+              - paragraph [ref=e191]: Pricing
+            - link "Passport" [ref=e193] [cursor=pointer]:
+              - /url: ./passport
+              - paragraph [ref=e195]: Passport
+            - link "Gift Cards" [ref=e197] [cursor=pointer]:
+              - /url: ./gift-cards
+              - paragraph [ref=e199]: Gift Cards
+            - link "Airports" [ref=e201] [cursor=pointer]:
+              - /url: https://www.flighty.com/airports
+              - paragraph [ref=e203]: Airports
+            - link "Flighty Insiders" [ref=e205] [cursor=pointer]:
+              - /url: ./insiders
+              - paragraph [ref=e207]: Flighty Insiders
+          - generic [ref=e208]:
+            - paragraph [ref=e210]: Compare
+            - link "FlightRadar24" [ref=e212] [cursor=pointer]:
+              - /url: ./compare/flightradar24
+              - paragraph [ref=e214]: FlightRadar24
+            - link "TripIt" [ref=e216] [cursor=pointer]:
+              - /url: ./compare/tripit
+              - paragraph [ref=e218]: TripIt
+            - link "Airline Apps" [ref=e220] [cursor=pointer]:
+              - /url: ./compare/airline-apps
+              - paragraph [ref=e222]: Airline Apps
+            - link "FlightAware" [ref=e224] [cursor=pointer]:
+              - /url: ./compare/flightaware
+              - paragraph [ref=e226]: FlightAware
+            - link "App In The Air" [ref=e228] [cursor=pointer]:
+              - /url: ./compare/app-in-the-air
+              - paragraph [ref=e230]: App In The Air
+          - generic [ref=e231]:
+            - paragraph [ref=e233]: Company
+            - link "About" [ref=e235] [cursor=pointer]:
+              - /url: ./about
+              - paragraph [ref=e237]: About
+            - link "Press" [ref=e239] [cursor=pointer]:
+              - /url: ./press
+              - paragraph [ref=e241]: Press
+            - link "Privacy Policy" [ref=e243] [cursor=pointer]:
+              - /url: ./legal/privacy
+              - paragraph [ref=e245]: Privacy Policy
+            - link "Terms of Service" [ref=e247] [cursor=pointer]:
+              - /url: ./legal/terms
+              - paragraph [ref=e249]: Terms of Service
+          - generic [ref=e250]:
+            - paragraph [ref=e252]: Support
+            - link "Help Center" [ref=e254] [cursor=pointer]:
+              - /url: ./help
+              - paragraph [ref=e256]: Help Center
+            - link "Business" [ref=e258] [cursor=pointer]:
+              - /url: ./business
+              - paragraph [ref=e260]: Business
+            - generic [ref=e261]:
+              - link [ref=e262] [cursor=pointer]:
+                - /url: https://www.facebook.com/flightyapp/
+                - img [ref=e267]
+              - link [ref=e269] [cursor=pointer]:
+                - /url: https://x.com/flighty
+                - img [ref=e274]
+              - link [ref=e276] [cursor=pointer]:
+                - /url: https://www.instagram.com/flightyapp/
+                - img [ref=e281]
+              - link [ref=e283] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/flighty/?originalSubdomain=es
+                - img [ref=e288]
+        - generic [ref=e291]:
+          - paragraph [ref=e293]: Made with love in Austin,
+          - paragraph [ref=e300]: Barcelona
+          - paragraph [ref=e307]: and Oslo.
+  - img [ref=e313]
+  - img [ref=e315]
+  - img [ref=e317]
+  - img [ref=e319]
+  - img [ref=e321]
+  - img [ref=e324]
+  - img [ref=e326]
+  - img [ref=e328]
+  - img [ref=e330]
+  - img [ref=e332]
+  - img [ref=e334]
+  - img [ref=e336]
+  - img [ref=e338]
+  - img [ref=e341]
+  - img [ref=e343]
+  - img [ref=e347]

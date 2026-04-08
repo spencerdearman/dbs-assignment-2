@@ -1,0 +1,55 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - generic [ref=e6]:
+          - generic [ref=e7]:
+            - generic [ref=e8]:
+              - generic [ref=e9]: WED
+              - generic [ref=e10]: "1"
+            - generic [ref=e11]:
+              - heading "Wednesday, April 1" [level=1] [ref=e12]
+              - paragraph [ref=e13]: 4 events scheduled
+          - button "New Event" [ref=e14]:
+            - img [ref=e15]
+            - text: New Event
+      - generic [ref=e18]:
+        - generic:
+          - generic [ref=e20] [cursor=pointer]: 6 AM
+          - generic [ref=e25] [cursor=pointer]: 7 AM
+          - generic [ref=e30] [cursor=pointer]: 8 AM
+          - generic [ref=e35] [cursor=pointer]: 9 AM
+          - generic [ref=e40] [cursor=pointer]: 10 AM
+          - generic [ref=e45] [cursor=pointer]: 11 AM
+          - generic [ref=e50] [cursor=pointer]: 12 PM
+          - generic [ref=e55] [cursor=pointer]: 1 PM
+          - generic [ref=e60] [cursor=pointer]: 2 PM
+          - generic [ref=e65] [cursor=pointer]: 3 PM
+          - generic [ref=e70] [cursor=pointer]: 4 PM
+          - generic [ref=e75] [cursor=pointer]: 5 PM
+          - generic [ref=e80] [cursor=pointer]: 6 PM
+          - generic [ref=e85] [cursor=pointer]: 7 PM
+          - generic [ref=e90] [cursor=pointer]: 8 PM
+          - generic [ref=e95] [cursor=pointer]: 9 PM
+        - button "Morning standup" [ref=e100] [cursor=pointer]:
+          - paragraph [ref=e101]: Morning standup
+        - button "Deep work block 10 AM – 12 PM" [ref=e103] [cursor=pointer]:
+          - paragraph [ref=e104]: Deep work block
+          - paragraph [ref=e105]: 10 AM – 12 PM
+        - button "Lunch 12:30 PM – 1:30 PM" [ref=e107] [cursor=pointer]:
+          - paragraph [ref=e108]: Lunch
+          - paragraph [ref=e109]: 12:30 PM – 1:30 PM
+        - button "Design review 2 PM – 3 PM" [ref=e111] [cursor=pointer]:
+          - paragraph [ref=e112]: Design review
+          - paragraph [ref=e113]: 2 PM – 3 PM
+    - navigation [ref=e114]:
+      - generic [ref=e115]:
+        - button "Planner" [ref=e116] [cursor=pointer]:
+          - img [ref=e117]
+          - generic [ref=e121]: Planner
+        - button "Flights" [ref=e122] [cursor=pointer]:
+          - img [ref=e123]
+          - generic [ref=e125]: Flights
+  - button "Open Next.js Dev Tools" [ref=e131] [cursor=pointer]:
+    - img [ref=e132]
+  - alert [ref=e135]

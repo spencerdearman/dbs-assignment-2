@@ -1,0 +1,1497 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - link "Logo Flighty airports" [ref=e6] [cursor=pointer]:
+      - /url: /airports
+      - img "Logo" [ref=e7]
+      - paragraph [ref=e9]: Flighty airports
+    - button "Search airports... ⌘K" [ref=e10]:
+      - generic [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]:
+          - img [ref=e13]
+          - generic [ref=e15]: Search airports...
+        - generic [ref=e16]: ⌘K
+    - link "TV Mode" [ref=e17] [cursor=pointer]:
+      - /url: /airports/tv
+      - img [ref=e18]
+      - generic [ref=e20]: TV Mode
+  - generic [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - heading "Major Airports & Disruptions" [level=1] [ref=e28]
+        - generic [ref=e29]:
+          - button "Live Today" [ref=e30] [cursor=pointer]:
+            - generic [ref=e32]: Live
+            - generic [ref=e35]: Today
+          - button "Download Flighty" [ref=e36]:
+            - generic [ref=e37] [cursor=pointer]:
+              - img [ref=e38]
+              - generic [ref=e40]: Download Flighty
+      - generic [ref=e42]:
+        - combobox [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: North America
+          - img [ref=e46]
+        - textbox [ref=e48]: North America
+    - generic [ref=e49]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - img [ref=e55]
+          - paragraph [ref=e57]: Airport
+        - generic [ref=e58]:
+          - img [ref=e59]
+          - paragraph [ref=e61]: City
+        - generic [ref=e62]:
+          - img [ref=e63]
+          - paragraph [ref=e65]: Departures Delays
+        - generic [ref=e66]:
+          - img [ref=e67]
+          - paragraph [ref=e69]: Arrivals Delays
+        - generic [ref=e70]:
+          - img [ref=e71]
+          - paragraph [ref=e73]: Alerts
+      - generic [ref=e77]:
+        - link "LGA LaGuardia New York 1h 3m 20% 0% 1h 17m 0% 0% Ground Stop" [ref=e78] [cursor=pointer]:
+          - /url: /airports/laguardia-lga
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - generic [ref=e85]: LGA
+              - generic [ref=e86]: LaGuardia
+            - generic [ref=e88]: New York
+            - generic [ref=e89]:
+              - generic [ref=e90]: 1h 3m
+              - generic [ref=e91]:
+                - generic [ref=e92]:
+                  - img [ref=e93]
+                  - paragraph [ref=e95]: 20%
+                - generic [ref=e96]:
+                  - img [ref=e97]
+                  - paragraph [ref=e99]: 0%
+            - generic [ref=e100]:
+              - generic [ref=e101]: 1h 17m
+              - generic [ref=e102]:
+                - generic [ref=e103]:
+                  - img [ref=e104]
+                  - paragraph [ref=e106]: 0%
+                - generic [ref=e107]:
+                  - img [ref=e108]
+                  - paragraph [ref=e110]: 0%
+            - paragraph [ref=e113]: Ground Stop
+        - link "DCA Ronald Reagan Washington National Washington DC 1h 41m 8% 12% 50m 22% 13% High Cancellations • Ground Stop •" [ref=e114] [cursor=pointer]:
+          - /url: /airports/ronald-reagan-washington-national-dca
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - generic [ref=e121]: DCA
+              - generic [ref=e122]: Ronald Reagan Washington National
+            - generic [ref=e124]: Washington DC
+            - generic [ref=e125]:
+              - generic [ref=e126]: 1h 41m
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - img [ref=e129]
+                  - paragraph [ref=e131]: 8%
+                - generic [ref=e132]:
+                  - img [ref=e133]
+                  - paragraph [ref=e135]: 12%
+            - generic [ref=e136]:
+              - generic [ref=e137]: 50m
+              - generic [ref=e138]:
+                - generic [ref=e139]:
+                  - img [ref=e140]
+                  - paragraph [ref=e142]: 22%
+                - generic [ref=e143]:
+                  - img [ref=e144]
+                  - paragraph [ref=e146]: 13%
+            - list [ref=e149]:
+              - listitem [ref=e150]:
+                - generic [ref=e151]: High Cancellations •
+              - listitem [ref=e152]:
+                - generic [ref=e153]: Ground Stop •
+        - link "BWI Baltimore/Washington Intl. Thurgood Marshall Baltimore 1h 33m 15% 0% 32m 31% 0% Ground Stop" [ref=e154] [cursor=pointer]:
+          - /url: /airports/baltimorewashington-intl-thurgood-marshall-bwi
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e161]: BWI
+              - generic [ref=e162]: Baltimore/Washington Intl. Thurgood Marshall
+            - generic [ref=e164]: Baltimore
+            - generic [ref=e165]:
+              - generic [ref=e166]: 1h 33m
+              - generic [ref=e167]:
+                - generic [ref=e168]:
+                  - img [ref=e169]
+                  - paragraph [ref=e171]: 15%
+                - generic [ref=e172]:
+                  - img [ref=e173]
+                  - paragraph [ref=e175]: 0%
+            - generic [ref=e176]:
+              - generic [ref=e177]: 32m
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - img [ref=e180]
+                  - paragraph [ref=e182]: 31%
+                - generic [ref=e183]:
+                  - img [ref=e184]
+                  - paragraph [ref=e186]: 0%
+            - paragraph [ref=e189]: Ground Stop
+        - link "BOS General Edward Lawrence Logan Intl. Boston 46m 55% 0% 24m 59% 0%" [ref=e190] [cursor=pointer]:
+          - /url: /airports/general-edward-lawrence-logan-intl-bos
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - generic [ref=e197]: BOS
+              - generic [ref=e198]: General Edward Lawrence Logan Intl.
+            - generic [ref=e200]: Boston
+            - generic [ref=e201]:
+              - generic [ref=e202]: 46m
+              - generic [ref=e203]:
+                - generic [ref=e204]:
+                  - img [ref=e205]
+                  - paragraph [ref=e207]: 55%
+                - generic [ref=e208]:
+                  - img [ref=e209]
+                  - paragraph [ref=e211]: 0%
+            - generic [ref=e212]:
+              - generic [ref=e213]: 24m
+              - generic [ref=e214]:
+                - generic [ref=e215]:
+                  - img [ref=e216]
+                  - paragraph [ref=e218]: 59%
+                - generic [ref=e219]:
+                  - img [ref=e220]
+                  - paragraph [ref=e222]: 0%
+            - generic [ref=e223]:
+              - generic:
+                - list
+        - link "YUL Montreal-Pierre Elliott Trudeau Intl. Montreal 53m 38% 0% 31m 40% 0%" [ref=e224] [cursor=pointer]:
+          - /url: /airports/montreal-pierre-elliott-trudeau-intl-yul
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e231]: YUL
+              - generic [ref=e232]: Montreal-Pierre Elliott Trudeau Intl.
+            - generic [ref=e234]: Montreal
+            - generic [ref=e235]:
+              - generic [ref=e236]: 53m
+              - generic [ref=e237]:
+                - generic [ref=e238]:
+                  - img [ref=e239]
+                  - paragraph [ref=e241]: 38%
+                - generic [ref=e242]:
+                  - img [ref=e243]
+                  - paragraph [ref=e245]: 0%
+            - generic [ref=e246]:
+              - generic [ref=e247]: 31m
+              - generic [ref=e248]:
+                - generic [ref=e249]:
+                  - img [ref=e250]
+                  - paragraph [ref=e252]: 40%
+                - generic [ref=e253]:
+                  - img [ref=e254]
+                  - paragraph [ref=e256]: 0%
+            - generic [ref=e257]:
+              - generic:
+                - list
+        - link "SJU Luis Muñoz Marín Intl. San Juan 19m 20% 0% 1h 22m 20% 0% Staff Shortage Slowing Operations" [ref=e258] [cursor=pointer]:
+          - /url: /airports/luis-munoz-marin-intl-sju
+          - generic [ref=e259]:
+            - generic [ref=e260]:
+              - generic [ref=e265]: SJU
+              - generic [ref=e266]: Luis Muñoz Marín Intl.
+            - generic [ref=e268]: San Juan
+            - generic [ref=e269]:
+              - generic [ref=e270]: 19m
+              - generic [ref=e271]:
+                - generic [ref=e272]:
+                  - img [ref=e273]
+                  - paragraph [ref=e275]: 20%
+                - generic [ref=e276]:
+                  - img [ref=e277]
+                  - paragraph [ref=e279]: 0%
+            - generic [ref=e280]:
+              - generic [ref=e281]: 1h 22m
+              - generic [ref=e282]:
+                - generic [ref=e283]:
+                  - img [ref=e284]
+                  - paragraph [ref=e286]: 20%
+                - generic [ref=e287]:
+                  - img [ref=e288]
+                  - paragraph [ref=e290]: 0%
+            - paragraph [ref=e293]: Staff Shortage Slowing Operations
+        - link "PUJ Punta Cana Intl. Punta Cana 1h 38m 40% 0% 0m 0% 0%" [ref=e294] [cursor=pointer]:
+          - /url: /airports/punta-cana-intl-puj
+          - generic [ref=e295]:
+            - generic [ref=e296]:
+              - generic [ref=e301]: PUJ
+              - generic [ref=e302]: Punta Cana Intl.
+            - generic [ref=e304]: Punta Cana
+            - generic [ref=e305]:
+              - generic [ref=e306]: 1h 38m
+              - generic [ref=e307]:
+                - generic [ref=e308]:
+                  - img [ref=e309]
+                  - paragraph [ref=e311]: 40%
+                - generic [ref=e312]:
+                  - img [ref=e313]
+                  - paragraph [ref=e315]: 0%
+            - generic [ref=e316]:
+              - generic [ref=e317]: 0m
+              - generic [ref=e318]:
+                - generic [ref=e319]:
+                  - img [ref=e320]
+                  - paragraph [ref=e322]: 0%
+                - generic [ref=e323]:
+                  - img [ref=e324]
+                  - paragraph [ref=e326]: 0%
+            - generic [ref=e327]:
+              - generic:
+                - list
+        - link "JFK John F Kennedy Intl. New York 28m 68% 0% 25m 42% 3% Ground Delay" [ref=e328] [cursor=pointer]:
+          - /url: /airports/john-f-kennedy-intl-jfk
+          - generic [ref=e329]:
+            - generic [ref=e330]:
+              - generic [ref=e335]: JFK
+              - generic [ref=e336]: John F Kennedy Intl.
+            - generic [ref=e338]: New York
+            - generic [ref=e339]:
+              - generic [ref=e340]: 28m
+              - generic [ref=e341]:
+                - generic [ref=e342]:
+                  - img [ref=e343]
+                  - paragraph [ref=e345]: 68%
+                - generic [ref=e346]:
+                  - img [ref=e347]
+                  - paragraph [ref=e349]: 0%
+            - generic [ref=e350]:
+              - generic [ref=e351]: 25m
+              - generic [ref=e352]:
+                - generic [ref=e353]:
+                  - img [ref=e354]
+                  - paragraph [ref=e356]: 42%
+                - generic [ref=e357]:
+                  - img [ref=e358]
+                  - paragraph [ref=e360]: 3%
+            - paragraph [ref=e363]: Ground Delay
+        - link "ORD Chicago O'Hare Intl. Chicago 29m 64% 0% 0m 69% 2%" [ref=e364] [cursor=pointer]:
+          - /url: /airports/chicago-ohare-intl-ord
+          - generic [ref=e365]:
+            - generic [ref=e366]:
+              - generic [ref=e371]: ORD
+              - generic [ref=e372]: Chicago O'Hare Intl.
+            - generic [ref=e374]: Chicago
+            - generic [ref=e375]:
+              - generic [ref=e376]: 29m
+              - generic [ref=e377]:
+                - generic [ref=e378]:
+                  - img [ref=e379]
+                  - paragraph [ref=e381]: 64%
+                - generic [ref=e382]:
+                  - img [ref=e383]
+                  - paragraph [ref=e385]: 0%
+            - generic [ref=e386]:
+              - generic [ref=e387]: 0m
+              - generic [ref=e388]:
+                - generic [ref=e389]:
+                  - img [ref=e390]
+                  - paragraph [ref=e392]: 69%
+                - generic [ref=e393]:
+                  - img [ref=e394]
+                  - paragraph [ref=e396]: 2%
+            - generic [ref=e397]:
+              - generic:
+                - list
+        - link "MIA Miami Intl. Miami 27m 81% 0% 13m 56% 0%" [ref=e398] [cursor=pointer]:
+          - /url: /airports/miami-intl-mia
+          - generic [ref=e399]:
+            - generic [ref=e400]:
+              - generic [ref=e405]: MIA
+              - generic [ref=e406]: Miami Intl.
+            - generic [ref=e408]: Miami
+            - generic [ref=e409]:
+              - generic [ref=e410]: 27m
+              - generic [ref=e411]:
+                - generic [ref=e412]:
+                  - img [ref=e413]
+                  - paragraph [ref=e415]: 81%
+                - generic [ref=e416]:
+                  - img [ref=e417]
+                  - paragraph [ref=e419]: 0%
+            - generic [ref=e420]:
+              - generic [ref=e421]: 13m
+              - generic [ref=e422]:
+                - generic [ref=e423]:
+                  - img [ref=e424]
+                  - paragraph [ref=e426]: 56%
+                - generic [ref=e427]:
+                  - img [ref=e428]
+                  - paragraph [ref=e430]: 0%
+            - generic [ref=e431]:
+              - generic:
+                - list
+        - link "EWR Newark Liberty Intl. Newark 30m 70% 4% 15m 37% 3% Ground Stop • Flights Diverted •" [ref=e432] [cursor=pointer]:
+          - /url: /airports/newark-liberty-intl-ewr
+          - generic [ref=e433]:
+            - generic [ref=e434]:
+              - generic [ref=e439]: EWR
+              - generic [ref=e440]: Newark Liberty Intl.
+            - generic [ref=e442]: Newark
+            - generic [ref=e443]:
+              - generic [ref=e444]: 30m
+              - generic [ref=e445]:
+                - generic [ref=e446]:
+                  - img [ref=e447]
+                  - paragraph [ref=e449]: 70%
+                - generic [ref=e450]:
+                  - img [ref=e451]
+                  - paragraph [ref=e453]: 4%
+            - generic [ref=e454]:
+              - generic [ref=e455]: 15m
+              - generic [ref=e456]:
+                - generic [ref=e457]:
+                  - img [ref=e458]
+                  - paragraph [ref=e460]: 37%
+                - generic [ref=e461]:
+                  - img [ref=e462]
+                  - paragraph [ref=e464]: 3%
+            - list [ref=e467]:
+              - listitem [ref=e468]:
+                - generic [ref=e469]: Ground Stop •
+              - listitem [ref=e470]:
+                - generic [ref=e471]: Flights Diverted •
+        - link "FLL Fort Lauderdale Hollywood Intl. Fort Lauderdale 26m 45% 13% 27m 52% 4% High Cancellations" [ref=e472] [cursor=pointer]:
+          - /url: /airports/fort-lauderdale-hollywood-intl-fll
+          - generic [ref=e473]:
+            - generic [ref=e474]:
+              - generic [ref=e479]: FLL
+              - generic [ref=e480]: Fort Lauderdale Hollywood Intl.
+            - generic [ref=e482]: Fort Lauderdale
+            - generic [ref=e483]:
+              - generic [ref=e484]: 26m
+              - generic [ref=e485]:
+                - generic [ref=e486]:
+                  - img [ref=e487]
+                  - paragraph [ref=e489]: 45%
+                - generic [ref=e490]:
+                  - img [ref=e491]
+                  - paragraph [ref=e493]: 13%
+            - generic [ref=e494]:
+              - generic [ref=e495]: 27m
+              - generic [ref=e496]:
+                - generic [ref=e497]:
+                  - img [ref=e498]
+                  - paragraph [ref=e500]: 52%
+                - generic [ref=e501]:
+                  - img [ref=e502]
+                  - paragraph [ref=e504]: 4%
+            - paragraph [ref=e507]: High Cancellations
+        - link "MCO Orlando Intl. Orlando 18m 73% 2% 12m 61% 3%" [ref=e508] [cursor=pointer]:
+          - /url: /airports/orlando-intl-mco
+          - generic [ref=e509]:
+            - generic [ref=e510]:
+              - generic [ref=e515]: MCO
+              - generic [ref=e516]: Orlando Intl.
+            - generic [ref=e518]: Orlando
+            - generic [ref=e519]:
+              - generic [ref=e520]: 18m
+              - generic [ref=e521]:
+                - generic [ref=e522]:
+                  - img [ref=e523]
+                  - paragraph [ref=e525]: 73%
+                - generic [ref=e526]:
+                  - img [ref=e527]
+                  - paragraph [ref=e529]: 2%
+            - generic [ref=e530]:
+              - generic [ref=e531]: 12m
+              - generic [ref=e532]:
+                - generic [ref=e533]:
+                  - img [ref=e534]
+                  - paragraph [ref=e536]: 61%
+                - generic [ref=e537]:
+                  - img [ref=e538]
+                  - paragraph [ref=e540]: 3%
+            - generic [ref=e541]:
+              - generic:
+                - list
+        - link "YYZ Lester B. Pearson Intl. Toronto 23m 49% 0% 13m 50% 0%" [ref=e542] [cursor=pointer]:
+          - /url: /airports/lester-b-pearson-intl-yyz
+          - generic [ref=e543]:
+            - generic [ref=e544]:
+              - generic [ref=e549]: YYZ
+              - generic [ref=e550]: Lester B. Pearson Intl.
+            - generic [ref=e552]: Toronto
+            - generic [ref=e553]:
+              - generic [ref=e554]: 23m
+              - generic [ref=e555]:
+                - generic [ref=e556]:
+                  - img [ref=e557]
+                  - paragraph [ref=e559]: 49%
+                - generic [ref=e560]:
+                  - img [ref=e561]
+                  - paragraph [ref=e563]: 0%
+            - generic [ref=e564]:
+              - generic [ref=e565]: 13m
+              - generic [ref=e566]:
+                - generic [ref=e567]:
+                  - img [ref=e568]
+                  - paragraph [ref=e570]: 50%
+                - generic [ref=e571]:
+                  - img [ref=e572]
+                  - paragraph [ref=e574]: 0%
+            - generic [ref=e575]:
+              - generic:
+                - list
+        - link "PHL Philadelphia Intl. Philadelphia 24m 82% 4% 32m 25% 0%" [ref=e576] [cursor=pointer]:
+          - /url: /airports/philadelphia-intl-phl
+          - generic [ref=e577]:
+            - generic [ref=e578]:
+              - generic [ref=e583]: PHL
+              - generic [ref=e584]: Philadelphia Intl.
+            - generic [ref=e586]: Philadelphia
+            - generic [ref=e587]:
+              - generic [ref=e588]: 24m
+              - generic [ref=e589]:
+                - generic [ref=e590]:
+                  - img [ref=e591]
+                  - paragraph [ref=e593]: 82%
+                - generic [ref=e594]:
+                  - img [ref=e595]
+                  - paragraph [ref=e597]: 4%
+            - generic [ref=e598]:
+              - generic [ref=e599]: 32m
+              - generic [ref=e600]:
+                - generic [ref=e601]:
+                  - img [ref=e602]
+                  - paragraph [ref=e604]: 25%
+                - generic [ref=e605]:
+                  - img [ref=e606]
+                  - paragraph [ref=e608]: 0%
+            - generic [ref=e609]:
+              - generic:
+                - list
+        - link "DFW Dallas Fort Worth Intl. Dallas 17m 59% 0% 0m 84% 0%" [ref=e610] [cursor=pointer]:
+          - /url: /airports/dallas-fort-worth-intl-dfw
+          - generic [ref=e611]:
+            - generic [ref=e612]:
+              - generic [ref=e617]: DFW
+              - generic [ref=e618]: Dallas Fort Worth Intl.
+            - generic [ref=e620]: Dallas
+            - generic [ref=e621]:
+              - generic [ref=e622]: 17m
+              - generic [ref=e623]:
+                - generic [ref=e624]:
+                  - img [ref=e625]
+                  - paragraph [ref=e627]: 59%
+                - generic [ref=e628]:
+                  - img [ref=e629]
+                  - paragraph [ref=e631]: 0%
+            - generic [ref=e632]:
+              - generic [ref=e633]: 0m
+              - generic [ref=e634]:
+                - generic [ref=e635]:
+                  - img [ref=e636]
+                  - paragraph [ref=e638]: 84%
+                - generic [ref=e639]:
+                  - img [ref=e640]
+                  - paragraph [ref=e642]: 0%
+            - generic [ref=e643]:
+              - generic:
+                - list
+        - link "DEN Denver Intl. Denver 17m 86% 0% 0m 79% 1%" [ref=e644] [cursor=pointer]:
+          - /url: /airports/denver-intl-den
+          - generic [ref=e645]:
+            - generic [ref=e646]:
+              - generic [ref=e651]: DEN
+              - generic [ref=e652]: Denver Intl.
+            - generic [ref=e654]: Denver
+            - generic [ref=e655]:
+              - generic [ref=e656]: 17m
+              - generic [ref=e657]:
+                - generic [ref=e658]:
+                  - img [ref=e659]
+                  - paragraph [ref=e661]: 86%
+                - generic [ref=e662]:
+                  - img [ref=e663]
+                  - paragraph [ref=e665]: 0%
+            - generic [ref=e666]:
+              - generic [ref=e667]: 0m
+              - generic [ref=e668]:
+                - generic [ref=e669]:
+                  - img [ref=e670]
+                  - paragraph [ref=e672]: 79%
+                - generic [ref=e673]:
+                  - img [ref=e674]
+                  - paragraph [ref=e676]: 1%
+            - generic [ref=e677]:
+              - generic:
+                - list
+        - link "SFO San Francisco Intl. San Francisco 18m 74% 0% 9m 79% 0%" [ref=e678] [cursor=pointer]:
+          - /url: /airports/san-francisco-intl-sfo
+          - generic [ref=e679]:
+            - generic [ref=e680]:
+              - generic [ref=e685]: SFO
+              - generic [ref=e686]: San Francisco Intl.
+            - generic [ref=e688]: San Francisco
+            - generic [ref=e689]:
+              - generic [ref=e690]: 18m
+              - generic [ref=e691]:
+                - generic [ref=e692]:
+                  - img [ref=e693]
+                  - paragraph [ref=e695]: 74%
+                - generic [ref=e696]:
+                  - img [ref=e697]
+                  - paragraph [ref=e699]: 0%
+            - generic [ref=e700]:
+              - generic [ref=e701]: 9m
+              - generic [ref=e702]:
+                - generic [ref=e703]:
+                  - img [ref=e704]
+                  - paragraph [ref=e706]: 79%
+                - generic [ref=e707]:
+                  - img [ref=e708]
+                  - paragraph [ref=e710]: 0%
+            - generic [ref=e711]:
+              - generic:
+                - list
+        - link "IAD Washington Dulles Intl. Washington DC 34m 40% 0% 0m 83% 0% Unexpected Inbound Diversions" [ref=e712] [cursor=pointer]:
+          - /url: /airports/washington-dulles-intl-iad
+          - generic [ref=e713]:
+            - generic [ref=e714]:
+              - generic [ref=e719]: IAD
+              - generic [ref=e720]: Washington Dulles Intl.
+            - generic [ref=e722]: Washington DC
+            - generic [ref=e723]:
+              - generic [ref=e724]: 34m
+              - generic [ref=e725]:
+                - generic [ref=e726]:
+                  - img [ref=e727]
+                  - paragraph [ref=e729]: 40%
+                - generic [ref=e730]:
+                  - img [ref=e731]
+                  - paragraph [ref=e733]: 0%
+            - generic [ref=e734]:
+              - generic [ref=e735]: 0m
+              - generic [ref=e736]:
+                - generic [ref=e737]:
+                  - img [ref=e738]
+                  - paragraph [ref=e740]: 83%
+                - generic [ref=e741]:
+                  - img [ref=e742]
+                  - paragraph [ref=e744]: 0%
+            - paragraph [ref=e747]: Unexpected Inbound Diversions
+        - link "YOW Ottawa Macdonald-Cartier Intl. Ottawa 28m 33% 0% 0m 100% 0%" [ref=e748] [cursor=pointer]:
+          - /url: /airports/ottawa-macdonald-cartier-intl-yow
+          - generic [ref=e749]:
+            - generic [ref=e750]:
+              - generic [ref=e755]: YOW
+              - generic [ref=e756]: Ottawa Macdonald-Cartier Intl.
+            - generic [ref=e758]: Ottawa
+            - generic [ref=e759]:
+              - generic [ref=e760]: 28m
+              - generic [ref=e761]:
+                - generic [ref=e762]:
+                  - img [ref=e763]
+                  - paragraph [ref=e765]: 33%
+                - generic [ref=e766]:
+                  - img [ref=e767]
+                  - paragraph [ref=e769]: 0%
+            - generic [ref=e770]:
+              - generic [ref=e771]: 0m
+              - generic [ref=e772]:
+                - generic [ref=e773]:
+                  - img [ref=e774]
+                  - paragraph [ref=e776]: 100%
+                - generic [ref=e777]:
+                  - img [ref=e778]
+                  - paragraph [ref=e780]: 0%
+            - generic [ref=e781]:
+              - generic:
+                - list
+        - link "STL St Louis Lambert Intl. Saint Louis 31m 33% 0% 0m 79% 0%" [ref=e782] [cursor=pointer]:
+          - /url: /airports/st-louis-lambert-intl-stl
+          - generic [ref=e783]:
+            - generic [ref=e784]:
+              - generic [ref=e789]: STL
+              - generic [ref=e790]: St Louis Lambert Intl.
+            - generic [ref=e792]: Saint Louis
+            - generic [ref=e793]:
+              - generic [ref=e794]: 31m
+              - generic [ref=e795]:
+                - generic [ref=e796]:
+                  - img [ref=e797]
+                  - paragraph [ref=e799]: 33%
+                - generic [ref=e800]:
+                  - img [ref=e801]
+                  - paragraph [ref=e803]: 0%
+            - generic [ref=e804]:
+              - generic [ref=e805]: 0m
+              - generic [ref=e806]:
+                - generic [ref=e807]:
+                  - img [ref=e808]
+                  - paragraph [ref=e810]: 79%
+                - generic [ref=e811]:
+                  - img [ref=e812]
+                  - paragraph [ref=e814]: 0%
+            - generic [ref=e815]:
+              - generic:
+                - list
+        - link "CLE Cleveland Hopkins Intl. Cleveland 16m 67% 0% 10m 57% 0%" [ref=e816] [cursor=pointer]:
+          - /url: /airports/cleveland-hopkins-intl-cle
+          - generic [ref=e817]:
+            - generic [ref=e818]:
+              - generic [ref=e823]: CLE
+              - generic [ref=e824]: Cleveland Hopkins Intl.
+            - generic [ref=e826]: Cleveland
+            - generic [ref=e827]:
+              - generic [ref=e828]: 16m
+              - generic [ref=e829]:
+                - generic [ref=e830]:
+                  - img [ref=e831]
+                  - paragraph [ref=e833]: 67%
+                - generic [ref=e834]:
+                  - img [ref=e835]
+                  - paragraph [ref=e837]: 0%
+            - generic [ref=e838]:
+              - generic [ref=e839]: 10m
+              - generic [ref=e840]:
+                - generic [ref=e841]:
+                  - img [ref=e842]
+                  - paragraph [ref=e844]: 57%
+                - generic [ref=e845]:
+                  - img [ref=e846]
+                  - paragraph [ref=e848]: 0%
+            - generic [ref=e849]:
+              - generic:
+                - list
+        - link "CLT Charlotte Douglas Intl. Charlotte 13m 77% 0% 0m 85% 0%" [ref=e850] [cursor=pointer]:
+          - /url: /airports/charlotte-douglas-intl-clt
+          - generic [ref=e851]:
+            - generic [ref=e852]:
+              - generic [ref=e857]: CLT
+              - generic [ref=e858]: Charlotte Douglas Intl.
+            - generic [ref=e860]: Charlotte
+            - generic [ref=e861]:
+              - generic [ref=e862]: 13m
+              - generic [ref=e863]:
+                - generic [ref=e864]:
+                  - img [ref=e865]
+                  - paragraph [ref=e867]: 77%
+                - generic [ref=e868]:
+                  - img [ref=e869]
+                  - paragraph [ref=e871]: 0%
+            - generic [ref=e872]:
+              - generic [ref=e873]: 0m
+              - generic [ref=e874]:
+                - generic [ref=e875]:
+                  - img [ref=e876]
+                  - paragraph [ref=e878]: 85%
+                - generic [ref=e879]:
+                  - img [ref=e880]
+                  - paragraph [ref=e882]: 0%
+            - generic [ref=e883]:
+              - generic:
+                - list
+        - link "ATL Hartsfield Jackson Atlanta Intl. Atlanta 11m 80% 0% 0m 71% 0%" [ref=e884] [cursor=pointer]:
+          - /url: /airports/hartsfield-jackson-atlanta-intl-atl
+          - generic [ref=e885]:
+            - generic [ref=e886]:
+              - generic [ref=e891]: ATL
+              - generic [ref=e892]: Hartsfield Jackson Atlanta Intl.
+            - generic [ref=e894]: Atlanta
+            - generic [ref=e895]:
+              - generic [ref=e896]: 11m
+              - generic [ref=e897]:
+                - generic [ref=e898]:
+                  - img [ref=e899]
+                  - paragraph [ref=e901]: 80%
+                - generic [ref=e902]:
+                  - img [ref=e903]
+                  - paragraph [ref=e905]: 0%
+            - generic [ref=e906]:
+              - generic [ref=e907]: 0m
+              - generic [ref=e908]:
+                - generic [ref=e909]:
+                  - img [ref=e910]
+                  - paragraph [ref=e912]: 71%
+                - generic [ref=e913]:
+                  - img [ref=e914]
+                  - paragraph [ref=e916]: 0%
+            - generic [ref=e917]:
+              - generic:
+                - list
+        - link "IAH George Bush Intercontinental Houston 10m 94% 0% 0m 94% 0%" [ref=e918] [cursor=pointer]:
+          - /url: /airports/george-bush-intercontinental-iah
+          - generic [ref=e919]:
+            - generic [ref=e920]:
+              - generic [ref=e925]: IAH
+              - generic [ref=e926]: George Bush Intercontinental
+            - generic [ref=e928]: Houston
+            - generic [ref=e929]:
+              - generic [ref=e930]: 10m
+              - generic [ref=e931]:
+                - generic [ref=e932]:
+                  - img [ref=e933]
+                  - paragraph [ref=e935]: 94%
+                - generic [ref=e936]:
+                  - img [ref=e937]
+                  - paragraph [ref=e939]: 0%
+            - generic [ref=e940]:
+              - generic [ref=e941]: 0m
+              - generic [ref=e942]:
+                - generic [ref=e943]:
+                  - img [ref=e944]
+                  - paragraph [ref=e946]: 94%
+                - generic [ref=e947]:
+                  - img [ref=e948]
+                  - paragraph [ref=e950]: 0%
+            - generic [ref=e951]:
+              - generic:
+                - list
+        - link "DTW Detroit Metropolitan Wayne County Detroit 7m 72% 0% 12m 63% 0%" [ref=e952] [cursor=pointer]:
+          - /url: /airports/detroit-metropolitan-wayne-county-dtw
+          - generic [ref=e953]:
+            - generic [ref=e954]:
+              - generic [ref=e959]: DTW
+              - generic [ref=e960]: Detroit Metropolitan Wayne County
+            - generic [ref=e962]: Detroit
+            - generic [ref=e963]:
+              - generic [ref=e964]: 7m
+              - generic [ref=e965]:
+                - generic [ref=e966]:
+                  - img [ref=e967]
+                  - paragraph [ref=e969]: 72%
+                - generic [ref=e970]:
+                  - img [ref=e971]
+                  - paragraph [ref=e973]: 0%
+            - generic [ref=e974]:
+              - generic [ref=e975]: 12m
+              - generic [ref=e976]:
+                - generic [ref=e977]:
+                  - img [ref=e978]
+                  - paragraph [ref=e980]: 63%
+                - generic [ref=e981]:
+                  - img [ref=e982]
+                  - paragraph [ref=e984]: 0%
+            - generic [ref=e985]:
+              - generic:
+                - list
+        - link "SEA Seattle Tacoma Intl. Seattle 9m 81% 0% 0m 80% 0%" [ref=e986] [cursor=pointer]:
+          - /url: /airports/seattle-tacoma-intl-sea
+          - generic [ref=e987]:
+            - generic [ref=e988]:
+              - generic [ref=e993]: SEA
+              - generic [ref=e994]: Seattle Tacoma Intl.
+            - generic [ref=e996]: Seattle
+            - generic [ref=e997]:
+              - generic [ref=e998]: 9m
+              - generic [ref=e999]:
+                - generic [ref=e1000]:
+                  - img [ref=e1001]
+                  - paragraph [ref=e1003]: 81%
+                - generic [ref=e1004]:
+                  - img [ref=e1005]
+                  - paragraph [ref=e1007]: 0%
+            - generic [ref=e1008]:
+              - generic [ref=e1009]: 0m
+              - generic [ref=e1010]:
+                - generic [ref=e1011]:
+                  - img [ref=e1012]
+                  - paragraph [ref=e1014]: 80%
+                - generic [ref=e1015]:
+                  - img [ref=e1016]
+                  - paragraph [ref=e1018]: 0%
+            - generic [ref=e1019]:
+              - generic:
+                - list
+        - link "SAN San Diego Intl. San Diego 10m 73% 0% 0m 95% 0%" [ref=e1020] [cursor=pointer]:
+          - /url: /airports/san-diego-intl-san
+          - generic [ref=e1021]:
+            - generic [ref=e1022]:
+              - generic [ref=e1027]: SAN
+              - generic [ref=e1028]: San Diego Intl.
+            - generic [ref=e1030]: San Diego
+            - generic [ref=e1031]:
+              - generic [ref=e1032]: 10m
+              - generic [ref=e1033]:
+                - generic [ref=e1034]:
+                  - img [ref=e1035]
+                  - paragraph [ref=e1037]: 73%
+                - generic [ref=e1038]:
+                  - img [ref=e1039]
+                  - paragraph [ref=e1041]: 0%
+            - generic [ref=e1042]:
+              - generic [ref=e1043]: 0m
+              - generic [ref=e1044]:
+                - generic [ref=e1045]:
+                  - img [ref=e1046]
+                  - paragraph [ref=e1048]: 95%
+                - generic [ref=e1049]:
+                  - img [ref=e1050]
+                  - paragraph [ref=e1052]: 0%
+            - generic [ref=e1053]:
+              - generic:
+                - list
+        - link "LAS Harry Reid Intl. Las Vegas 6m 95% 0% 0m 89% 0%" [ref=e1054] [cursor=pointer]:
+          - /url: /airports/harry-reid-intl-las
+          - generic [ref=e1055]:
+            - generic [ref=e1056]:
+              - generic [ref=e1061]: LAS
+              - generic [ref=e1062]: Harry Reid Intl.
+            - generic [ref=e1064]: Las Vegas
+            - generic [ref=e1065]:
+              - generic [ref=e1066]: 6m
+              - generic [ref=e1067]:
+                - generic [ref=e1068]:
+                  - img [ref=e1069]
+                  - paragraph [ref=e1071]: 95%
+                - generic [ref=e1072]:
+                  - img [ref=e1073]
+                  - paragraph [ref=e1075]: 0%
+            - generic [ref=e1076]:
+              - generic [ref=e1077]: 0m
+              - generic [ref=e1078]:
+                - generic [ref=e1079]:
+                  - img [ref=e1080]
+                  - paragraph [ref=e1082]: 89%
+                - generic [ref=e1083]:
+                  - img [ref=e1084]
+                  - paragraph [ref=e1086]: 0%
+            - generic [ref=e1087]:
+              - generic:
+                - list
+        - link "HNL Daniel K Inouye Intl. Honolulu 10m 82% 0% 0m 88% 0%" [ref=e1088] [cursor=pointer]:
+          - /url: /airports/daniel-k-inouye-intl-hnl
+          - generic [ref=e1089]:
+            - generic [ref=e1090]:
+              - generic [ref=e1095]: HNL
+              - generic [ref=e1096]: Daniel K Inouye Intl.
+            - generic [ref=e1098]: Honolulu
+            - generic [ref=e1099]:
+              - generic [ref=e1100]: 10m
+              - generic [ref=e1101]:
+                - generic [ref=e1102]:
+                  - img [ref=e1103]
+                  - paragraph [ref=e1105]: 82%
+                - generic [ref=e1106]:
+                  - img [ref=e1107]
+                  - paragraph [ref=e1109]: 0%
+            - generic [ref=e1110]:
+              - generic [ref=e1111]: 0m
+              - generic [ref=e1112]:
+                - generic [ref=e1113]:
+                  - img [ref=e1114]
+                  - paragraph [ref=e1116]: 88%
+                - generic [ref=e1117]:
+                  - img [ref=e1118]
+                  - paragraph [ref=e1120]: 0%
+            - generic [ref=e1121]:
+              - generic:
+                - list
+        - link "LAX Los Angeles Intl. Los Angeles 4m 94% 0% 0m 89% 0%" [ref=e1122] [cursor=pointer]:
+          - /url: /airports/los-angeles-intl-lax
+          - generic [ref=e1123]:
+            - generic [ref=e1124]:
+              - generic [ref=e1129]: LAX
+              - generic [ref=e1130]: Los Angeles Intl.
+            - generic [ref=e1132]: Los Angeles
+            - generic [ref=e1133]:
+              - generic [ref=e1134]: 4m
+              - generic [ref=e1135]:
+                - generic [ref=e1136]:
+                  - img [ref=e1137]
+                  - paragraph [ref=e1139]: 94%
+                - generic [ref=e1140]:
+                  - img [ref=e1141]
+                  - paragraph [ref=e1143]: 0%
+            - generic [ref=e1144]:
+              - generic [ref=e1145]: 0m
+              - generic [ref=e1146]:
+                - generic [ref=e1147]:
+                  - img [ref=e1148]
+                  - paragraph [ref=e1150]: 89%
+                - generic [ref=e1151]:
+                  - img [ref=e1152]
+                  - paragraph [ref=e1154]: 0%
+            - generic [ref=e1155]:
+              - generic:
+                - list
+        - link "MEX Licenciado Benito Juarez Intl. Mexico City 5m 86% 0% 0m 88% 0%" [ref=e1156] [cursor=pointer]:
+          - /url: /airports/licenciado-benito-juarez-intl-mex
+          - generic [ref=e1157]:
+            - generic [ref=e1158]:
+              - generic [ref=e1163]: MEX
+              - generic [ref=e1164]: Licenciado Benito Juarez Intl.
+            - generic [ref=e1166]: Mexico City
+            - generic [ref=e1167]:
+              - generic [ref=e1168]: 5m
+              - generic [ref=e1169]:
+                - generic [ref=e1170]:
+                  - img [ref=e1171]
+                  - paragraph [ref=e1173]: 86%
+                - generic [ref=e1174]:
+                  - img [ref=e1175]
+                  - paragraph [ref=e1177]: 0%
+            - generic [ref=e1178]:
+              - generic [ref=e1179]: 0m
+              - generic [ref=e1180]:
+                - generic [ref=e1181]:
+                  - img [ref=e1182]
+                  - paragraph [ref=e1184]: 88%
+                - generic [ref=e1185]:
+                  - img [ref=e1186]
+                  - paragraph [ref=e1188]: 0%
+            - generic [ref=e1189]:
+              - generic:
+                - list
+        - link "CUN Cancún Intl. Cancún 14m 57% 0% 0m 71% 0%" [ref=e1190] [cursor=pointer]:
+          - /url: /airports/cancun-intl-cun
+          - generic [ref=e1191]:
+            - generic [ref=e1192]:
+              - generic [ref=e1197]: CUN
+              - generic [ref=e1198]: Cancún Intl.
+            - generic [ref=e1200]: Cancún
+            - generic [ref=e1201]:
+              - generic [ref=e1202]: 14m
+              - generic [ref=e1203]:
+                - generic [ref=e1204]:
+                  - img [ref=e1205]
+                  - paragraph [ref=e1207]: 57%
+                - generic [ref=e1208]:
+                  - img [ref=e1209]
+                  - paragraph [ref=e1211]: 0%
+            - generic [ref=e1212]:
+              - generic [ref=e1213]: 0m
+              - generic [ref=e1214]:
+                - generic [ref=e1215]:
+                  - img [ref=e1216]
+                  - paragraph [ref=e1218]: 71%
+                - generic [ref=e1219]:
+                  - img [ref=e1220]
+                  - paragraph [ref=e1222]: 0%
+            - generic [ref=e1223]:
+              - generic:
+                - list
+        - link "PDX Portland Intl. Portland 3m 87% 0% 3m 89% 0%" [ref=e1224] [cursor=pointer]:
+          - /url: /airports/portland-intl-pdx
+          - generic [ref=e1225]:
+            - generic [ref=e1226]:
+              - generic [ref=e1231]: PDX
+              - generic [ref=e1232]: Portland Intl.
+            - generic [ref=e1234]: Portland
+            - generic [ref=e1235]:
+              - generic [ref=e1236]: 3m
+              - generic [ref=e1237]:
+                - generic [ref=e1238]:
+                  - img [ref=e1239]
+                  - paragraph [ref=e1241]: 87%
+                - generic [ref=e1242]:
+                  - img [ref=e1243]
+                  - paragraph [ref=e1245]: 0%
+            - generic [ref=e1246]:
+              - generic [ref=e1247]: 3m
+              - generic [ref=e1248]:
+                - generic [ref=e1249]:
+                  - img [ref=e1250]
+                  - paragraph [ref=e1252]: 89%
+                - generic [ref=e1253]:
+                  - img [ref=e1254]
+                  - paragraph [ref=e1256]: 0%
+            - generic [ref=e1257]:
+              - generic:
+                - list
+        - link "PHX Phoenix Sky Harbor Intl. Phoenix 4m 87% 0% 0m 85% 0% Unexpected Inbound Diversions" [ref=e1258] [cursor=pointer]:
+          - /url: /airports/phoenix-sky-harbor-intl-phx
+          - generic [ref=e1259]:
+            - generic [ref=e1260]:
+              - generic [ref=e1265]: PHX
+              - generic [ref=e1266]: Phoenix Sky Harbor Intl.
+            - generic [ref=e1268]: Phoenix
+            - generic [ref=e1269]:
+              - generic [ref=e1270]: 4m
+              - generic [ref=e1271]:
+                - generic [ref=e1272]:
+                  - img [ref=e1273]
+                  - paragraph [ref=e1275]: 87%
+                - generic [ref=e1276]:
+                  - img [ref=e1277]
+                  - paragraph [ref=e1279]: 0%
+            - generic [ref=e1280]:
+              - generic [ref=e1281]: 0m
+              - generic [ref=e1282]:
+                - generic [ref=e1283]:
+                  - img [ref=e1284]
+                  - paragraph [ref=e1286]: 85%
+                - generic [ref=e1287]:
+                  - img [ref=e1288]
+                  - paragraph [ref=e1290]: 0%
+            - paragraph [ref=e1293]: Unexpected Inbound Diversions
+        - link "YVR Vancouver Intl. Vancouver 2m 88% 0% 3m 75% 0%" [ref=e1294] [cursor=pointer]:
+          - /url: /airports/vancouver-intl-yvr
+          - generic [ref=e1295]:
+            - generic [ref=e1296]:
+              - generic [ref=e1301]: YVR
+              - generic [ref=e1302]: Vancouver Intl.
+            - generic [ref=e1304]: Vancouver
+            - generic [ref=e1305]:
+              - generic [ref=e1306]: 2m
+              - generic [ref=e1307]:
+                - generic [ref=e1308]:
+                  - img [ref=e1309]
+                  - paragraph [ref=e1311]: 88%
+                - generic [ref=e1312]:
+                  - img [ref=e1313]
+                  - paragraph [ref=e1315]: 0%
+            - generic [ref=e1316]:
+              - generic [ref=e1317]: 3m
+              - generic [ref=e1318]:
+                - generic [ref=e1319]:
+                  - img [ref=e1320]
+                  - paragraph [ref=e1322]: 75%
+                - generic [ref=e1323]:
+                  - img [ref=e1324]
+                  - paragraph [ref=e1326]: 0%
+            - generic [ref=e1327]:
+              - generic:
+                - list
+        - link "MSP Minneapolis–Saint Paul Intl. Minneapolis 3m 92% 0% 0m 83% 0%" [ref=e1328] [cursor=pointer]:
+          - /url: /airports/minneapolissaint-paul-intl-msp
+          - generic [ref=e1329]:
+            - generic [ref=e1330]:
+              - generic [ref=e1335]: MSP
+              - generic [ref=e1336]: Minneapolis–Saint Paul Intl.
+            - generic [ref=e1338]: Minneapolis
+            - generic [ref=e1339]:
+              - generic [ref=e1340]: 3m
+              - generic [ref=e1341]:
+                - generic [ref=e1342]:
+                  - img [ref=e1343]
+                  - paragraph [ref=e1345]: 92%
+                - generic [ref=e1346]:
+                  - img [ref=e1347]
+                  - paragraph [ref=e1349]: 0%
+            - generic [ref=e1350]:
+              - generic [ref=e1351]: 0m
+              - generic [ref=e1352]:
+                - generic [ref=e1353]:
+                  - img [ref=e1354]
+                  - paragraph [ref=e1356]: 83%
+                - generic [ref=e1357]:
+                  - img [ref=e1358]
+                  - paragraph [ref=e1360]: 0%
+            - generic [ref=e1361]:
+              - generic:
+                - list
+        - link "CVG Cincinnati Northern Kentucky Intl. Cincinnati 0m 100% 0% 9m 63% 0%" [ref=e1362] [cursor=pointer]:
+          - /url: /airports/cincinnati-northern-kentucky-intl-cvg
+          - generic [ref=e1363]:
+            - generic [ref=e1364]:
+              - generic [ref=e1369]: CVG
+              - generic [ref=e1370]: Cincinnati Northern Kentucky Intl.
+            - generic [ref=e1372]: Cincinnati
+            - generic [ref=e1373]:
+              - generic [ref=e1374]: 0m
+              - generic [ref=e1375]:
+                - generic [ref=e1376]:
+                  - img [ref=e1377]
+                  - paragraph [ref=e1379]: 100%
+                - generic [ref=e1380]:
+                  - img [ref=e1381]
+                  - paragraph [ref=e1383]: 0%
+            - generic [ref=e1384]:
+              - generic [ref=e1385]: 9m
+              - generic [ref=e1386]:
+                - generic [ref=e1387]:
+                  - img [ref=e1388]
+                  - paragraph [ref=e1390]: 63%
+                - generic [ref=e1391]:
+                  - img [ref=e1392]
+                  - paragraph [ref=e1394]: 0%
+            - generic [ref=e1395]:
+              - generic:
+                - list
+        - link "YYC Calgary Intl. Calgary 4m 75% 0% 0m 83% 0%" [ref=e1396] [cursor=pointer]:
+          - /url: /airports/calgary-intl-yyc
+          - generic [ref=e1397]:
+            - generic [ref=e1398]:
+              - generic [ref=e1403]: YYC
+              - generic [ref=e1404]: Calgary Intl.
+            - generic [ref=e1406]: Calgary
+            - generic [ref=e1407]:
+              - generic [ref=e1408]: 4m
+              - generic [ref=e1409]:
+                - generic [ref=e1410]:
+                  - img [ref=e1411]
+                  - paragraph [ref=e1413]: 75%
+                - generic [ref=e1414]:
+                  - img [ref=e1415]
+                  - paragraph [ref=e1417]: 0%
+            - generic [ref=e1418]:
+              - generic [ref=e1419]: 0m
+              - generic [ref=e1420]:
+                - generic [ref=e1421]:
+                  - img [ref=e1422]
+                  - paragraph [ref=e1424]: 83%
+                - generic [ref=e1425]:
+                  - img [ref=e1426]
+                  - paragraph [ref=e1428]: 0%
+            - generic [ref=e1429]:
+              - generic:
+                - list
+        - link "MTY General Mariano Escobedo Intl. Monterrey 2m 77% 0% 0m 100% 0%" [ref=e1430] [cursor=pointer]:
+          - /url: /airports/general-mariano-escobedo-intl-mty
+          - generic [ref=e1431]:
+            - generic [ref=e1432]:
+              - generic [ref=e1437]: MTY
+              - generic [ref=e1438]: General Mariano Escobedo Intl.
+            - generic [ref=e1440]: Monterrey
+            - generic [ref=e1441]:
+              - generic [ref=e1442]: 2m
+              - generic [ref=e1443]:
+                - generic [ref=e1444]:
+                  - img [ref=e1445]
+                  - paragraph [ref=e1447]: 77%
+                - generic [ref=e1448]:
+                  - img [ref=e1449]
+                  - paragraph [ref=e1451]: 0%
+            - generic [ref=e1452]:
+              - generic [ref=e1453]: 0m
+              - generic [ref=e1454]:
+                - generic [ref=e1455]:
+                  - img [ref=e1456]
+                  - paragraph [ref=e1458]: 100%
+                - generic [ref=e1459]:
+                  - img [ref=e1460]
+                  - paragraph [ref=e1462]: 0%
+            - generic [ref=e1463]:
+              - generic:
+                - list
+        - link "ANC Ted Stevens Anchorage Intl. Anchorage 0m 100% 0% 2m 88% 0%" [ref=e1464] [cursor=pointer]:
+          - /url: /airports/ted-stevens-anchorage-intl-anc
+          - generic [ref=e1465]:
+            - generic [ref=e1466]:
+              - generic [ref=e1471]: ANC
+              - generic [ref=e1472]: Ted Stevens Anchorage Intl.
+            - generic [ref=e1474]: Anchorage
+            - generic [ref=e1475]:
+              - generic [ref=e1476]: 0m
+              - generic [ref=e1477]:
+                - generic [ref=e1478]:
+                  - img [ref=e1479]
+                  - paragraph [ref=e1481]: 100%
+                - generic [ref=e1482]:
+                  - img [ref=e1483]
+                  - paragraph [ref=e1485]: 0%
+            - generic [ref=e1486]:
+              - generic [ref=e1487]: 2m
+              - generic [ref=e1488]:
+                - generic [ref=e1489]:
+                  - img [ref=e1490]
+                  - paragraph [ref=e1492]: 88%
+                - generic [ref=e1493]:
+                  - img [ref=e1494]
+                  - paragraph [ref=e1496]: 0%
+            - generic [ref=e1497]:
+              - generic:
+                - list
+        - link "MEM Memphis Intl. Memphis 0m 50% 0% 6m 80% 0%" [ref=e1498] [cursor=pointer]:
+          - /url: /airports/memphis-intl-mem
+          - generic [ref=e1499]:
+            - generic [ref=e1500]:
+              - generic [ref=e1505]: MEM
+              - generic [ref=e1506]: Memphis Intl.
+            - generic [ref=e1508]: Memphis
+            - generic [ref=e1509]:
+              - generic [ref=e1510]: 0m
+              - generic [ref=e1511]:
+                - generic [ref=e1512]:
+                  - img [ref=e1513]
+                  - paragraph [ref=e1515]: 50%
+                - generic [ref=e1516]:
+                  - img [ref=e1517]
+                  - paragraph [ref=e1519]: 0%
+            - generic [ref=e1520]:
+              - generic [ref=e1521]: 6m
+              - generic [ref=e1522]:
+                - generic [ref=e1523]:
+                  - img [ref=e1524]
+                  - paragraph [ref=e1526]: 80%
+                - generic [ref=e1527]:
+                  - img [ref=e1528]
+                  - paragraph [ref=e1530]: 0%
+            - generic [ref=e1531]:
+              - generic:
+                - list
+        - link "AUS Austin Bergstrom Intl. Austin 0m 100% 0% 1m 79% 0%" [ref=e1532] [cursor=pointer]:
+          - /url: /airports/austin-bergstrom-intl-aus
+          - generic [ref=e1533]:
+            - generic [ref=e1534]:
+              - generic [ref=e1539]: AUS
+              - generic [ref=e1540]: Austin Bergstrom Intl.
+            - generic [ref=e1542]: Austin
+            - generic [ref=e1543]:
+              - generic [ref=e1544]: 0m
+              - generic [ref=e1545]:
+                - generic [ref=e1546]:
+                  - img [ref=e1547]
+                  - paragraph [ref=e1549]: 100%
+                - generic [ref=e1550]:
+                  - img [ref=e1551]
+                  - paragraph [ref=e1553]: 0%
+            - generic [ref=e1554]:
+              - generic [ref=e1555]: 1m
+              - generic [ref=e1556]:
+                - generic [ref=e1557]:
+                  - img [ref=e1558]
+                  - paragraph [ref=e1560]: 79%
+                - generic [ref=e1561]:
+                  - img [ref=e1562]
+                  - paragraph [ref=e1564]: 0%
+            - generic [ref=e1565]:
+              - generic:
+                - list
+        - link "NAS Lynden Pindling Intl. Nassau 0m 0% 0% 0m 50% 0%" [ref=e1566] [cursor=pointer]:
+          - /url: /airports/lynden-pindling-intl-nas
+          - generic [ref=e1567]:
+            - generic [ref=e1568]:
+              - generic [ref=e1573]: NAS
+              - generic [ref=e1574]: Lynden Pindling Intl.
+            - generic [ref=e1576]: Nassau
+            - generic [ref=e1577]:
+              - generic [ref=e1578]: 0m
+              - generic [ref=e1579]:
+                - generic [ref=e1580]:
+                  - img [ref=e1581]
+                  - paragraph [ref=e1583]: 0%
+                - generic [ref=e1584]:
+                  - img [ref=e1585]
+                  - paragraph [ref=e1587]: 0%
+            - generic [ref=e1588]:
+              - generic [ref=e1589]: 0m
+              - generic [ref=e1590]:
+                - generic [ref=e1591]:
+                  - img [ref=e1592]
+                  - paragraph [ref=e1594]: 50%
+                - generic [ref=e1595]:
+                  - img [ref=e1596]
+                  - paragraph [ref=e1598]: 0%
+            - generic [ref=e1599]:
+              - generic:
+                - list
+        - link "YHZ Halifax / Stanfield Intl. Halifax 0m 100% 0% 0m 50% 0%" [ref=e1600] [cursor=pointer]:
+          - /url: /airports/halifax-stanfield-intl-yhz
+          - generic [ref=e1601]:
+            - generic [ref=e1602]:
+              - generic [ref=e1607]: YHZ
+              - generic [ref=e1608]: Halifax / Stanfield Intl.
+            - generic [ref=e1610]: Halifax
+            - generic [ref=e1611]:
+              - generic [ref=e1612]: 0m
+              - generic [ref=e1613]:
+                - generic [ref=e1614]:
+                  - img [ref=e1615]
+                  - paragraph [ref=e1617]: 100%
+                - generic [ref=e1618]:
+                  - img [ref=e1619]
+                  - paragraph [ref=e1621]: 0%
+            - generic [ref=e1622]:
+              - generic [ref=e1623]: 0m
+              - generic [ref=e1624]:
+                - generic [ref=e1625]:
+                  - img [ref=e1626]
+                  - paragraph [ref=e1628]: 50%
+                - generic [ref=e1629]:
+                  - img [ref=e1630]
+                  - paragraph [ref=e1632]: 0%
+            - generic [ref=e1633]:
+              - generic:
+                - list
+        - link "GDL Don Miguel Hidalgo Y Costilla Intl. Guadalajara 0m 93% 0% 0m 75% 13%" [ref=e1634] [cursor=pointer]:
+          - /url: /airports/don-miguel-hidalgo-y-costilla-intl-gdl
+          - generic [ref=e1635]:
+            - generic [ref=e1636]:
+              - generic [ref=e1641]: GDL
+              - generic [ref=e1642]: Don Miguel Hidalgo Y Costilla Intl.
+            - generic [ref=e1644]: Guadalajara
+            - generic [ref=e1645]:
+              - generic [ref=e1646]: 0m
+              - generic [ref=e1647]:
+                - generic [ref=e1648]:
+                  - img [ref=e1649]
+                  - paragraph [ref=e1651]: 93%
+                - generic [ref=e1652]:
+                  - img [ref=e1653]
+                  - paragraph [ref=e1655]: 0%
+            - generic [ref=e1656]:
+              - generic [ref=e1657]: 0m
+              - generic [ref=e1658]:
+                - generic [ref=e1659]:
+                  - img [ref=e1660]
+                  - paragraph [ref=e1662]: 75%
+                - generic [ref=e1663]:
+                  - img [ref=e1664]
+                  - paragraph [ref=e1666]: 13%
+            - generic [ref=e1667]:
+              - generic:
+                - list
+        - link "SLC Salt Lake City Intl. Salt Lake City 0m 100% 0% 0m 90% 0%" [ref=e1668] [cursor=pointer]:
+          - /url: /airports/salt-lake-city-intl-slc
+          - generic [ref=e1669]:
+            - generic [ref=e1670]:
+              - generic [ref=e1675]: SLC
+              - generic [ref=e1676]: Salt Lake City Intl.
+            - generic [ref=e1678]: Salt Lake City
+            - generic [ref=e1679]:
+              - generic [ref=e1680]: 0m
+              - generic [ref=e1681]:
+                - generic [ref=e1682]:
+                  - img [ref=e1683]
+                  - paragraph [ref=e1685]: 100%
+                - generic [ref=e1686]:
+                  - img [ref=e1687]
+                  - paragraph [ref=e1689]: 0%
+            - generic [ref=e1690]:
+              - generic [ref=e1691]: 0m
+              - generic [ref=e1692]:
+                - generic [ref=e1693]:
+                  - img [ref=e1694]
+                  - paragraph [ref=e1696]: 90%
+                - generic [ref=e1697]:
+                  - img [ref=e1698]
+                  - paragraph [ref=e1700]: 0%
+            - generic [ref=e1701]:
+              - generic:
+                - list
+        - link "YEG Edmonton Intl. Edmonton 0m 100% 0% 0m 100% 0%" [ref=e1702] [cursor=pointer]:
+          - /url: /airports/edmonton-intl-yeg
+          - generic [ref=e1703]:
+            - generic [ref=e1704]:
+              - generic [ref=e1709]: YEG
+              - generic [ref=e1710]: Edmonton Intl.
+            - generic [ref=e1712]: Edmonton
+            - generic [ref=e1713]:
+              - generic [ref=e1714]: 0m
+              - generic [ref=e1715]:
+                - generic [ref=e1716]:
+                  - img [ref=e1717]
+                  - paragraph [ref=e1719]: 100%
+                - generic [ref=e1720]:
+                  - img [ref=e1721]
+                  - paragraph [ref=e1723]: 0%
+            - generic [ref=e1724]:
+              - generic [ref=e1725]: 0m
+              - generic [ref=e1726]:
+                - generic [ref=e1727]:
+                  - img [ref=e1728]
+                  - paragraph [ref=e1730]: 100%
+                - generic [ref=e1731]:
+                  - img [ref=e1732]
+                  - paragraph [ref=e1734]: 0%
+            - generic [ref=e1735]:
+              - generic:
+                - list
+        - link "PVR Licenciado Gustavo Díaz Ordaz Intl. Puerto Vallarta 0m 100% 0% 0m 100% 0%" [ref=e1736] [cursor=pointer]:
+          - /url: /airports/licenciado-gustavo-diaz-ordaz-intl-pvr
+          - generic [ref=e1737]:
+            - generic [ref=e1738]:
+              - generic [ref=e1743]: PVR
+              - generic [ref=e1744]: Licenciado Gustavo Díaz Ordaz Intl.
+            - generic [ref=e1746]: Puerto Vallarta
+            - generic [ref=e1747]:
+              - generic [ref=e1748]: 0m
+              - generic [ref=e1749]:
+                - generic [ref=e1750]:
+                  - img [ref=e1751]
+                  - paragraph [ref=e1753]: 100%
+                - generic [ref=e1754]:
+                  - img [ref=e1755]
+                  - paragraph [ref=e1757]: 0%
+            - generic [ref=e1758]:
+              - generic [ref=e1759]: 0m
+              - generic [ref=e1760]:
+                - generic [ref=e1761]:
+                  - img [ref=e1762]
+                  - paragraph [ref=e1764]: 100%
+                - generic [ref=e1765]:
+                  - img [ref=e1766]
+                  - paragraph [ref=e1768]: 0%
+            - generic [ref=e1769]:
+              - generic:
+                - list
+        - link "SJD Los Cabos Intl. San Jose Cabo 0m 100% 0% 0m 100% 0%" [ref=e1770] [cursor=pointer]:
+          - /url: /airports/los-cabos-intl-sjd
+          - generic [ref=e1771]:
+            - generic [ref=e1772]:
+              - generic [ref=e1777]: SJD
+              - generic [ref=e1778]: Los Cabos Intl.
+            - generic [ref=e1780]: San Jose Cabo
+            - generic [ref=e1781]:
+              - generic [ref=e1782]: 0m
+              - generic [ref=e1783]:
+                - generic [ref=e1784]:
+                  - img [ref=e1785]
+                  - paragraph [ref=e1787]: 100%
+                - generic [ref=e1788]:
+                  - img [ref=e1789]
+                  - paragraph [ref=e1791]: 0%
+            - generic [ref=e1792]:
+              - generic [ref=e1793]: 0m
+              - generic [ref=e1794]:
+                - generic [ref=e1795]:
+                  - img [ref=e1796]
+                  - paragraph [ref=e1798]: 100%
+                - generic [ref=e1799]:
+                  - img [ref=e1800]
+                  - paragraph [ref=e1802]: 0%
+            - generic [ref=e1803]:
+              - generic:
+                - list
+        - link "MBJ Sangster Intl. Montego Bay 0m 100% 0% 0m 100% 0%" [ref=e1804] [cursor=pointer]:
+          - /url: /airports/sangster-intl-mbj
+          - generic [ref=e1805]:
+            - generic [ref=e1806]:
+              - generic [ref=e1811]: MBJ
+              - generic [ref=e1812]: Sangster Intl.
+            - generic [ref=e1814]: Montego Bay
+            - generic [ref=e1815]:
+              - generic [ref=e1816]: 0m
+              - generic [ref=e1817]:
+                - generic [ref=e1818]:
+                  - img [ref=e1819]
+                  - paragraph [ref=e1821]: 100%
+                - generic [ref=e1822]:
+                  - img [ref=e1823]
+                  - paragraph [ref=e1825]: 0%
+            - generic [ref=e1826]:
+              - generic [ref=e1827]: 0m
+              - generic [ref=e1828]:
+                - generic [ref=e1829]:
+                  - img [ref=e1830]
+                  - paragraph [ref=e1832]: 100%
+                - generic [ref=e1833]:
+                  - img [ref=e1834]
+                  - paragraph [ref=e1836]: 0%
+            - generic [ref=e1837]:
+              - generic:
+                - list
+        - link "YWG Winnipeg James Armstrong Richardson Intl. Winnipeg 0m 100% 0% 0m 100% 0%" [ref=e1838] [cursor=pointer]:
+          - /url: /airports/winnipeg-james-armstrong-richardson-intl-ywg
+          - generic [ref=e1839]:
+            - generic [ref=e1840]:
+              - generic [ref=e1845]: YWG
+              - generic [ref=e1846]: Winnipeg James Armstrong Richardson Intl.
+            - generic [ref=e1848]: Winnipeg
+            - generic [ref=e1849]:
+              - generic [ref=e1850]: 0m
+              - generic [ref=e1851]:
+                - generic [ref=e1852]:
+                  - img [ref=e1853]
+                  - paragraph [ref=e1855]: 100%
+                - generic [ref=e1856]:
+                  - img [ref=e1857]
+                  - paragraph [ref=e1859]: 0%
+            - generic [ref=e1860]:
+              - generic [ref=e1861]: 0m
+              - generic [ref=e1862]:
+                - generic [ref=e1863]:
+                  - img [ref=e1864]
+                  - paragraph [ref=e1866]: 100%
+                - generic [ref=e1867]:
+                  - img [ref=e1868]
+                  - paragraph [ref=e1870]: 0%
+            - generic [ref=e1871]:
+              - generic:
+                - list

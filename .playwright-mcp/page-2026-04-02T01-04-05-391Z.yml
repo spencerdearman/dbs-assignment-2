@@ -1,0 +1,194 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e6]:
+      - generic [ref=e8] [cursor=pointer]:
+        - link "NEW! Airport Intelligence View Live" [ref=e9]:
+          - /url: https://www.flighty.com/airports
+          - paragraph [ref=e13]: NEW! Airport Intelligence
+          - generic [ref=e15]:
+            - paragraph [ref=e17]: View Live
+            - img [ref=e20]
+        - img [ref=e25]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - link "Flighty" [ref=e31] [cursor=pointer]:
+            - /url: ../
+            - paragraph [ref=e37]: Flighty
+          - link "Get the app" [ref=e40] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/apple-store/id1358823008?pt=118988326&ct=Our%20Website&mt=8
+            - paragraph [ref=e42]: Get the app
+        - generic:
+          - link "Pricing" [ref=e49] [cursor=pointer]:
+            - /url: ../pricing
+            - img [ref=e54]
+            - paragraph [ref=e57]: Pricing
+          - link "About" [ref=e59] [cursor=pointer]:
+            - /url: ../about
+            - img [ref=e64]
+            - paragraph [ref=e67]: About
+          - link "Press" [ref=e69] [cursor=pointer]:
+            - /url: ../press
+            - img [ref=e74]
+            - paragraph [ref=e77]: Press
+          - link "Support" [ref=e79] [cursor=pointer]:
+            - /url: ../
+            - img [ref=e84]
+            - paragraph [ref=e87]: Support
+          - link "Gift Cards" [ref=e89] [cursor=pointer]:
+            - /url: ../gift-cards
+            - img [ref=e94]
+            - paragraph [ref=e97]: Gift Cards
+          - link "Businesses" [ref=e99] [cursor=pointer]:
+            - /url: ../business
+            - img [ref=e104]
+            - paragraph [ref=e107]: Businesses
+    - generic [ref=e108]:
+      - heading "Help Center" [level=1] [ref=e117]
+      - generic [ref=e123]:
+        - heading "What is 'Where Is My Plane?' in Flighty?" [level=1] [ref=e126]
+        - generic [ref=e127]:
+          - paragraph [ref=e128]:
+            - strong [ref=e129]: Where Is My Plane?
+            - text: shows you where the exact aircraft scheduled to operate your flight is now, and how it’s getting to your airport.
+          - paragraph [ref=e130]:
+            - text: To view it, open your flight in Flighty and scroll to
+            - strong [ref=e131]: Where’s My Plane?
+            - text: ". You’ll see:"
+          - list [ref=e132]:
+            - listitem [ref=e133]:
+              - text: •
+              - paragraph [ref=e134]: The plane’s current position
+            - listitem [ref=e135]:
+              - text: •
+              - paragraph [ref=e136]: The flight leg it operates before yours (the inbound flight)
+            - listitem [ref=e137]:
+              - text: •
+              - paragraph [ref=e138]: A short history of where it’s been
+            - listitem [ref=e139]:
+              - text: •
+              - paragraph [ref=e140]: Extra details (when available) like the tail number, aircraft age, first-flight date, range, and cruising speed
+          - heading "How it works" [level=2] [ref=e141]
+          - paragraph [ref=e142]:
+            - text: Behind the scenes, Flighty links your flight to its inbound aircraft and begins monitoring it up to
+            - strong [ref=e143]: 25 hours before departure
+            - text: .
+          - paragraph [ref=e144]: Unlike other flight trackers that only follow your flight number, Flighty tracks the actual airplane. This lets us identify and alert issues about your flight to you as early as possible. If your inbound aircraft is delayed, there’s a good chance your departure will be, too.
+          - heading "Why it matters" [level=2] [ref=e145]
+          - paragraph [ref=e146]:
+            - text: Seeing your aircraft’s real progress gives you a realistic picture of where it’s coming from, helping you understand potential delays
+            - emphasis [ref=e147]: before the airline even announces them
+            - text: . Flighty predicts and communicates delays hours ahead of official updates, so you can stay informed and make decisions faster.
+      - generic [ref=e150]:
+        - paragraph [ref=e152]: Need more help?
+        - paragraph [ref=e154]:
+          - text: For additional support, please contact us directly through the app via
+          - strong [ref=e155]: Settings → Send Feedback
+          - text: . We typically respond within 24 hours.
+      - generic [ref=e166]:
+        - heading "The answers don't stop here." [level=3] [ref=e168]
+        - generic [ref=e169]:
+          - figure [ref=e170]:
+            - table [ref=e171]:
+              - rowgroup [ref=e172]:
+                - row "Where's my plane? Why are we delayed? You have real-time questions. We have real-time alerts. Always be the first to know with Flighty." [ref=e173]:
+                  - cell "Where's my plane? Why are we delayed? You have real-time questions. We have real-time alerts. Always be the first to know with Flighty." [ref=e174]:
+                    - paragraph [ref=e175]: Where's my plane? Why are we delayed? You have real-time questions. We have real-time alerts. Always be the first to know with Flighty.
+          - figure [ref=e176]:
+            - table [ref=e177]:
+              - rowgroup [ref=e178]:
+                - row [ref=e179]:
+                  - cell [ref=e180]:
+                    - paragraph [ref=e181]
+        - link "Download for free" [ref=e186] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/flighty-live-flight-tracker/id1358823008
+          - paragraph [ref=e192]: Download for free
+      - generic [ref=e199]:
+        - generic [ref=e204]:
+          - generic [ref=e205]:
+            - paragraph [ref=e207]: Product
+            - link "Pricing" [ref=e209] [cursor=pointer]:
+              - /url: ../pricing
+              - paragraph [ref=e211]: Pricing
+            - link "Passport" [ref=e213] [cursor=pointer]:
+              - /url: ../passport
+              - paragraph [ref=e215]: Passport
+            - link "Gift Cards" [ref=e217] [cursor=pointer]:
+              - /url: ../gift-cards
+              - paragraph [ref=e219]: Gift Cards
+            - link "Airports" [ref=e221] [cursor=pointer]:
+              - /url: https://www.flighty.com/airports
+              - paragraph [ref=e223]: Airports
+            - link "Flighty Insiders" [ref=e225] [cursor=pointer]:
+              - /url: ../insiders
+              - paragraph [ref=e227]: Flighty Insiders
+          - generic [ref=e228]:
+            - paragraph [ref=e230]: Compare
+            - link "FlightRadar24" [ref=e232] [cursor=pointer]:
+              - /url: ../compare/flightradar24
+              - paragraph [ref=e234]: FlightRadar24
+            - link "TripIt" [ref=e236] [cursor=pointer]:
+              - /url: ../compare/tripit
+              - paragraph [ref=e238]: TripIt
+            - link "Airline Apps" [ref=e240] [cursor=pointer]:
+              - /url: ../compare/airline-apps
+              - paragraph [ref=e242]: Airline Apps
+            - link "FlightAware" [ref=e244] [cursor=pointer]:
+              - /url: ../compare/flightaware
+              - paragraph [ref=e246]: FlightAware
+            - link "App In The Air" [ref=e248] [cursor=pointer]:
+              - /url: ../compare/app-in-the-air
+              - paragraph [ref=e250]: App In The Air
+          - generic [ref=e251]:
+            - paragraph [ref=e253]: Company
+            - link "About" [ref=e255] [cursor=pointer]:
+              - /url: ../about
+              - paragraph [ref=e257]: About
+            - link "Press" [ref=e259] [cursor=pointer]:
+              - /url: ../press
+              - paragraph [ref=e261]: Press
+            - link "Privacy Policy" [ref=e263] [cursor=pointer]:
+              - /url: ../legal/privacy
+              - paragraph [ref=e265]: Privacy Policy
+            - link "Terms of Service" [ref=e267] [cursor=pointer]:
+              - /url: ../legal/terms
+              - paragraph [ref=e269]: Terms of Service
+          - generic [ref=e270]:
+            - paragraph [ref=e272]: Support
+            - link "Help Center" [ref=e274] [cursor=pointer]:
+              - /url: ../help
+              - paragraph [ref=e276]: Help Center
+            - link "Business" [ref=e278] [cursor=pointer]:
+              - /url: ../business
+              - paragraph [ref=e280]: Business
+            - generic [ref=e281]:
+              - link [ref=e282] [cursor=pointer]:
+                - /url: https://www.facebook.com/flightyapp/
+                - img [ref=e287]
+              - link [ref=e289] [cursor=pointer]:
+                - /url: https://x.com/flighty
+                - img [ref=e294]
+              - link [ref=e296] [cursor=pointer]:
+                - /url: https://www.instagram.com/flightyapp/
+                - img [ref=e301]
+              - link [ref=e303] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/flighty/?originalSubdomain=es
+                - img [ref=e308]
+        - generic [ref=e311]:
+          - paragraph [ref=e313]: Made with love in Austin,
+          - paragraph [ref=e320]: Barcelona
+          - paragraph [ref=e327]: and Oslo.
+  - img [ref=e333]
+  - img [ref=e335]
+  - img [ref=e337]
+  - img [ref=e339]
+  - img [ref=e341]
+  - img [ref=e344]
+  - img [ref=e346]
+  - img [ref=e348]
+  - img [ref=e350]
+  - img [ref=e352]
+  - img [ref=e354]
+  - img [ref=e356]
+  - img [ref=e359]
+  - img [ref=e361]
+  - img [ref=e365]

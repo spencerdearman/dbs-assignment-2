@@ -1,0 +1,52 @@
+[    1142ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://www.imore.com/apps/flighty-review:0
+[    1156ms] [LOG] fep ga exc Cannot read properties of undefined (reading 'adTags') @ https://www.imore.com/apps/flighty-review:344
+[    1630ms] [LOG] Messaging without detection successfully executed. @ https://cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js:0
+[    1642ms] [LOG] interaction complete @ https://cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js:0
+[    1695ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://cdn.brandmetrics.com/tag/62da25c406df470db725091722ab7306/imore.js:0
+[    1763ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://www.imore.com/.events-handler/future.adtech.freyr.v1.PageViewEvent:0
+[    1938ms] [LOG] %c BORDEAUX  background: #800020; color: #ffffff EUID: No hashed email available from FUTR or lrh query param @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2002ms] Uncaught (in promise) Error: Unable to parse event
+    at <anonymous> (https://freyr.futurecdn.net/freyr.js:0:78065)
+    at <anonymous> (https://freyr.futurecdn.net/freyr.js:0:77839)
+    at <anonymous> (https://freyr.futurecdn.net/freyr.js:0:77944)
+    at tX (https://freyr.futurecdn.net/freyr.js:0:76729)
+    at s (https://freyr.futurecdn.net/freyr.js:0:79436)
+    at <anonymous> (https://freyr.futurecdn.net/freyr.js:0:79497)
+    at t (https://freyr.futurecdn.net/freyr.js:0:79377)
+    at <anonymous> (https://freyr.futurecdn.net/freyr.js:0:79539)
+    at nl (https://freyr.futurecdn.net/freyr.js:0:85784)
+    at <anonymous> (https://freyr.futurecdn.net/freyr.js:0:99340)
+    at document.addEventListener.once (https://freyr.futurecdn.net/freyr.js:0:99313)
+    at n (https://bordeaux.futurecdn.net/bordeaux.js:26:80485)
+    at c (https://bordeaux.futurecdn.net/bordeaux.js:26:79047)
+    at o (https://bordeaux.futurecdn.net/bordeaux.js:26:80630)
+[    2012ms] [WARNING] Permutive was not initialized. No consent to run on the page @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2087ms] [ERROR] Access to fetch at 'https://ib.adnxs.com/getuidj?gdpr=1&gdpr_consent=DBABLA~BVQqAAAAAgA.QA' from origin 'https://www.imore.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://www.imore.com/apps/flighty-review:0
+[    2088ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://ib.adnxs.com/getuidj?gdpr=1&gdpr_consent=DBABLA~BVQqAAAAAgA.QA:0
+[    2147ms] [LOG] %c BORDEAUX  background: #800020; color: #ffffff Static slot top-leaderboard could not find an element with hook '.dfp-leaderboard-container'. @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2147ms] [LOG] %c BORDEAUX  background: #800020; color: #ffffff Static slot sponsored could not find any elements with hook '.sponsored-post'. @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2147ms] [LOG] %c BORDEAUX  background: #800020; color: #ffffff Static slot sponsored-by could not find an element with hook '.vertical-header > :first-child, .vertical-header > :first-child, .hero-curated-wrapper > :first-child, .widget-header > :first-child'. @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2148ms] [WARNING] %c BORDEAUX  background: #800020; color: #ffffff The ad unit 'top-leaderboard' has a slot affinity 'top-leaderboard' but the slot could not be created. @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2148ms] [WARNING] %c BORDEAUX  background: #800020; color: #ffffff The ad unit 'sponsored-by' has a slot affinity 'sponsored-by' but the slot could not be created. @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2189ms] [ERROR] Access to XMLHttpRequest at 'https://c.amazon-adsystem.com/cdn/prod/config?src=3032&u=https%3A%2F%2Fwww.imore.com' from origin 'https://www.imore.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://www.imore.com/apps/flighty-review:0
+[    2190ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://c.amazon-adsystem.com/cdn/prod/config?src=3032&u=https%3A%2F%2Fwww.imore.com:0
+[    2207ms] [WARNING] %c FTE  background: #9306F9; color: #ffffff No archive filter present @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2269ms] [WARNING] Mixed Content: The page at 'https://ssum-sec.casalemedia.com/usermatch?r=8473&s=181869&cb=https%3A%2F%2Fpixel.servebom.com%2Fpartner%3Fcb%3D3161%26svc%3Dus%26id%3D2%26uid%3D' was loaded over HTTPS, but requested an insecure element 'http://rtb2-useast.delivrdsp.ai/sync?exchange=1378&r=https%3A%2F%2Fdsum-sec.casalemedia.com%2Fcrum%3Fcm_dsp_id%3D282%26external_user_id%3D%7BUID%7D&us_privacy='. This request was automatically upgraded to HTTPS, For more information see https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html @ https://ssum-sec.casalemedia.com/usermatch?r=8473&s=181869&cb=https%3A%2F%2Fpixel.servebom.com%2Fpartner%3Fcb%3D3161%26svc%3Dus%26id%3D2%26uid%3D:0
+[    2270ms] [WARNING] Mixed Content: The page at 'https://ssum-sec.casalemedia.com/usermatch?r=8473&s=181869&cb=https%3A%2F%2Fpixel.servebom.com%2Fpartner%3Fcb%3D3161%26svc%3Dus%26id%3D2%26uid%3D' was loaded over HTTPS, but requested an insecure element 'http://rtb2-useast.delivrdsp.ai/sync?exchange=1378&r=https%3A%2F%2Fdsum-sec.casalemedia.com%2Fcrum%3Fcm_dsp_id%3D282%26external_user_id%3D%7BUID%7D&us_privacy='. This request was automatically upgraded to HTTPS, For more information see https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html @ https://ssum-sec.casalemedia.com/usermatch?r=8473&s=181869&cb=https%3A%2F%2Fpixel.servebom.com%2Fpartner%3Fcb%3D3161%26svc%3Dus%26id%3D2%26uid%3D:0
+[    2392ms] [ERROR] ERROR - (ATS-DROPMATCH-MODULE) PixelID is not configured. @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    2419ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://eb2.3lift.com/getuid?gdpr=0&gdpr_consent=&redir=https%3A%2F%2Fvisitor.us-east4.gcp.omnitagjs.com%2Fvisitor%2Fsync%3Fgdpr%3D0%26gdpr_consent%3D%26is_cookie_sync_uid%3D1%26name%3DTRIPLELIFT_cookie_sync%26ttl%3D720%26uid%3D771bebe2d6221e9ca65e16ebf8d2f6f3%26visitor%3D%24UID:0
+[    2675ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://usermatch.krxd.net/um/v2?partner=tapad:0
+[    2707ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://usermatch.krxd.net/um/v2?partner=tapad:0
+[    2675ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://usermatch.krxd.net/um/v2?partner=tapad:0
+[    2707ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://usermatch.krxd.net/um/v2?partner=tapad:0
+[    2269ms] [WARNING] Mixed Content: The page at 'https://ssum-sec.casalemedia.com/usermatch?r=8473&s=181869&cb=https%3A%2F%2Fpixel.servebom.com%2Fpartner%3Fcb%3D3161%26svc%3Dus%26id%3D2%26uid%3D' was loaded over HTTPS, but requested an insecure element 'http://rtb2-useast.delivrdsp.ai/sync?exchange=1378&r=https%3A%2F%2Fdsum-sec.casalemedia.com%2Fcrum%3Fcm_dsp_id%3D282%26external_user_id%3D%7BUID%7D&us_privacy='. This request was automatically upgraded to HTTPS, For more information see https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html @ https://ssum-sec.casalemedia.com/usermatch?r=8473&s=181869&cb=https%3A%2F%2Fpixel.servebom.com%2Fpartner%3Fcb%3D3161%26svc%3Dus%26id%3D2%26uid%3D:0
+[    2270ms] [WARNING] Mixed Content: The page at 'https://ssum-sec.casalemedia.com/usermatch?r=8473&s=181869&cb=https%3A%2F%2Fpixel.servebom.com%2Fpartner%3Fcb%3D3161%26svc%3Dus%26id%3D2%26uid%3D' was loaded over HTTPS, but requested an insecure element 'http://rtb2-useast.delivrdsp.ai/sync?exchange=1378&r=https%3A%2F%2Fdsum-sec.casalemedia.com%2Fcrum%3Fcm_dsp_id%3D282%26external_user_id%3D%7BUID%7D&us_privacy='. This request was automatically upgraded to HTTPS, For more information see https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html @ https://ssum-sec.casalemedia.com/usermatch?r=8473&s=181869&cb=https%3A%2F%2Fpixel.servebom.com%2Fpartner%3Fcb%3D3161%26svc%3Dus%26id%3D2%26uid%3D:0
+[    2995ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://sync.cootlogix.com/api/user/image/55537adc33d1b40300987e8e?gdpr=&gdpr_consent=&redirect=https%3A%2F%2Fevt.undertone.com%2FuserPixel%2Fsync%3FpartnerId%3D59%26uid%3D%24%7BvdzUserSyncMacro%7D:0
+[    3173ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://sync.cootlogix.com/api/cookie?partnerId=rubiconut&userId=MNGRSOCA-2-I7Y9:0
+[    3301ms] [WARNING] [GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead.
+https://goo.gle/gpt-message#155 @ https://bordeaux.futurecdn.net/bordeaux.js:53
+[    3365ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://sync.cootlogix.com/api/cookie?partnerId=rubiconut&userId=MNGRSOCA-2-I7Y9:0
+[    4019ms] [ERROR] Attestation check for Shared Storage on https://www.googleadservices.com failed. @ https://www.googleadservices.com/pagead/managed/js/activeview/current/reach_worklet.html:0
+[    4022ms] [ERROR] Attestation check for Shared Storage on https://www.googleadservices.com failed. @ https://www.googleadservices.com/pagead/managed/js/activeview/current/reach_worklet.html:0
+[    4486ms] [TIMEEND] a: 0.0009765625 ms @ https://static.adsafeprotected.com/sca.17.6.4.js:31
+[    3365ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://sync.cootlogix.com/api/cookie?partnerId=rubiconut&userId=MNGRSOCA-2-I7Y9:0
