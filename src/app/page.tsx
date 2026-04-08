@@ -171,12 +171,17 @@ export default function TypingArena() {
   }, [codeSnippets]);
 
   const [selectedLang, setSelectedLang] = useState<string>("all");
-  const filteredSnippets = useMemo(() => {
-    if (selectedLang === "all") return codeSnippets;
-    return codeSnippets.filter((s) => s.language === selectedLang);
-  }, [codeSnippets, selectedLang]);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all");
 
-  // When language filter changes, auto-select the first snippet in that language
+  const filteredSnippets = useMemo(() => {
+    return codeSnippets.filter((s) => {
+      if (selectedLang !== "all" && s.language !== selectedLang) return false;
+      if (selectedDifficulty !== "all" && s.difficulty !== selectedDifficulty) return false;
+      return true;
+    });
+  }, [codeSnippets, selectedLang, selectedDifficulty]);
+
+  // When filters change, auto-select the first matching snippet
   useEffect(() => {
     if (filteredSnippets.length > 0 && !filteredSnippets.find((s) => s.id === selectedCodeId)) {
       setSelectedCodeId(filteredSnippets[0].id);
@@ -447,7 +452,7 @@ export default function TypingArena() {
 
         {topMode === "code" && (
           <>
-            <select value={selectedLang} onChange={(e) => { setSelectedLang(e.target.value); }}
+            <select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)}
               className="border border-white/[0.06] bg-white/[0.04] pl-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
               style={{ borderRadius: 16 }}
             >
@@ -455,6 +460,15 @@ export default function TypingArena() {
               {languages.map((l) => (
                 <option key={l} value={l} className="bg-[#08080c]">{l}</option>
               ))}
+            </select>
+            <select value={selectedDifficulty} onChange={(e) => setSelectedDifficulty(e.target.value)}
+              className="border border-white/[0.06] bg-white/[0.04] pl-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"
+              style={{ borderRadius: 16 }}
+            >
+              <option value="all" className="bg-[#08080c]">All Levels</option>
+              <option value="easy" className="bg-[#08080c]">Easy</option>
+              <option value="medium" className="bg-[#08080c]">Medium</option>
+              <option value="hard" className="bg-[#08080c]">Hard</option>
             </select>
             <select value={selectedCodeId} onChange={(e) => setSelectedCodeId(e.target.value)}
               className="border border-white/[0.06] bg-white/[0.04] pl-3 py-1.5 text-[13px] text-white outline-none transition-colors focus:border-blue-500/50"

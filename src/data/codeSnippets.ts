@@ -1,20 +1,35 @@
+export type Difficulty = "easy" | "medium" | "hard";
+
 export interface CodeSnippet {
   id: string;
   title: string;
   language: string;
+  difficulty: Difficulty;
   text: string;
   personalBestWPM: number | null;
 }
 
-// Each snippet uses real, idiomatic code with proper formatting.
-// \n for newlines, spaces for indentation (2-space or 4-space per language convention).
-
 export const defaultCodeSnippets: CodeSnippet[] = [
-  // ── JavaScript / TypeScript ──
+  // ═══════════════════════════════════════
+  //  JavaScript
+  // ═══════════════════════════════════════
   {
-    id: "code-js-1",
+    id: "js-easy",
+    title: "Variables & Loops",
+    language: "JavaScript",
+    difficulty: "easy",
+    text: `let count = 0;
+for (let i = 0; i < 10; i++) {
+  count += i;
+}
+console.log(count);`,
+    personalBestWPM: null,
+  },
+  {
+    id: "js-med",
     title: "Array Methods",
     language: "JavaScript",
+    difficulty: "medium",
     text: `function processUsers(users) {
   const active = users.filter(u => u.isActive);
   const names = active.map(u => u.name);
@@ -24,9 +39,53 @@ export const defaultCodeSnippets: CodeSnippet[] = [
     personalBestWPM: null,
   },
   {
-    id: "code-ts-1",
+    id: "js-hard",
+    title: "Async Iterator",
+    language: "JavaScript",
+    difficulty: "hard",
+    text: `async function* paginate(url) {
+  let page = 1;
+  while (true) {
+    const res = await fetch(\`\${url}?page=\${page}\`);
+    const data = await res.json();
+    if (data.items.length === 0) return;
+    yield* data.items;
+    page++;
+  }
+}
+
+for await (const item of paginate("/api/users")) {
+  console.log(item.name);
+}`,
+    personalBestWPM: null,
+  },
+
+  // ═══════════════════════════════════════
+  //  TypeScript
+  // ═══════════════════════════════════════
+  {
+    id: "ts-easy",
+    title: "Type Aliases",
+    language: "TypeScript",
+    difficulty: "easy",
+    text: `type User = {
+  name: string;
+  age: number;
+  active: boolean;
+};
+
+const user: User = {
+  name: "Alice",
+  age: 30,
+  active: true,
+};`,
+    personalBestWPM: null,
+  },
+  {
+    id: "ts-med",
     title: "Generic Interface",
     language: "TypeScript",
+    difficulty: "medium",
     text: `interface ApiResponse<T> {
   data: T;
   status: number;
@@ -40,11 +99,52 @@ async function fetchData<T>(url: string): Promise<ApiResponse<T>> {
 }`,
     personalBestWPM: null,
   },
-  // ── Python ──
   {
-    id: "code-py-1",
+    id: "ts-hard",
+    title: "Mapped & Conditional Types",
+    language: "TypeScript",
+    difficulty: "hard",
+    text: `type DeepReadonly<T> = {
+  readonly [K in keyof T]: T[K] extends object
+    ? DeepReadonly<T[K]>
+    : T[K];
+};
+
+type EventMap = {
+  click: { x: number; y: number };
+  keydown: { key: string; code: number };
+};
+
+function on<K extends keyof EventMap>(
+  event: K,
+  handler: (payload: EventMap[K]) => void
+): void {
+  window.addEventListener(event, handler as EventListener);
+}`,
+    personalBestWPM: null,
+  },
+
+  // ═══════════════════════════════════════
+  //  Python
+  // ═══════════════════════════════════════
+  {
+    id: "py-easy",
+    title: "Functions & Lists",
+    language: "Python",
+    difficulty: "easy",
+    text: `def greet(name):
+    return f"Hello, {name}!"
+
+names = ["Alice", "Bob", "Charlie"]
+for name in names:
+    print(greet(name))`,
+    personalBestWPM: null,
+  },
+  {
+    id: "py-med",
     title: "List Comprehension",
     language: "Python",
+    difficulty: "medium",
     text: `def fibonacci(n):
     a, b = 0, 1
     result = []
@@ -57,47 +157,58 @@ squares = [x ** 2 for x in range(10) if x % 2 == 0]`,
     personalBestWPM: null,
   },
   {
-    id: "code-py-2",
-    title: "Class Definition",
+    id: "py-hard",
+    title: "Decorator & Context Manager",
     language: "Python",
-    text: `class Vector:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+    difficulty: "hard",
+    text: `import functools
+import time
+from contextlib import contextmanager
 
-    def __add__(self, other):
-        return Vector(self.x + other.x, self.y + other.y)
+def timer(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        elapsed = time.perf_counter() - start
+        print(f"{func.__name__} took {elapsed:.4f}s")
+        return result
+    return wrapper
 
-    def magnitude(self):
-        return (self.x ** 2 + self.y ** 2) ** 0.5`,
+@contextmanager
+def managed_resource(name):
+    print(f"Acquiring {name}")
+    try:
+        yield name
+    finally:
+        print(f"Releasing {name}")`,
     personalBestWPM: null,
   },
-  // ── Swift ──
+
+  // ═══════════════════════════════════════
+  //  Swift
+  // ═══════════════════════════════════════
   {
-    id: "code-swift-1",
-    title: "Struct & Protocol",
+    id: "swift-easy",
+    title: "Optionals & Guard",
     language: "Swift",
-    text: `protocol Drawable {
-    func draw() -> String
+    difficulty: "easy",
+    text: `func greet(_ name: String?) -> String {
+    guard let name = name else {
+        return "Hello, stranger!"
+    }
+    return "Hello, \\(name)!"
 }
 
-struct Circle: Drawable {
-    let radius: Double
-
-    func draw() -> String {
-        return "Circle with radius \\(radius)"
-    }
-
-    var area: Double {
-        return .pi * radius * radius
-    }
-}`,
+let message = greet("Alice")
+print(message)`,
     personalBestWPM: null,
   },
   {
-    id: "code-swift-2",
+    id: "swift-med",
     title: "Enum & Switch",
     language: "Swift",
+    difficulty: "medium",
     text: `enum Direction {
     case north, south, east, west
 }
@@ -112,11 +223,59 @@ func describe(_ dir: Direction) -> String {
 }`,
     personalBestWPM: null,
   },
-  // ── C ──
   {
-    id: "code-c-1",
+    id: "swift-hard",
+    title: "Protocol & Associated Types",
+    language: "Swift",
+    difficulty: "hard",
+    text: `protocol Container {
+    associatedtype Item: Equatable
+    var count: Int { get }
+    mutating func append(_ item: Item)
+    subscript(i: Int) -> Item { get }
+}
+
+struct Stack<Element: Equatable>: Container {
+    private var items: [Element] = []
+    var count: Int { items.count }
+
+    mutating func append(_ item: Element) {
+        items.append(item)
+    }
+
+    subscript(i: Int) -> Element {
+        return items[i]
+    }
+
+    mutating func pop() -> Element? {
+        return items.popLast()
+    }
+}`,
+    personalBestWPM: null,
+  },
+
+  // ═══════════════════════════════════════
+  //  C
+  // ═══════════════════════════════════════
+  {
+    id: "c-easy",
+    title: "Arrays & Pointers",
+    language: "C",
+    difficulty: "easy",
+    text: `int sum(int* arr, int len) {
+    int total = 0;
+    for (int i = 0; i < len; i++) {
+        total += arr[i];
+    }
+    return total;
+}`,
+    personalBestWPM: null,
+  },
+  {
+    id: "c-med",
     title: "Linked List",
     language: "C",
+    difficulty: "medium",
     text: `struct Node {
     int data;
     struct Node* next;
@@ -131,24 +290,68 @@ struct Node* insert(struct Node* head, int val) {
     personalBestWPM: null,
   },
   {
-    id: "code-c-2",
-    title: "String Reverse",
+    id: "c-hard",
+    title: "Hash Table",
     language: "C",
-    text: `void reverse(char* str) {
-    int len = strlen(str);
-    for (int i = 0; i < len / 2; i++) {
-        char tmp = str[i];
-        str[i] = str[len - 1 - i];
-        str[len - 1 - i] = tmp;
+    difficulty: "hard",
+    text: `#define TABLE_SIZE 256
+
+typedef struct Entry {
+    char* key;
+    int value;
+    struct Entry* next;
+} Entry;
+
+typedef struct {
+    Entry* buckets[TABLE_SIZE];
+} HashMap;
+
+unsigned int hash(const char* key) {
+    unsigned int h = 0;
+    while (*key) {
+        h = h * 31 + (unsigned char)(*key++);
     }
+    return h % TABLE_SIZE;
+}
+
+void put(HashMap* map, const char* key, int value) {
+    unsigned int idx = hash(key);
+    Entry* e = malloc(sizeof(Entry));
+    e->key = strdup(key);
+    e->value = value;
+    e->next = map->buckets[idx];
+    map->buckets[idx] = e;
 }`,
     personalBestWPM: null,
   },
-  // ── C++ ──
+
+  // ═══════════════════════════════════════
+  //  C++
+  // ═══════════════════════════════════════
   {
-    id: "code-cpp-1",
+    id: "cpp-easy",
+    title: "Vectors & Loops",
+    language: "C++",
+    difficulty: "easy",
+    text: `#include <vector>
+#include <iostream>
+
+int main() {
+    std::vector<int> nums = {1, 2, 3, 4, 5};
+    int sum = 0;
+    for (int n : nums) {
+        sum += n;
+    }
+    std::cout << "Sum: " << sum << std::endl;
+    return 0;
+}`,
+    personalBestWPM: null,
+  },
+  {
+    id: "cpp-med",
     title: "Template Class",
     language: "C++",
+    difficulty: "medium",
     text: `template <typename T>
 class Stack {
     std::vector<T> data;
@@ -166,27 +369,68 @@ public:
     personalBestWPM: null,
   },
   {
-    id: "code-cpp-2",
-    title: "Smart Pointers",
+    id: "cpp-hard",
+    title: "Move Semantics & RAII",
     language: "C++",
-    text: `auto createWidget(const std::string& name) {
-    auto widget = std::make_unique<Widget>(name);
-    widget->init();
-    return widget;
+    difficulty: "hard",
+    text: `template <typename T>
+class UniquePtr {
+    T* ptr;
+public:
+    explicit UniquePtr(T* p = nullptr) : ptr(p) {}
+    ~UniquePtr() { delete ptr; }
+
+    UniquePtr(const UniquePtr&) = delete;
+    UniquePtr& operator=(const UniquePtr&) = delete;
+
+    UniquePtr(UniquePtr&& other) noexcept : ptr(other.ptr) {
+        other.ptr = nullptr;
+    }
+
+    UniquePtr& operator=(UniquePtr&& other) noexcept {
+        if (this != &other) {
+            delete ptr;
+            ptr = other.ptr;
+            other.ptr = nullptr;
+        }
+        return *this;
+    }
+
+    T& operator*() const { return *ptr; }
+    T* operator->() const { return ptr; }
+};`,
+    personalBestWPM: null,
+  },
+
+  // ═══════════════════════════════════════
+  //  Rust
+  // ═══════════════════════════════════════
+  {
+    id: "rust-easy",
+    title: "Structs & Methods",
+    language: "Rust",
+    difficulty: "easy",
+    text: `struct Rectangle {
+    width: f64,
+    height: f64,
 }
 
-void process() {
-    auto w = createWidget("button");
-    auto shared = std::make_shared<Widget>("label");
-    std::cout << shared->getName() << std::endl;
+impl Rectangle {
+    fn area(&self) -> f64 {
+        self.width * self.height
+    }
+
+    fn is_square(&self) -> bool {
+        self.width == self.height
+    }
 }`,
     personalBestWPM: null,
   },
-  // ── Rust ──
   {
-    id: "code-rust-1",
+    id: "rust-med",
     title: "Ownership & Match",
     language: "Rust",
+    difficulty: "medium",
     text: `fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() { x } else { y }
 }
@@ -200,11 +444,68 @@ fn describe(val: Option<i32>) -> String {
 }`,
     personalBestWPM: null,
   },
-  // ── Go ──
   {
-    id: "code-go-1",
+    id: "rust-hard",
+    title: "Trait Objects & Generics",
+    language: "Rust",
+    difficulty: "hard",
+    text: `use std::collections::HashMap;
+
+trait Summary {
+    fn summarize(&self) -> String;
+    fn author(&self) -> &str;
+}
+
+struct Article {
+    title: String,
+    author: String,
+    content: String,
+}
+
+impl Summary for Article {
+    fn summarize(&self) -> String {
+        format!("{} by {}: {}...", self.title, self.author, &self.content[..50])
+    }
+    fn author(&self) -> &str { &self.author }
+}
+
+fn notify(items: &[&dyn Summary]) -> HashMap<String, Vec<String>> {
+    let mut by_author: HashMap<String, Vec<String>> = HashMap::new();
+    for item in items {
+        by_author
+            .entry(item.author().to_string())
+            .or_default()
+            .push(item.summarize());
+    }
+    by_author
+}`,
+    personalBestWPM: null,
+  },
+
+  // ═══════════════════════════════════════
+  //  Go
+  // ═══════════════════════════════════════
+  {
+    id: "go-easy",
+    title: "Structs & Methods",
+    language: "Go",
+    difficulty: "easy",
+    text: `type Point struct {
+    X, Y float64
+}
+
+func (p Point) Distance(q Point) float64 {
+    dx := p.X - q.X
+    dy := p.Y - q.Y
+    return math.Sqrt(dx*dx + dy*dy)
+}`,
+    personalBestWPM: null,
+  },
+  {
+    id: "go-med",
     title: "HTTP Handler",
     language: "Go",
+    difficulty: "medium",
     text: `func handleUsers(w http.ResponseWriter, r *http.Request) {
     if r.Method != http.MethodGet {
         http.Error(w, "method not allowed", 405)
@@ -219,11 +520,61 @@ fn describe(val: Option<i32>) -> String {
 }`,
     personalBestWPM: null,
   },
-  // ── Java ──
   {
-    id: "code-java-1",
+    id: "go-hard",
+    title: "Concurrency & Channels",
+    language: "Go",
+    difficulty: "hard",
+    text: `func fanOut(input <-chan int, workers int) <-chan int {
+    out := make(chan int)
+    var wg sync.WaitGroup
+    for i := 0; i < workers; i++ {
+        wg.Add(1)
+        go func() {
+            defer wg.Done()
+            for val := range input {
+                result := heavyCompute(val)
+                out <- result
+            }
+        }()
+    }
+    go func() {
+        wg.Wait()
+        close(out)
+    }()
+    return out
+}`,
+    personalBestWPM: null,
+  },
+
+  // ═══════════════════════════════════════
+  //  Java
+  // ═══════════════════════════════════════
+  {
+    id: "java-easy",
+    title: "Class & Constructor",
+    language: "Java",
+    difficulty: "easy",
+    text: `public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return name + " (" + age + ")";
+    }
+}`,
+    personalBestWPM: null,
+  },
+  {
+    id: "java-med",
     title: "Stream API",
     language: "Java",
+    difficulty: "medium",
     text: `public List<String> getActiveEmails(List<User> users) {
     return users.stream()
         .filter(User::isActive)
@@ -239,11 +590,57 @@ public record Point(int x, int y) {
 }`,
     personalBestWPM: null,
   },
-  // ── Ruby ──
   {
-    id: "code-ruby-1",
+    id: "java-hard",
+    title: "Generics & Functional",
+    language: "Java",
+    difficulty: "hard",
+    text: `public class Pipeline<T> {
+    private final List<Function<T, T>> steps = new ArrayList<>();
+
+    public Pipeline<T> addStep(Function<T, T> step) {
+        steps.add(step);
+        return this;
+    }
+
+    public T execute(T input) {
+        T result = input;
+        for (Function<T, T> step : steps) {
+            result = step.apply(result);
+        }
+        return result;
+    }
+
+    public <R> R executeAndTransform(T input, Function<T, R> finalizer) {
+        return finalizer.apply(execute(input));
+    }
+}`,
+    personalBestWPM: null,
+  },
+
+  // ═══════════════════════════════════════
+  //  Ruby
+  // ═══════════════════════════════════════
+  {
+    id: "ruby-easy",
+    title: "Hashes & Iteration",
+    language: "Ruby",
+    difficulty: "easy",
+    text: `scores = { alice: 95, bob: 87, charlie: 92 }
+
+scores.each do |name, score|
+  puts "#{name}: #{score}"
+end
+
+top = scores.select { |_, s| s > 90 }
+puts top.keys`,
+    personalBestWPM: null,
+  },
+  {
+    id: "ruby-med",
     title: "Class & Blocks",
     language: "Ruby",
+    difficulty: "medium",
     text: `class TaskRunner
   def initialize(tasks)
     @tasks = tasks
@@ -255,6 +652,40 @@ public record Point(int x, int y) {
       task[:action].call
     end
   end
+end`,
+    personalBestWPM: null,
+  },
+  {
+    id: "ruby-hard",
+    title: "Metaprogramming",
+    language: "Ruby",
+    difficulty: "hard",
+    text: `module Cacheable
+  def self.included(base)
+    base.extend(ClassMethods)
+  end
+
+  module ClassMethods
+    def cache_method(name)
+      original = instance_method(name)
+      define_method(name) do |*args|
+        @cache ||= {}
+        key = [name, args]
+        return @cache[key] if @cache.key?(key)
+        @cache[key] = original.bind(self).call(*args)
+      end
+    end
+  end
+end
+
+class Calculator
+  include Cacheable
+
+  def fib(n)
+    return n if n <= 1
+    fib(n - 1) + fib(n - 2)
+  end
+  cache_method :fib
 end`,
     personalBestWPM: null,
   },
